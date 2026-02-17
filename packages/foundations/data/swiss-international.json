@@ -1,0 +1,52 @@
+{
+  "$name": "swiss-international-style",
+  "$description": "Swiss International Typographic Style — precision, clarity, grid-based order from the Basel and Zurich schools",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "Born from the Basel and Zurich schools of the 1950s, Swiss International Style prioritized objective clarity over decorative expression. Designers like Josef Müller-Brockmann and Armin Hofmann established principles of grid-based composition, asymmetric layouts, and sans-serif typography that became the global standard for corporate and informational design.",
+      "philosophy": "Sachlichkeit (Objectivity) — form follows function with mathematical precision",
+      "era": "1950s–present",
+      "harmonyMode": "monochromatic",
+      "radiusTendency": "none",
+      "typographyCategory": "neo-grotesque"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#111111",
+      "name": "Schwarz",
+      "tradition": "Pure typographic black. The foundation of Swiss poster design and Helvetica specimens.",
+      "source": "Swiss Graphic Design: The Origins and Growth of an International Style, R. Hollis"
+    },
+    {
+      "hex": "#FAFAFA",
+      "name": "Weiss",
+      "tradition": "Paper white. The generous whitespace that gives Swiss design its breathing room.",
+      "source": "Grid Systems in Graphic Design, Josef Müller-Brockmann"
+    },
+    {
+      "hex": "#E8322E",
+      "name": "Rot (Signal Red)",
+      "tradition": "The accent of Swiss rail (SBB/CFF), national flag, and Müller-Brockmann concert posters. Pure signal with no ambiguity.",
+      "source": "Swiss Style: The Graphic Design of Swiss International Style"
+    },
+    {
+      "hex": "#6E6E6E",
+      "name": "Mittelgrau",
+      "tradition": "Mid-grey for secondary information hierarchy. Swiss design uses grey to create clear visual levels.",
+      "source": "Typographic Design: Form and Communication, R. Carter"
+    },
+    {
+      "hex": "#D4D4D4",
+      "name": "Hellgrau",
+      "tradition": "Light grey for borders, dividers, and subtle structural elements in grid systems.",
+      "source": "Swiss Graphic Design"
+    },
+    {
+      "hex": "#1A3A5C",
+      "name": "Dunkelblau",
+      "tradition": "Swiss corporate blue. Used in banking, insurance, and institutional communications for trust and authority.",
+      "source": "Corporate Design, Wally Olins"
+    }
+  ]
+}

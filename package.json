@@ -1,0 +1,26 @@
+{
+  "name": "@syncupsuite/themes-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Worry-free design super-powers",
+  "license": "MIT",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "generate": "tsx scripts/generate-themes.ts",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
