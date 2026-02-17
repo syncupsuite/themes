@@ -30,6 +30,10 @@ export function buildFoundation(data: FoundationData): BuildResult {
   const foundation = data.$extensions['syncupsuite.foundation'];
   const seeds = data.seedColors;
 
+  if (!seeds || seeds.length === 0) {
+    throw new Error('Foundation data must include at least one seed color.');
+  }
+
   // Layer 1: Expand seed colors to primitive scales
   const primitiveColors = expandPrimitives(seeds);
 

@@ -1,6 +1,7 @@
 // Types
 export type {
   DTCGToken,
+  DTCGTokenValue,
   DTCGTokenGroup,
   DTCGRoot,
   TransformOptions,
@@ -20,6 +21,9 @@ export {
   resolveReference,
   walkTokens,
   resolvePath,
+  sanitizeCssValue,
+  sanitizeCssComment,
+  assertHex,
 } from './utilities';
 
 // Constants

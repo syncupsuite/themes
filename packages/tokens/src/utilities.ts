@@ -81,3 +81,43 @@ export function resolvePath(obj: Record<string, unknown>, path: string): unknown
     return undefined;
   }, obj);
 }
+
+// ---------------------------------------------------------------------------
+// CSS Sanitization
+// ---------------------------------------------------------------------------
+
+const UNSAFE_CSS_VALUE = /[{}]|url\s*\(|expression\s*\(|@import|@charset/i;
+
+/**
+ * Sanitize a token value for safe CSS output.
+ * Throws if the value contains patterns that could break out of a CSS property.
+ */
+export function sanitizeCssValue(value: string): string {
+  if (UNSAFE_CSS_VALUE.test(value)) {
+    throw new Error(`Unsafe CSS value detected: "${value.slice(0, 80)}"`);
+  }
+  return value;
+}
+
+/**
+ * Sanitize text for use inside a CSS comment. Escapes comment-closing sequences.
+ */
+export function sanitizeCssComment(text: string): string {
+  return text.replace(/\*\//g, '* /');
+}
+
+// ---------------------------------------------------------------------------
+// Hex Color Validation
+// ---------------------------------------------------------------------------
+
+const HEX_COLOR = /^#[0-9a-fA-F]{6}$/;
+
+/**
+ * Validate that a string is a 6-digit hex color (e.g., #FF0000).
+ * Throws with a descriptive error on invalid input.
+ */
+export function assertHex(hex: string): void {
+  if (!HEX_COLOR.test(hex)) {
+    throw new Error(`Invalid hex color: "${hex}". Expected 6-digit hex (e.g., #FF0000).`);
+  }
+}

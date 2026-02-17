@@ -2,6 +2,8 @@
  * HSL color math for the token expansion engine.
  */
 
+import { assertHex } from '@syncupsuite/tokens';
+
 export interface HSL {
   h: number; // 0-360
   s: number; // 0-100
@@ -9,6 +11,7 @@ export interface HSL {
 }
 
 export function hexToHsl(hex: string): HSL {
+  assertHex(hex);
   const h = hex.replace('#', '');
   const r = parseInt(h.slice(0, 2), 16) / 255;
   const g = parseInt(h.slice(2, 4), 16) / 255;

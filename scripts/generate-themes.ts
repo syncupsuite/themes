@@ -20,6 +20,8 @@ const foundations = [
   { data: swissInternationalData, dir: 'swiss-international' },
 ];
 
+let hasErrors = false;
+
 for (const { data, dir } of foundations) {
   console.log(`\nGenerating: ${dir}`);
 
@@ -37,9 +39,11 @@ for (const { data, dir } of foundations) {
 
   if (!schemaResult.valid) {
     console.error(`  Schema errors:`, schemaResult.errors);
+    hasErrors = true;
   }
   if (!completenessResult.valid) {
     console.error(`  Completeness errors:`, completenessResult.errors);
+    hasErrors = true;
   }
 
   // Generate CSS outputs
@@ -60,6 +64,11 @@ for (const { data, dir } of foundations) {
   console.log(`  tailwind.css: ${tailwindCss.length} bytes`);
   console.log(`  schema: ${schemaResult.valid ? 'PASS' : 'FAIL'}`);
   console.log(`  completeness: ${completenessResult.valid ? 'PASS' : 'FAIL'}`);
+}
+
+if (hasErrors) {
+  console.error('\nGeneration completed with validation errors.');
+  process.exit(1);
 }
 
 console.log('\nDone.');

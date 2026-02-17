@@ -39,10 +39,13 @@ export type TypographyCategory =
   | 'transitional-serif'
   | 'grotesque-sans';
 
+/** DTCG token value — string for most types, composite for typography/border/shadow. */
+export type DTCGTokenValue = string | number | boolean | Record<string, unknown> | unknown[];
+
 /** A single design token conforming to the DTCG specification. */
 export interface DTCGToken {
   $type: string;
-  $value: string;
+  $value: DTCGTokenValue;
   $description?: string;
   $extensions?: Record<string, unknown>;
 }

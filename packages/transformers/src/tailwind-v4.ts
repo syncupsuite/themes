@@ -6,7 +6,12 @@
  */
 
 import type { DTCGToken, DTCGTokenGroup, DTCGRoot, TransformOptions } from '@syncupsuite/tokens';
-import { isToken, flattenTokens, pathToProperty, resolveReference } from '@syncupsuite/tokens';
+import { flattenTokens, pathToProperty, resolveReference, sanitizeCssValue, sanitizeCssComment } from '@syncupsuite/tokens';
+
+function tokenValueToString(value: DTCGToken['$value']): string {
+  if (typeof value === 'string') return value;
+  return String(value);
+}
 
 function formatProperty(
   path: string[],
@@ -15,13 +20,14 @@ function formatProperty(
   includeComments: boolean,
 ): string {
   const prop = pathToProperty(path.join('.'), prefix);
-  const value = token.$value.startsWith('{')
-    ? resolveReference(token.$value, prefix)
-    : token.$value;
+  const raw = tokenValueToString(token.$value);
+  const value = raw.startsWith('{')
+    ? resolveReference(raw, prefix)
+    : sanitizeCssValue(raw);
 
   const lines: string[] = [];
   if (includeComments && token.$description) {
-    lines.push(`  /* ${token.$description} */`);
+    lines.push(`  /* ${sanitizeCssComment(token.$description)} */`);
   }
   lines.push(`  ${prop}: ${value};`);
   return lines.join('\n');
@@ -34,8 +40,9 @@ function extractThemeColors(colors: DTCGTokenGroup): Array<{ name: string; value
   for (const [path, token] of tokens) {
     if (token.$type !== 'color') continue;
     const name = `--color-${path.join('-')}`;
-    const value = token.$value.startsWith('{') ? `var(--${path.join('-')})` : token.$value;
-    entries.push({ name, value, comment: token.$description });
+    const raw = tokenValueToString(token.$value);
+    const value = raw.startsWith('{') ? `var(--${path.join('-')})` : sanitizeCssValue(raw);
+    entries.push({ name, value, comment: token.$description ? sanitizeCssComment(token.$description) : undefined });
   }
 
   return entries;
@@ -48,7 +55,7 @@ function extractThemeSpacing(spacingGroup: DTCGTokenGroup): Array<{ name: string
   for (const [path, token] of tokens) {
     if (token.$type !== 'dimension') continue;
     const name = `--spacing-${path.join('-')}`;
-    entries.push({ name, value: token.$value, comment: token.$description });
+    entries.push({ name, value: sanitizeCssValue(tokenValueToString(token.$value)), comment: token.$description ? sanitizeCssComment(token.$description) : undefined });
   }
 
   return entries;
@@ -65,10 +72,10 @@ function extractThemeTypography(typographyGroup: DTCGTokenGroup): {
   for (const [path, token] of tokens) {
     if (path[0] === 'family') {
       const name = `--font-${path.slice(1).join('-')}`;
-      families.push({ name, value: token.$value, comment: token.$description });
+      families.push({ name, value: sanitizeCssValue(tokenValueToString(token.$value)), comment: token.$description ? sanitizeCssComment(token.$description) : undefined });
     } else if (path[0] === 'size') {
       const name = `--text-${path.slice(1).join('-')}`;
-      sizes.push({ name, value: token.$value, comment: token.$description });
+      sizes.push({ name, value: sanitizeCssValue(tokenValueToString(token.$value)), comment: token.$description ? sanitizeCssComment(token.$description) : undefined });
     }
   }
 
@@ -81,7 +88,7 @@ function extractThemeRadius(radiusGroup: DTCGTokenGroup): Array<{ name: string; 
 
   for (const [path, token] of tokens) {
     const name = `--radius-${path.join('-')}`;
-    entries.push({ name, value: token.$value, comment: token.$description });
+    entries.push({ name, value: sanitizeCssValue(tokenValueToString(token.$value)), comment: token.$description ? sanitizeCssComment(token.$description) : undefined });
   }
 
   return entries;
@@ -196,10 +203,11 @@ export function transformToTailwindV4(
         sections.push('  :root {');
         for (const [path, token] of darkTokens) {
           const prop = pathToProperty(path.join('.'), prefix);
-          const value = token.$value.startsWith('{')
-            ? resolveReference(token.$value, prefix)
-            : token.$value;
-          if (includeComments && token.$description) sections.push(`    /* ${token.$description} */`);
+          const raw = tokenValueToString(token.$value);
+          const value = raw.startsWith('{')
+            ? resolveReference(raw, prefix)
+            : sanitizeCssValue(raw);
+          if (includeComments && token.$description) sections.push(`    /* ${sanitizeCssComment(token.$description)} */`);
           sections.push(`    ${prop}: ${value};`);
         }
         sections.push('  }');
