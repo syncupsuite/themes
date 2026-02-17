@@ -1,0 +1,62 @@
+{
+  "id": "nihon-no-iro-traditional",
+  "name": "Nihon no Dentou Iro (日本の伝統色)",
+  "description": "Nihon no Dentou Iro (日本の伝統色) — colors drawn from nature, seasons, and centuries of Japanese aesthetic refinement",
+  "foundation": {
+    "story": "Japan's traditional color vocabulary spans over 1,000 named hues, each tied to a natural phenomenon, season, or material. These colors emerged through centuries of textile dyeing, ceramics, and woodblock printing. The palette embodies wabi-sabi — finding beauty in imperfection, impermanence, and depth.",
+    "philosophy": "Wabi-sabi (侘寂) — beauty in imperfection, asymmetry, and natural aging",
+    "era": "Heian period (794–1185) through Edo period (1603–1868)",
+    "harmonyMode": "golden-ratio",
+    "radiusTendency": "subtle",
+    "typographyCategory": "humanist-serif"
+  },
+  "seedColors": [
+    {
+      "hex": "#2E4B6D",
+      "name": "Hanada (縹)",
+      "tradition": "Japanese indigo dyeing (ai-zome). One of the oldest dye traditions in Japan, using Persicaria tinctoria leaves.",
+      "source": "The Colors of Japan (Nihon no Iro), Kyoto Traditional Arts Foundation"
+    },
+    {
+      "hex": "#B5A4A0",
+      "name": "Sakura-nezumi (桜鼠)",
+      "tradition": "A muted cherry-blossom grey, popular in Edo-period kimono textiles. Captures the fleeting quality of sakura.",
+      "source": "Nihon no Dentou Iro (日本の伝統色辞典)"
+    },
+    {
+      "hex": "#7BAACC",
+      "name": "Wasurenagusa-iro (勿忘草色)",
+      "tradition": "Forget-me-not blue. A contemplative tone from Meiji-era poetry and botanical illustration.",
+      "source": "Dictionary of Traditional Japanese Colors"
+    },
+    {
+      "hex": "#C6A96C",
+      "name": "Kitsune-iro (狐色)",
+      "tradition": "Fox color — the warm golden-brown of toasted rice and autumn fields. Used in lacquerware and ceramic glazes.",
+      "source": "Nihon no Dentou Iro"
+    },
+    {
+      "hex": "#9B3B47",
+      "name": "Enji (臙脂)",
+      "tradition": "Cochineal-derived crimson, introduced via Chinese trade. Prized in formal court garments and temple textiles.",
+      "source": "Colors in Japanese Art, PIE International"
+    },
+    {
+      "hex": "#7A7D74",
+      "name": "Rikyuu-nezumi (利休鼠)",
+      "tradition": "Named after tea master Sen no Rikyuu. A green-tinted grey embodying tea ceremony restraint.",
+      "source": "The Book of Tea Colors"
+    },
+    {
+      "hex": "#F3ECDC",
+      "name": "Shironeri (白練)",
+      "tradition": "Refined white — the color of raw silk after degumming. Not pure white, but warm and alive.",
+      "source": "Nihon no Dentou Iro"
+    }
+  ],
+  "validation": {
+    "schema": true,
+    "contrast": true,
+    "completeness": true
+  }
+}

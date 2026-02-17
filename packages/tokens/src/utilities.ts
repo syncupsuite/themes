@@ -64,8 +64,8 @@ export function walkTokens(
   for (const [key, value] of Object.entries(tokens)) {
     if (key.startsWith('$')) continue;
     const path = parentPath ? `${parentPath}.${key}` : key;
-    if (isToken(value)) {
-      callback(path, value);
+    if (typeof value === 'object' && value !== null && '$value' in value) {
+      callback(path, value as DTCGToken);
     } else if (typeof value === 'object' && value !== null) {
       walkTokens(value as Record<string, unknown>, path, callback);
     }

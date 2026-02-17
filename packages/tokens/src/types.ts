@@ -49,10 +49,7 @@ export interface DTCGToken {
 
 /** A group of tokens or nested groups. */
 export interface DTCGTokenGroup {
-  [key: string]: DTCGToken | DTCGTokenGroup | string | undefined;
-  $name?: string;
-  $description?: string;
-  $extensions?: Record<string, unknown>;
+  [key: string]: DTCGToken | DTCGTokenGroup | string | Record<string, unknown> | undefined;
 }
 
 /**
@@ -75,7 +72,7 @@ export interface DTCGRoot {
     light?: DTCGTokenGroup;
     dark?: DTCGTokenGroup;
   };
-  [key: string]: DTCGTokenGroup | string | undefined | { light?: DTCGTokenGroup; dark?: DTCGTokenGroup };
+  [key: string]: DTCGTokenGroup | string | Record<string, unknown> | undefined | { light?: DTCGTokenGroup; dark?: DTCGTokenGroup };
 }
 
 export interface TransformOptions {
