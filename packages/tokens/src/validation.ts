@@ -27,15 +27,15 @@ export function validateSchema(tokens: Record<string, unknown>): ValidationResul
   const errors: ValidationError[] = [];
   const warnings: ValidationWarning[] = [];
 
-  walkTokens(tokens, '', (_path, token) => {
+  walkTokens(tokens, '', (path, token) => {
     if (!token.$type) {
-      errors.push({ path: _path, message: 'Token missing $type field', rule: 'schema.type' });
+      errors.push({ path, message: 'Token missing $type field', rule: 'schema.type' });
     }
     if (token.$value === undefined || token.$value === null) {
-      errors.push({ path: _path, message: 'Token missing $value field', rule: 'schema.value' });
+      errors.push({ path, message: 'Token missing $value field', rule: 'schema.value' });
     }
     if (!token.$description) {
-      warnings.push({ path: _path, message: 'Token missing $description (recommended)', rule: 'schema.description' });
+      warnings.push({ path, message: 'Token missing $description (recommended)', rule: 'schema.description' });
     }
   });
 
@@ -86,6 +86,34 @@ export function validateOverride(overrideTokens: Record<string, unknown>): Valid
         message: `Cannot override protected token: ${path}`,
         rule: 'governance.protected',
       });
+    }
+  });
+
+  return { valid: errors.length === 0, errors, warnings: [] };
+}
+
+/**
+ * Validate that all DTCG references ({path.to.token}) resolve to actual nodes in the tree.
+ */
+export function validateReferences(tokens: Record<string, unknown>): ValidationResult {
+  const errors: ValidationError[] = [];
+
+  walkTokens(tokens, '', (path, token) => {
+    const value = token.$value;
+    if (typeof value !== 'string') return;
+
+    const refPattern = /\{([^}]+)\}/g;
+    let match: RegExpExecArray | null;
+    while ((match = refPattern.exec(value)) !== null) {
+      const refPath = match[1];
+      const resolved = resolvePath(tokens, refPath);
+      if (resolved === undefined || resolved === null) {
+        errors.push({
+          path,
+          message: `Dangling reference: {${refPath}} does not resolve to a token`,
+          rule: 'references.resolve',
+        });
+      }
     }
   });
 

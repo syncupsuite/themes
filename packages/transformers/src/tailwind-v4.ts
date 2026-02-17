@@ -5,33 +5,9 @@
  * Output: CSS with @import "tailwindcss", @theme block, and custom properties.
  */
 
-import type { DTCGToken, DTCGTokenGroup, DTCGRoot, TransformOptions } from '@syncupsuite/tokens';
+import type { DTCGTokenGroup, DTCGRoot, TransformOptions } from '@syncupsuite/tokens';
 import { flattenTokens, pathToProperty, resolveReference, sanitizeCssValue, sanitizeCssComment } from '@syncupsuite/tokens';
-
-function tokenValueToString(value: DTCGToken['$value']): string {
-  if (typeof value === 'string') return value;
-  return String(value);
-}
-
-function formatProperty(
-  path: string[],
-  token: DTCGToken,
-  prefix: string,
-  includeComments: boolean,
-): string {
-  const prop = pathToProperty(path.join('.'), prefix);
-  const raw = tokenValueToString(token.$value);
-  const value = raw.startsWith('{')
-    ? resolveReference(raw, prefix)
-    : sanitizeCssValue(raw);
-
-  const lines: string[] = [];
-  if (includeComments && token.$description) {
-    lines.push(`  /* ${sanitizeCssComment(token.$description)} */`);
-  }
-  lines.push(`  ${prop}: ${value};`);
-  return lines.join('\n');
-}
+import { formatProperty, tokenValueToString } from './format';
 
 function extractThemeColors(colors: DTCGTokenGroup): Array<{ name: string; value: string; comment?: string }> {
   const entries: Array<{ name: string; value: string; comment?: string }> = [];

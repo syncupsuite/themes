@@ -4,35 +4,10 @@
  * Converts DTCG token tree to CSS custom properties without Tailwind dependencies.
  */
 
-import type { DTCGToken, DTCGRoot, TransformOptions } from '@syncupsuite/tokens';
-import { flattenTokens, pathToProperty, resolveReference, sanitizeCssValue, sanitizeCssComment } from '@syncupsuite/tokens';
+import type { DTCGRoot, TransformOptions } from '@syncupsuite/tokens';
+import { flattenTokens, sanitizeCssComment } from '@syncupsuite/tokens';
 import type { DTCGTokenGroup } from '@syncupsuite/tokens';
-
-function tokenValueToString(value: DTCGToken['$value']): string {
-  if (typeof value === 'string') return value;
-  return String(value);
-}
-
-function formatProperty(
-  path: string[],
-  token: DTCGToken,
-  prefix: string,
-  includeComments: boolean,
-  indent = '  ',
-): string {
-  const prop = pathToProperty(path.join('.'), prefix);
-  const raw = tokenValueToString(token.$value);
-  const value = raw.startsWith('{')
-    ? resolveReference(raw, prefix)
-    : sanitizeCssValue(raw);
-
-  const lines: string[] = [];
-  if (includeComments && token.$description) {
-    lines.push(`${indent}/* ${sanitizeCssComment(token.$description)} */`);
-  }
-  lines.push(`${indent}${prop}: ${value};`);
-  return lines.join('\n');
-}
+import { formatProperty } from './format';
 
 /**
  * Transform a DTCG token tree into plain CSS custom properties.

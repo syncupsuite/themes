@@ -83,6 +83,21 @@ export function resolvePath(obj: Record<string, unknown>, path: string): unknown
 }
 
 // ---------------------------------------------------------------------------
+// Slug Generation
+// ---------------------------------------------------------------------------
+
+/**
+ * Convert a name to a URL/CSS-safe slug.
+ * "Signal Red" → "signal-red"
+ */
+export function slugify(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+// ---------------------------------------------------------------------------
 // CSS Sanitization
 // ---------------------------------------------------------------------------
 

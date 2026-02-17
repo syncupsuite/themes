@@ -1,17 +1,11 @@
-import { buildFoundation, swissInternationalData } from '@syncupsuite/foundations';
-import { transformToTailwindV4, transformToCSS } from '@syncupsuite/transformers';
-import type { DTCGRoot, FoundationMeta } from '@syncupsuite/tokens';
+import type { BuiltTheme } from '@syncupsuite/tokens';
+import tokens from './tokens.json';
+import meta from './meta.json';
+import { css, tailwindCss } from './_css';
 
-const { tokens, meta } = buildFoundation(swissInternationalData);
-
-export const swissInternational: {
-  tokens: DTCGRoot;
-  css: string;
-  tailwindCss: string;
-  meta: FoundationMeta;
-} = {
-  tokens,
-  css: transformToCSS(tokens),
-  tailwindCss: transformToTailwindV4(tokens),
-  meta,
+export const swissInternational: BuiltTheme = {
+  tokens: tokens as BuiltTheme['tokens'],
+  css,
+  tailwindCss,
+  meta: meta as BuiltTheme['meta'],
 };

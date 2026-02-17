@@ -5,6 +5,7 @@
  */
 
 import type { DTCGRoot, DTCGTokenGroup, CulturalFoundation, SeedColor, FoundationMeta } from '@syncupsuite/tokens';
+import { slugify } from '@syncupsuite/tokens';
 import { generateLightnessScale, generateNeutrals, getHue } from './color';
 import { generateHarmonyAccents } from './harmony';
 import { getFontStacks, hueToTypographyCategory, TYPE_SCALE, WEIGHT_SCALE, LINE_HEIGHT_SCALE } from './typography';
@@ -95,10 +96,7 @@ function expandPrimitives(seeds: SeedColor[]): Record<string, DTCGTokenGroup> {
   const colors: Record<string, DTCGTokenGroup> = {};
 
   for (const seed of seeds) {
-    const id = seed.name
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
+    const id = slugify(seed.name);
     const scale = generateLightnessScale(seed.hex);
     colors[id] = buildColorGroup(scale, seed.name, seed.tradition, seed);
   }
@@ -212,7 +210,7 @@ function buildRadiusPrimitives(tendency: CulturalFoundation['radiusTendency']): 
 
 function buildSemanticTokens(seeds: SeedColor[]): { light: DTCGTokenGroup; dark: DTCGTokenGroup } {
   // Derive key color references from first seed
-  const primaryId = seeds[0].name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const primaryId = slugify(seeds[0].name);
 
   // Find a warm/red seed for error, or fallback
   const errorSeed = seeds.find((s) => {
@@ -220,7 +218,7 @@ function buildSemanticTokens(seeds: SeedColor[]): { light: DTCGTokenGroup; dark:
     return hue < 30 || hue > 340;
   });
   const errorId = errorSeed
-    ? errorSeed.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    ? slugify(errorSeed.name)
     : primaryId;
 
   return {

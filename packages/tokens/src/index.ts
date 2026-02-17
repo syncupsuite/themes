@@ -5,6 +5,7 @@ export type {
   DTCGTokenGroup,
   DTCGRoot,
   TransformOptions,
+  BuiltTheme,
   CulturalFoundation,
   SeedColor,
   Provenance,
@@ -21,6 +22,7 @@ export {
   resolveReference,
   walkTokens,
   resolvePath,
+  slugify,
   sanitizeCssValue,
   sanitizeCssComment,
   assertHex,
@@ -40,4 +42,5 @@ export {
   validateCompleteness,
   validateContrast,
   validateOverride,
+  validateReferences,
 } from './validation';

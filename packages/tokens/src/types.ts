@@ -89,6 +89,14 @@ export interface TransformOptions {
   prefix?: string;
 }
 
+/** A fully built theme ready for consumption. */
+export interface BuiltTheme {
+  tokens: DTCGRoot;
+  css: string;
+  tailwindCss: string;
+  meta: FoundationMeta;
+}
+
 /** Seed color definition for foundation data. */
 export interface SeedColor {
   hex: string;
