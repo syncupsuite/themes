@@ -1,6 +1,6 @@
 {
   "name": "@syncupsuite/transformers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Token transformers — Tailwind v4 CSS, plain CSS custom properties",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,13 @@
     "directory": "packages/transformers"
   },
   "homepage": "https://github.com/syncupsuite/themes#readme",
-  "keywords": ["design-tokens", "tailwind", "css", "transformer", "syncupsuite"],
+  "keywords": [
+    "design-tokens",
+    "tailwind",
+    "css",
+    "transformer",
+    "syncupsuite"
+  ],
   "publishConfig": {
     "access": "public"
   },

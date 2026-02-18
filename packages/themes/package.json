@@ -1,6 +1,6 @@
 {
   "name": "@syncupsuite/themes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pre-built, culturally-grounded design themes — ready to use",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,17 @@
     "directory": "packages/themes"
   },
   "homepage": "https://github.com/syncupsuite/themes#readme",
-  "keywords": ["design-tokens", "design-system", "themes", "tailwind", "css", "cultural", "swiss", "japanese", "syncupsuite"],
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "themes",
+    "tailwind",
+    "css",
+    "cultural",
+    "swiss",
+    "japanese",
+    "syncupsuite"
+  ],
   "publishConfig": {
     "access": "public"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@syncupsuite/tokens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DTCG design token types, utilities, and validation — zero runtime dependencies",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,12 @@
     "directory": "packages/tokens"
   },
   "homepage": "https://github.com/syncupsuite/themes#readme",
-  "keywords": ["design-tokens", "dtcg", "typescript", "syncupsuite"],
+  "keywords": [
+    "design-tokens",
+    "dtcg",
+    "typescript",
+    "syncupsuite"
+  ],
   "publishConfig": {
     "access": "public"
   },

@@ -30,7 +30,9 @@ function extractThemeSpacing(spacingGroup: DTCGTokenGroup): Array<{ name: string
 
   for (const [path, token] of tokens) {
     if (token.$type !== 'dimension') continue;
-    const name = `--spacing-${path.join('-')}`;
+    // Replace dots in path segments (e.g. "0.5" → "0-5") to produce valid CSS property names
+    const safePath = path.map(s => s.replace(/\./g, '-')).join('-');
+    const name = `--spacing-${safePath}`;
     entries.push({ name, value: sanitizeCssValue(tokenValueToString(token.$value)), comment: token.$description ? sanitizeCssComment(token.$description) : undefined });
   }
 
@@ -149,18 +151,39 @@ export function transformToTailwindV4(
     sections.push('');
   }
 
-  // :root — light mode semantic tokens
-  if (tokens.semantic?.light) {
-    const lightTokens = flattenTokens(tokens.semantic.light);
-    if (lightTokens.length > 0) {
-      sections.push('/* Light mode semantic tokens (default) */');
-      sections.push(':root {');
+  // :root — primitive color aliases + light mode semantic tokens
+  // Tailwind @theme uses --color-* convention for utility classes (bg-neutral-50, text-primary-500).
+  // DTCG semantic tokens reference {primitive.color.*} which resolveReference converts to
+  // var(--primitive-color-*). These aliases bridge the two naming conventions so both work.
+  const hasPrimitiveColors = !!tokens.primitive?.color;
+  const hasLightSemantics = !!(tokens.semantic?.light && flattenTokens(tokens.semantic.light).length > 0);
+
+  if (hasPrimitiveColors || hasLightSemantics) {
+    sections.push('/* Primitive aliases + light mode semantic tokens */');
+    sections.push(':root {');
+
+    if (hasPrimitiveColors) {
+      if (includeComments) sections.push('  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */');
+      const colorTokens = flattenTokens(tokens.primitive!.color as DTCGTokenGroup);
+      for (const [path, token] of colorTokens) {
+        if (token.$type !== 'color') continue;
+        const themeName = `--color-${path.join('-')}`;
+        const primitiveName = `--primitive-color-${path.join('-')}`;
+        sections.push(`  ${primitiveName}: var(${themeName});`);
+      }
+      sections.push('');
+    }
+
+    if (hasLightSemantics) {
+      if (includeComments) sections.push('  /* Semantic tokens */');
+      const lightTokens = flattenTokens(tokens.semantic!.light!);
       for (const [path, token] of lightTokens) {
         sections.push(formatProperty(path, token, prefix, includeComments));
       }
-      sections.push('}');
-      sections.push('');
     }
+
+    sections.push('}');
+    sections.push('');
   }
 
   // Dark mode

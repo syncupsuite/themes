@@ -1,6 +1,6 @@
 {
   "name": "@syncupsuite/foundations",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cultural design foundations — color expansion, semantic mapping, typography",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,14 @@
     "directory": "packages/foundations"
   },
   "homepage": "https://github.com/syncupsuite/themes#readme",
-  "keywords": ["design-tokens", "design-system", "color", "typography", "cultural", "syncupsuite"],
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "color",
+    "typography",
+    "cultural",
+    "syncupsuite"
+  ],
   "publishConfig": {
     "access": "public"
   },
