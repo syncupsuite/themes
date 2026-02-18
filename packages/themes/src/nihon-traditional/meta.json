@@ -56,7 +56,7 @@
   ],
   "validation": {
     "schema": true,
-    "contrast": true,
+    "contrast": null,
     "completeness": true
   }
 }

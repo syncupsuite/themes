@@ -114,7 +114,8 @@ export interface FoundationMeta {
   seedColors: SeedColor[];
   validation: {
     schema: boolean;
-    contrast: boolean;
+    /** null = not yet computed (see ADR-005); true/false = WCAG audit result */
+    contrast: boolean | null;
     completeness: boolean;
   };
 }
