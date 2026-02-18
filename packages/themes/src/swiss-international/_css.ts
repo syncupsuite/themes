@@ -516,9 +516,9 @@ export const tailwindCss = `@import "tailwindcss";
   /* Spacing 20 (80px) */
   --spacing-20: 80px;
   /* Spacing 0.5 (2px) */
-  --spacing-0.5: 2px;
+  --spacing-0-5: 2px;
   /* Spacing 1.5 (6px) */
-  --spacing-1.5: 6px;
+  --spacing-1-5: 6px;
 
   /* --- Font Families --- */
   /* Heading font family */
@@ -562,8 +562,91 @@ export const tailwindCss = `@import "tailwindcss";
 
 }
 
-/* Light mode semantic tokens (default) */
+/* Primitive aliases + light mode semantic tokens */
 :root {
+  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */
+  --primitive-color-schwarz-50: var(--color-schwarz-50);
+  --primitive-color-schwarz-100: var(--color-schwarz-100);
+  --primitive-color-schwarz-200: var(--color-schwarz-200);
+  --primitive-color-schwarz-300: var(--color-schwarz-300);
+  --primitive-color-schwarz-400: var(--color-schwarz-400);
+  --primitive-color-schwarz-500: var(--color-schwarz-500);
+  --primitive-color-schwarz-600: var(--color-schwarz-600);
+  --primitive-color-schwarz-700: var(--color-schwarz-700);
+  --primitive-color-schwarz-800: var(--color-schwarz-800);
+  --primitive-color-schwarz-900: var(--color-schwarz-900);
+  --primitive-color-weiss-50: var(--color-weiss-50);
+  --primitive-color-weiss-100: var(--color-weiss-100);
+  --primitive-color-weiss-200: var(--color-weiss-200);
+  --primitive-color-weiss-300: var(--color-weiss-300);
+  --primitive-color-weiss-400: var(--color-weiss-400);
+  --primitive-color-weiss-500: var(--color-weiss-500);
+  --primitive-color-weiss-600: var(--color-weiss-600);
+  --primitive-color-weiss-700: var(--color-weiss-700);
+  --primitive-color-weiss-800: var(--color-weiss-800);
+  --primitive-color-weiss-900: var(--color-weiss-900);
+  --primitive-color-rot-signal-red-50: var(--color-rot-signal-red-50);
+  --primitive-color-rot-signal-red-100: var(--color-rot-signal-red-100);
+  --primitive-color-rot-signal-red-200: var(--color-rot-signal-red-200);
+  --primitive-color-rot-signal-red-300: var(--color-rot-signal-red-300);
+  --primitive-color-rot-signal-red-400: var(--color-rot-signal-red-400);
+  --primitive-color-rot-signal-red-500: var(--color-rot-signal-red-500);
+  --primitive-color-rot-signal-red-600: var(--color-rot-signal-red-600);
+  --primitive-color-rot-signal-red-700: var(--color-rot-signal-red-700);
+  --primitive-color-rot-signal-red-800: var(--color-rot-signal-red-800);
+  --primitive-color-rot-signal-red-900: var(--color-rot-signal-red-900);
+  --primitive-color-mittelgrau-50: var(--color-mittelgrau-50);
+  --primitive-color-mittelgrau-100: var(--color-mittelgrau-100);
+  --primitive-color-mittelgrau-200: var(--color-mittelgrau-200);
+  --primitive-color-mittelgrau-300: var(--color-mittelgrau-300);
+  --primitive-color-mittelgrau-400: var(--color-mittelgrau-400);
+  --primitive-color-mittelgrau-500: var(--color-mittelgrau-500);
+  --primitive-color-mittelgrau-600: var(--color-mittelgrau-600);
+  --primitive-color-mittelgrau-700: var(--color-mittelgrau-700);
+  --primitive-color-mittelgrau-800: var(--color-mittelgrau-800);
+  --primitive-color-mittelgrau-900: var(--color-mittelgrau-900);
+  --primitive-color-hellgrau-50: var(--color-hellgrau-50);
+  --primitive-color-hellgrau-100: var(--color-hellgrau-100);
+  --primitive-color-hellgrau-200: var(--color-hellgrau-200);
+  --primitive-color-hellgrau-300: var(--color-hellgrau-300);
+  --primitive-color-hellgrau-400: var(--color-hellgrau-400);
+  --primitive-color-hellgrau-500: var(--color-hellgrau-500);
+  --primitive-color-hellgrau-600: var(--color-hellgrau-600);
+  --primitive-color-hellgrau-700: var(--color-hellgrau-700);
+  --primitive-color-hellgrau-800: var(--color-hellgrau-800);
+  --primitive-color-hellgrau-900: var(--color-hellgrau-900);
+  --primitive-color-dunkelblau-50: var(--color-dunkelblau-50);
+  --primitive-color-dunkelblau-100: var(--color-dunkelblau-100);
+  --primitive-color-dunkelblau-200: var(--color-dunkelblau-200);
+  --primitive-color-dunkelblau-300: var(--color-dunkelblau-300);
+  --primitive-color-dunkelblau-400: var(--color-dunkelblau-400);
+  --primitive-color-dunkelblau-500: var(--color-dunkelblau-500);
+  --primitive-color-dunkelblau-600: var(--color-dunkelblau-600);
+  --primitive-color-dunkelblau-700: var(--color-dunkelblau-700);
+  --primitive-color-dunkelblau-800: var(--color-dunkelblau-800);
+  --primitive-color-dunkelblau-900: var(--color-dunkelblau-900);
+  --primitive-color-neutral-50: var(--color-neutral-50);
+  --primitive-color-neutral-100: var(--color-neutral-100);
+  --primitive-color-neutral-200: var(--color-neutral-200);
+  --primitive-color-neutral-300: var(--color-neutral-300);
+  --primitive-color-neutral-400: var(--color-neutral-400);
+  --primitive-color-neutral-500: var(--color-neutral-500);
+  --primitive-color-neutral-600: var(--color-neutral-600);
+  --primitive-color-neutral-700: var(--color-neutral-700);
+  --primitive-color-neutral-800: var(--color-neutral-800);
+  --primitive-color-neutral-900: var(--color-neutral-900);
+  --primitive-color-accent-50: var(--color-accent-50);
+  --primitive-color-accent-100: var(--color-accent-100);
+  --primitive-color-accent-200: var(--color-accent-200);
+  --primitive-color-accent-300: var(--color-accent-300);
+  --primitive-color-accent-400: var(--color-accent-400);
+  --primitive-color-accent-500: var(--color-accent-500);
+  --primitive-color-accent-600: var(--color-accent-600);
+  --primitive-color-accent-700: var(--color-accent-700);
+  --primitive-color-accent-800: var(--color-accent-800);
+  --primitive-color-accent-900: var(--color-accent-900);
+
+  /* Semantic tokens */
   /* Page background */
   --background-canvas: var(--primitive-color-neutral-50);
   /* Card/surface background */

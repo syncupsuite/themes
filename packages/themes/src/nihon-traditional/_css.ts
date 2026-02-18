@@ -556,9 +556,9 @@ export const tailwindCss = `@import "tailwindcss";
   /* Spacing 20 (80px) */
   --spacing-20: 80px;
   /* Spacing 0.5 (2px) */
-  --spacing-0.5: 2px;
+  --spacing-0-5: 2px;
   /* Spacing 1.5 (6px) */
-  --spacing-1.5: 6px;
+  --spacing-1-5: 6px;
 
   /* --- Font Families --- */
   /* Heading font family */
@@ -602,8 +602,101 @@ export const tailwindCss = `@import "tailwindcss";
 
 }
 
-/* Light mode semantic tokens (default) */
+/* Primitive aliases + light mode semantic tokens */
 :root {
+  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */
+  --primitive-color-hanada-50: var(--color-hanada-50);
+  --primitive-color-hanada-100: var(--color-hanada-100);
+  --primitive-color-hanada-200: var(--color-hanada-200);
+  --primitive-color-hanada-300: var(--color-hanada-300);
+  --primitive-color-hanada-400: var(--color-hanada-400);
+  --primitive-color-hanada-500: var(--color-hanada-500);
+  --primitive-color-hanada-600: var(--color-hanada-600);
+  --primitive-color-hanada-700: var(--color-hanada-700);
+  --primitive-color-hanada-800: var(--color-hanada-800);
+  --primitive-color-hanada-900: var(--color-hanada-900);
+  --primitive-color-sakura-nezumi-50: var(--color-sakura-nezumi-50);
+  --primitive-color-sakura-nezumi-100: var(--color-sakura-nezumi-100);
+  --primitive-color-sakura-nezumi-200: var(--color-sakura-nezumi-200);
+  --primitive-color-sakura-nezumi-300: var(--color-sakura-nezumi-300);
+  --primitive-color-sakura-nezumi-400: var(--color-sakura-nezumi-400);
+  --primitive-color-sakura-nezumi-500: var(--color-sakura-nezumi-500);
+  --primitive-color-sakura-nezumi-600: var(--color-sakura-nezumi-600);
+  --primitive-color-sakura-nezumi-700: var(--color-sakura-nezumi-700);
+  --primitive-color-sakura-nezumi-800: var(--color-sakura-nezumi-800);
+  --primitive-color-sakura-nezumi-900: var(--color-sakura-nezumi-900);
+  --primitive-color-wasurenagusa-iro-50: var(--color-wasurenagusa-iro-50);
+  --primitive-color-wasurenagusa-iro-100: var(--color-wasurenagusa-iro-100);
+  --primitive-color-wasurenagusa-iro-200: var(--color-wasurenagusa-iro-200);
+  --primitive-color-wasurenagusa-iro-300: var(--color-wasurenagusa-iro-300);
+  --primitive-color-wasurenagusa-iro-400: var(--color-wasurenagusa-iro-400);
+  --primitive-color-wasurenagusa-iro-500: var(--color-wasurenagusa-iro-500);
+  --primitive-color-wasurenagusa-iro-600: var(--color-wasurenagusa-iro-600);
+  --primitive-color-wasurenagusa-iro-700: var(--color-wasurenagusa-iro-700);
+  --primitive-color-wasurenagusa-iro-800: var(--color-wasurenagusa-iro-800);
+  --primitive-color-wasurenagusa-iro-900: var(--color-wasurenagusa-iro-900);
+  --primitive-color-kitsune-iro-50: var(--color-kitsune-iro-50);
+  --primitive-color-kitsune-iro-100: var(--color-kitsune-iro-100);
+  --primitive-color-kitsune-iro-200: var(--color-kitsune-iro-200);
+  --primitive-color-kitsune-iro-300: var(--color-kitsune-iro-300);
+  --primitive-color-kitsune-iro-400: var(--color-kitsune-iro-400);
+  --primitive-color-kitsune-iro-500: var(--color-kitsune-iro-500);
+  --primitive-color-kitsune-iro-600: var(--color-kitsune-iro-600);
+  --primitive-color-kitsune-iro-700: var(--color-kitsune-iro-700);
+  --primitive-color-kitsune-iro-800: var(--color-kitsune-iro-800);
+  --primitive-color-kitsune-iro-900: var(--color-kitsune-iro-900);
+  --primitive-color-enji-50: var(--color-enji-50);
+  --primitive-color-enji-100: var(--color-enji-100);
+  --primitive-color-enji-200: var(--color-enji-200);
+  --primitive-color-enji-300: var(--color-enji-300);
+  --primitive-color-enji-400: var(--color-enji-400);
+  --primitive-color-enji-500: var(--color-enji-500);
+  --primitive-color-enji-600: var(--color-enji-600);
+  --primitive-color-enji-700: var(--color-enji-700);
+  --primitive-color-enji-800: var(--color-enji-800);
+  --primitive-color-enji-900: var(--color-enji-900);
+  --primitive-color-rikyuu-nezumi-50: var(--color-rikyuu-nezumi-50);
+  --primitive-color-rikyuu-nezumi-100: var(--color-rikyuu-nezumi-100);
+  --primitive-color-rikyuu-nezumi-200: var(--color-rikyuu-nezumi-200);
+  --primitive-color-rikyuu-nezumi-300: var(--color-rikyuu-nezumi-300);
+  --primitive-color-rikyuu-nezumi-400: var(--color-rikyuu-nezumi-400);
+  --primitive-color-rikyuu-nezumi-500: var(--color-rikyuu-nezumi-500);
+  --primitive-color-rikyuu-nezumi-600: var(--color-rikyuu-nezumi-600);
+  --primitive-color-rikyuu-nezumi-700: var(--color-rikyuu-nezumi-700);
+  --primitive-color-rikyuu-nezumi-800: var(--color-rikyuu-nezumi-800);
+  --primitive-color-rikyuu-nezumi-900: var(--color-rikyuu-nezumi-900);
+  --primitive-color-shironeri-50: var(--color-shironeri-50);
+  --primitive-color-shironeri-100: var(--color-shironeri-100);
+  --primitive-color-shironeri-200: var(--color-shironeri-200);
+  --primitive-color-shironeri-300: var(--color-shironeri-300);
+  --primitive-color-shironeri-400: var(--color-shironeri-400);
+  --primitive-color-shironeri-500: var(--color-shironeri-500);
+  --primitive-color-shironeri-600: var(--color-shironeri-600);
+  --primitive-color-shironeri-700: var(--color-shironeri-700);
+  --primitive-color-shironeri-800: var(--color-shironeri-800);
+  --primitive-color-shironeri-900: var(--color-shironeri-900);
+  --primitive-color-neutral-50: var(--color-neutral-50);
+  --primitive-color-neutral-100: var(--color-neutral-100);
+  --primitive-color-neutral-200: var(--color-neutral-200);
+  --primitive-color-neutral-300: var(--color-neutral-300);
+  --primitive-color-neutral-400: var(--color-neutral-400);
+  --primitive-color-neutral-500: var(--color-neutral-500);
+  --primitive-color-neutral-600: var(--color-neutral-600);
+  --primitive-color-neutral-700: var(--color-neutral-700);
+  --primitive-color-neutral-800: var(--color-neutral-800);
+  --primitive-color-neutral-900: var(--color-neutral-900);
+  --primitive-color-accent-50: var(--color-accent-50);
+  --primitive-color-accent-100: var(--color-accent-100);
+  --primitive-color-accent-200: var(--color-accent-200);
+  --primitive-color-accent-300: var(--color-accent-300);
+  --primitive-color-accent-400: var(--color-accent-400);
+  --primitive-color-accent-500: var(--color-accent-500);
+  --primitive-color-accent-600: var(--color-accent-600);
+  --primitive-color-accent-700: var(--color-accent-700);
+  --primitive-color-accent-800: var(--color-accent-800);
+  --primitive-color-accent-900: var(--color-accent-900);
+
+  /* Semantic tokens */
   /* Page background */
   --background-canvas: var(--primitive-color-neutral-50);
   /* Card/surface background */
