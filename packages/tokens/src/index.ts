@@ -26,6 +26,7 @@ export {
   sanitizeCssValue,
   sanitizeCssComment,
   assertHex,
+  formatCssValue,
 } from './utilities';
 
 // Constants

@@ -3,7 +3,7 @@
  */
 
 import type { DTCGToken } from '@syncupsuite/tokens';
-import { pathToProperty, resolveReference, sanitizeCssValue, sanitizeCssComment } from '@syncupsuite/tokens';
+import { pathToProperty, formatCssValue, sanitizeCssComment } from '@syncupsuite/tokens';
 
 export function tokenValueToString(value: DTCGToken['$value']): string {
   if (typeof value === 'string') return value;
@@ -19,9 +19,7 @@ export function formatProperty(
 ): string {
   const prop = pathToProperty(path.join('.'), prefix);
   const raw = tokenValueToString(token.$value);
-  const value = raw.startsWith('{')
-    ? resolveReference(raw, prefix)
-    : sanitizeCssValue(raw);
+  const value = formatCssValue(raw, prefix);
 
   const lines: string[] = [];
   if (includeComments && token.$description) {

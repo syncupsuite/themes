@@ -31,8 +31,8 @@ export function validateSchema(tokens: Record<string, unknown>): ValidationResul
     if (!token.$type) {
       errors.push({ path, message: 'Token missing $type field', rule: 'schema.type' });
     }
-    if (token.$value === undefined || token.$value === null) {
-      errors.push({ path, message: 'Token missing $value field', rule: 'schema.value' });
+    if (token.$value === undefined || token.$value === null || token.$value === '') {
+      errors.push({ path, message: 'Token missing or empty $value field', rule: 'schema.value' });
     }
     if (!token.$description) {
       warnings.push({ path, message: 'Token missing $description (recommended)', rule: 'schema.description' });

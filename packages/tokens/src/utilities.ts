@@ -101,7 +101,8 @@ export function slugify(name: string): string {
 // CSS Sanitization
 // ---------------------------------------------------------------------------
 
-const UNSAFE_CSS_VALUE = /[{}]|url\s*\(|expression\s*\(|@import|@charset/i;
+const UNSAFE_CSS_VALUE =
+  /[{}]|url\s*\(|expression\s*\(|@import|@charset|javascript:|data:|behavior\s*:|-moz-binding\s*:|;|<\//i;
 
 /**
  * Sanitize a token value for safe CSS output.
@@ -112,6 +113,25 @@ export function sanitizeCssValue(value: string): string {
     throw new Error(`Unsafe CSS value detected: "${value.slice(0, 80)}"`);
   }
   return value;
+}
+
+/**
+ * Format a raw DTCG token value for CSS output.
+ * Resolves {reference} tokens and sanitizes all literal segments.
+ *
+ * Prevents injection via mixed reference/literal values such as:
+ *   "{color.primary}; background-image: url(evil.com)"
+ * — each non-reference segment is validated by sanitizeCssValue.
+ */
+export function formatCssValue(raw: string, prefix = ''): string {
+  const segments = raw.split(/(\{[^}]+\})/);
+  return segments
+    .map((seg) =>
+      seg.startsWith('{') && seg.endsWith('}')
+        ? resolveReference(seg, prefix)
+        : sanitizeCssValue(seg),
+    )
+    .join('');
 }
 
 /**
