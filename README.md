@@ -2,7 +2,7 @@
 
 **Worry-free design super-powers.**
 
-One import. Your app gets a complete, accessible, culturally-grounded design identity — colors, typography, spacing, dark mode, WCAG compliance. You pick a theme with a story. You don't hire a designer.
+One import. Your app gets a complete, culturally-grounded design identity — colors, typography, spacing, dark mode, accessibility-ready tokens. You pick a theme with a story. You don't hire a designer.
 
 ## Quick Start
 
@@ -94,13 +94,13 @@ Every token follows the [DTCG specification](https://tr.designtokens.org/format/
 - `tailwind.css` — Tailwind v4 `@theme` block + semantic properties
 - `meta.json` — Cultural story, philosophy, provenance, validation
 
-## WCAG Compliance
+## Accessibility
 
 All themes ship with:
-- WCAG 2.1 AA contrast ratios for text on backgrounds
-- Protected status colors (error, success, warning) that can't be overridden
+- Protected status colors (error, success, warning) that cannot be overridden at T1/T2 level
 - Focus ring tokens for keyboard accessibility
 - Required semantic tokens validated at build time
+- Semantic token structure designed for WCAG 2.1 AA targets (automated contrast validation planned — see [ADR-005](docs/adr/ADR-005-ci-snapshot-matrix.md))
 
 ## License
 
