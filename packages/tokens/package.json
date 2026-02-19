@@ -1,6 +1,6 @@
 {
   "name": "@syncupsuite/tokens",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "DTCG design token types, utilities, and validation — zero runtime dependencies",
   "license": "MIT",
   "repository": {

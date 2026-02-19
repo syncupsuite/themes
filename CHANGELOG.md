@@ -11,13 +11,42 @@ All four packages (`@syncupsuite/tokens`, `@syncupsuite/foundations`, `@syncupsu
 
 ## [Unreleased]
 
-### Planned (breaking — will be 0.2.0)
-- **OKLCH color math migration** (ADR-001): Replace HSL lightness scale generation with OKLCH for perceptually uniform scales across hues. All generated token values will change. Custom foundations built on 0.1.x will require recalculation.
-
 ### Planned (non-breaking)
 - Per-theme subpath bundle splitting (`@syncupsuite/themes/swiss-international`, `@syncupsuite/themes/nihon-traditional`) for tree-shakeable imports
-- Filesystem auto-discovery for theme registration (ADR-007 Phase 1) — reduces new theme addition from 6 touch points to 1
 - assertHex support for 3-digit and 8-digit hex (currently 6-digit only)
+
+---
+
+## [0.2.0] — 2026-02-19
+
+**Breaking change**: All generated token color values change due to OKLCH color math migration. CSS output hex values differ from 0.1.x for all non-seed color steps (50–900 and neutrals). Seed colors at step 500 are preserved exactly.
+
+### Changed — Breaking
+
+- **`@syncupsuite/foundations`**: `generateLightnessScale` and `generateNeutrals` now use OKLCH color math (ADR-001). Perceptually uniform lightness scales across all hues. Equal numeric steps in OKLCH lightness produce equal perceived brightness changes — HSL does not have this property.
+  - Lightness is interpolated outward from the seed: lighter steps (50–400) interpolate toward L=0.97; darker steps (600–900) interpolate toward L=0.12. This guarantees monotonically ordered scales regardless of where the seed's native lightness falls.
+  - Chroma scales proportionally: reduced at light extremes (0.25× at step 50, rising to 1× at step 400); reduced at dark extremes (falling to 0.6× at step 900).
+  - Seed hex is preserved exactly at step 500.
+  - Neutral chroma: 8% of seed chroma, clamped to 0.01–0.04, producing soft hue-tinted neutrals.
+
+- **`@syncupsuite/themes`**: Swiss International and Nihon Traditional CSS files regenerated with OKLCH-computed values. All `--primitive-color-*` hex values change. Semantic token names, structure, and `var()` references are unchanged.
+
+### Added
+
+- **`@syncupsuite/foundations`**: `hexToOklch(hex) → OKLCH` and `oklchToHex(oklch) → string` exported from `@syncupsuite/foundations`.
+- **`@syncupsuite/foundations`**: `OKLCH` type exported alongside existing `HSL`.
+- **`@syncupsuite/foundations`**: 20 new tests for OKLCH conversion, scale monotonicity, gamut clipping, hue preservation, and neutral chroma bounds. Foundations package: 35 → 55 tests.
+- **ADR-007 Phase 1** (non-breaking, also in this release): filesystem auto-discovery in `scripts/generate-themes.ts`. Adding theme 3 = drop JSON in `packages/foundations/data/`, run `pnpm generate`. Touch points: 6 → 1.
+
+### Deprecated
+
+- `hexToHsl` and `hslToHex` in `@syncupsuite/foundations` — retained for backward compatibility, marked `@deprecated`. Use `hexToOklch` / `oklchToHex` for new code.
+
+### Migration guide for 0.1.x consumers
+
+If you use `@syncupsuite/themes` **CSS imports only** (most users): update `npm install @syncupsuite/themes@0.2.0` and regenerate any visual snapshots. Token names and semantic structure are unchanged — only color values.
+
+If you use `@syncupsuite/foundations` to build custom foundations: your generated token values will change after updating. Re-run `buildFoundation()` and update any snapshots that store hex values.
 
 ---
 

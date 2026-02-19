@@ -3,8 +3,8 @@ export { buildFoundation } from './engine';
 export type { FoundationData, BuildResult } from './engine';
 
 // Color utilities
-export { hexToHsl, hslToHex, generateLightnessScale, generateNeutrals, getHue } from './color';
-export type { HSL } from './color';
+export { hexToOklch, oklchToHex, hexToHsl, hslToHex, generateLightnessScale, generateNeutrals, getHue } from './color';
+export type { OKLCH, HSL } from './color';
 
 // Harmony
 export { generateHarmonyAccents } from './harmony';
