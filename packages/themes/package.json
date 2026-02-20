@@ -34,8 +34,10 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./*/*.css": "./src/*/*.css",
-    "./*/*.json": "./src/*/*.json"
+    "./*/tailwind.css": "./src/*/tailwind.css",
+    "./*/tokens.css": "./src/*/tokens.css",
+    "./*/tokens.json": "./src/*/tokens.json",
+    "./*/meta.json": "./src/*/meta.json"
   },
   "files": [
     "dist",
