@@ -235,6 +235,28 @@
 
 }
 
+/* === Semantic Color API — theme-aware Tailwind utilities === */
+@theme {
+  --color-canvas: var(--background-canvas);
+  --color-surface: var(--background-surface);
+  --color-muted: var(--background-muted);
+  --color-foreground: var(--text-primary);
+  --color-foreground-secondary: var(--text-secondary);
+  --color-foreground-muted: var(--text-muted);
+  --color-foreground-inverse: var(--text-inverse);
+  --color-primary: var(--interactive-primary);
+  --color-primary-hover: var(--interactive-primary-hover);
+  --color-primary-active: var(--interactive-primary-active);
+  --color-border: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  --color-error: var(--status-error);
+  --color-success: var(--status-success);
+  --color-warning: var(--status-warning);
+  --color-info: var(--status-info);
+  --color-ring: var(--focus-ring);
+  --color-focus-visible: var(--accessibility-focus-visible);
+}
+
 /* Primitive aliases + light mode semantic tokens */
 :root {
   /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */

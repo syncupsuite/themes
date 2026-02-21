@@ -9,6 +9,38 @@ import type { DTCGTokenGroup, DTCGRoot, TransformOptions } from '@syncupsuite/to
 import { flattenTokens, pathToProperty, resolveReference, sanitizeCssValue, sanitizeCssComment } from '@syncupsuite/tokens';
 import { formatProperty, tokenValueToString } from './format';
 
+/**
+ * Maps semantic token paths (dot-separated) to Tailwind --color-* names.
+ * This defines the consumer-facing Tailwind utility API:
+ *   bg-canvas, text-foreground, bg-primary, border-border, ring-ring, etc.
+ */
+const SEMANTIC_COLOR_MAP: Array<{ tailwind: string; semanticPath: string }> = [
+  // Backgrounds
+  { tailwind: 'canvas', semanticPath: 'background.canvas' },
+  { tailwind: 'surface', semanticPath: 'background.surface' },
+  { tailwind: 'muted', semanticPath: 'background.muted' },
+  // Text / foreground
+  { tailwind: 'foreground', semanticPath: 'text.primary' },
+  { tailwind: 'foreground-secondary', semanticPath: 'text.secondary' },
+  { tailwind: 'foreground-muted', semanticPath: 'text.muted' },
+  { tailwind: 'foreground-inverse', semanticPath: 'text.inverse' },
+  // Interactive / primary
+  { tailwind: 'primary', semanticPath: 'interactive.primary' },
+  { tailwind: 'primary-hover', semanticPath: 'interactive.primary-hover' },
+  { tailwind: 'primary-active', semanticPath: 'interactive.primary-active' },
+  // Borders
+  { tailwind: 'border', semanticPath: 'border.default' },
+  { tailwind: 'border-strong', semanticPath: 'border.strong' },
+  // Status
+  { tailwind: 'error', semanticPath: 'status.error' },
+  { tailwind: 'success', semanticPath: 'status.success' },
+  { tailwind: 'warning', semanticPath: 'status.warning' },
+  { tailwind: 'info', semanticPath: 'status.info' },
+  // Focus
+  { tailwind: 'ring', semanticPath: 'focus.ring' },
+  { tailwind: 'focus-visible', semanticPath: 'accessibility.focus-visible' },
+];
+
 function extractThemeColors(colors: DTCGTokenGroup): Array<{ name: string; value: string; comment?: string }> {
   const entries: Array<{ name: string; value: string; comment?: string }> = [];
   const tokens = flattenTokens(colors);
@@ -149,6 +181,28 @@ export function transformToTailwindV4(
     sections.push(themeEntries.join('\n'));
     sections.push('}');
     sections.push('');
+  }
+
+  // Semantic color @theme — maps semantic tokens to Tailwind --color-* utilities
+  if (tokens.semantic?.light) {
+    const semanticEntries: string[] = [];
+    const lightTokens = flattenTokens(tokens.semantic.light);
+    const availablePaths = new Set(lightTokens.map(([path]) => path.join('.')));
+
+    for (const { tailwind, semanticPath } of SEMANTIC_COLOR_MAP) {
+      if (availablePaths.has(semanticPath)) {
+        const cssVar = pathToProperty(semanticPath);
+        semanticEntries.push(`  --color-${tailwind}: var(${cssVar});`);
+      }
+    }
+
+    if (semanticEntries.length > 0) {
+      sections.push('/* === Semantic Color API — theme-aware Tailwind utilities === */');
+      sections.push('@theme {');
+      sections.push(semanticEntries.join('\n'));
+      sections.push('}');
+      sections.push('');
+    }
   }
 
   // :root — primitive color aliases + light mode semantic tokens

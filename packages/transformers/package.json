@@ -1,6 +1,6 @@
 {
   "name": "@syncupsuite/transformers",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Token transformers — Tailwind v4 CSS, plain CSS custom properties",
   "license": "MIT",
   "repository": {
