@@ -1,0 +1,52 @@
+{
+  "$name": "renaissance",
+  "$description": "Renaissance (Rinascimento) — the rich humanist palette of Italian masters, from lapis lazuli ultramarine to Tuscan earth and gold leaf",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "The Italian Renaissance (14th–17th century) transformed art through oil painting, linear perspective, and a palette derived from mineral pigments traded across the Mediterranean. Ultramarine from Afghan lapis lazuli cost more than gold. Tuscan earth pigments — sienna, umber, ochre — grounded compositions in warmth. Gold leaf connected human achievement to divine light. The palette of Raphael, Titian, and Botticelli remains the Western canon's richest.",
+      "philosophy": "Rinascimento — the rebirth of classical learning, humanist confidence in beauty and proportion",
+      "era": "Italian Renaissance (14th–17th century)",
+      "harmonyMode": "triadic",
+      "radiusTendency": "moderate",
+      "typographyCategory": "modern-serif"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#2F4A9E",
+      "name": "Oltremare (Ultramarine)",
+      "tradition": "From lapis lazuli mined in Badakhshan, Afghanistan — ground, purified, and mixed with oil. More expensive than gold per ounce, it was reserved for the Virgin Mary's robe.",
+      "source": "Color: A Natural History of the Palette, Victoria Finlay"
+    },
+    {
+      "hex": "#A0522D",
+      "name": "Terra di Siena (Sienna Earth)",
+      "tradition": "Burnt sienna — iron-rich earth from Tuscany, heated to deepen its red-brown warmth. The shadow tone in chiaroscuro painting from Leonardo to Caravaggio.",
+      "source": "The Materials and Techniques of Medieval Painting, Daniel V. Thompson"
+    },
+    {
+      "hex": "#B8952F",
+      "name": "Oro (Gold Leaf)",
+      "tradition": "Beaten gold applied to gesso grounds in tempera painting. From Giotto's haloes to Ghiberti's bronze doors, gold represented divine light breaking through the earthly plane.",
+      "source": "The Craftsman's Handbook (Il Libro dell'Arte), Cennino Cennini"
+    },
+    {
+      "hex": "#5E6B3A",
+      "name": "Verdaccio",
+      "tradition": "A green-grey earth underpainting used to model flesh tones before color layers. The structural skeleton of Renaissance portraiture.",
+      "source": "The Craftsman's Handbook, Cennino Cennini"
+    },
+    {
+      "hex": "#F2E8D5",
+      "name": "Pergamena (Parchment)",
+      "tradition": "Calfskin vellum — the surface for illuminated manuscripts from Petrarch's sonnets to Leonardo's notebooks. Warm, organic, never pure white.",
+      "source": "The Art of Renaissance Europe, Boskovits & Brown"
+    },
+    {
+      "hex": "#6B4423",
+      "name": "Ombra Naturale (Raw Umber)",
+      "tradition": "Manganese-rich earth from Umbria — the deep brown of shadow and depth. Essential for the sfumato technique of Leonardo da Vinci.",
+      "source": "The Materials and Techniques of Medieval Painting, Daniel V. Thompson"
+    }
+  ]
+}

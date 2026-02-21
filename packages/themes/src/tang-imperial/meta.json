@@ -1,0 +1,56 @@
+{
+  "id": "tang-imperial",
+  "name": "Tang Imperial (大唐)",
+  "description": "Tang Imperial (大唐) — the cosmopolitan grandeur of China's golden age, where Silk Road luxury met Confucian order",
+  "foundation": {
+    "story": "The Tang Dynasty (618–907 CE) represents the apex of Chinese civilization — a cosmopolitan empire where Persian merchants, Buddhist monks, and Japanese scholars mingled in Chang'an, the world's largest city. Its palette comes from sancai (three-color) glazes, imperial silks dyed with mineral pigments, and the gilded bronzes of court ritual.",
+    "philosophy": "大同 (Dàtóng) — Great Harmony through cosmopolitan confidence and ritual order",
+    "era": "Tang Dynasty (618–907 CE)",
+    "harmonyMode": "complementary",
+    "radiusTendency": "subtle",
+    "typographyCategory": "transitional-serif"
+  },
+  "seedColors": [
+    {
+      "hex": "#B5312A",
+      "name": "Zhūshā Hóng (朱砂红)",
+      "tradition": "Cinnabar vermilion — the color of imperial seals, lacquerware, and temple gates. Ground from mercury sulfide ore, it was the most valued pigment in East Asia.",
+      "source": "Chinese Pigments: A Technical Study, Rutherford J. Gettens"
+    },
+    {
+      "hex": "#C5A03F",
+      "name": "Jīn Sè (金色)",
+      "tradition": "Imperial gold — from gilt bronze ritual vessels (鎏金) and the golden reliquaries of Famen Temple. Symbolizes prosperity and the mandate of heaven.",
+      "source": "The Golden Age of Chinese Art: The Lively Tang Dynasty, Maxwell Hearn"
+    },
+    {
+      "hex": "#3B7A57",
+      "name": "Cuì Lǜ (翠绿)",
+      "tradition": "Jade green — the color of nephrite and jadeite prized above gold. Tang celadon glazes approached this color through iron-reduction firing.",
+      "source": "Chinese Jade: From the Neolithic to the Qing, Jessica Rawson"
+    },
+    {
+      "hex": "#1A1A1A",
+      "name": "Mò Hēi (墨黑)",
+      "tradition": "Ink black — from pine soot ink sticks used in Tang calligraphy. The foundation of Chinese writing from Yan Zhenqing's regular script.",
+      "source": "A History of Chinese Calligraphy, Yuho Tseng"
+    },
+    {
+      "hex": "#F3EDE0",
+      "name": "Xuān Zhǐ (宣紙)",
+      "tradition": "Xuan paper — the absorbent mulberry-bark paper from Anhui province, unchanged since the Tang. Its warm tone defines Chinese painting ground.",
+      "source": "Paper and Printing (Science and Civilisation in China), Tsien Tsuen-Hsuin"
+    },
+    {
+      "hex": "#5B2C3F",
+      "name": "Zǐ Tán (紫檀)",
+      "tradition": "Rosewood purple — from the prized zitan hardwood of imperial furniture. The deepest, most restrained luxury of the Tang court.",
+      "source": "Chinese Furniture: A Guide to Collecting Antiques, Karen Mazurkewich"
+    }
+  ],
+  "validation": {
+    "schema": true,
+    "contrast": true,
+    "completeness": true
+  }
+}

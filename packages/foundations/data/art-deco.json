@@ -1,0 +1,46 @@
+{
+  "$name": "art-deco",
+  "$description": "Art Deco — machine-age luxury and geometric glamour from the Jazz Age, where skyscrapers met Cubism",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "Art Deco crystallized at the 1925 Exposition Internationale des Arts Décoratifs in Paris, then conquered New York in the Chrysler Building, Radio City Music Hall, and the Empire State Building. It fused Cubist geometry, Egyptian motifs, and machine-age optimism into a style of unapologetic luxury. Its palette of deep teal, champagne gold, and onyx black evokes speakeasy interiors, ocean liner salons, and the gleaming facades of Miami Beach.",
+      "philosophy": "Machine-age luxury — celebrating technological progress through geometric ornament and bold material contrasts",
+      "era": "1920s–1940s",
+      "harmonyMode": "complementary",
+      "radiusTendency": "none",
+      "typographyCategory": "geometric-sans"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#1B5E6B",
+      "name": "Petrolio (Petroleum Teal)",
+      "tradition": "The deep teal-blue of Art Deco swimming pools, Tiffany glass, and the Egyptian-revival interiors of Grauman's theatres. The signature color of the era.",
+      "source": "Art Deco Complete: The Definitive Guide, Alastair Duncan"
+    },
+    {
+      "hex": "#C8A951",
+      "name": "Champagne Doré (Champagne Gold)",
+      "tradition": "The metallic gold of elevator doors, lobby ceilings, and cocktail shakers. Art Deco democratized gilding through anodized metals and gold-tone lacquer.",
+      "source": "Deco Deluxe: The Art and Design of the Twenties and Thirties, Patricia Bayer"
+    },
+    {
+      "hex": "#1C1C1C",
+      "name": "Onice (Onyx Black)",
+      "tradition": "Polished black onyx and marble — used in lobby floors, bar tops, and geometric inlays. The darkness that makes gold and teal sing.",
+      "source": "American Art Deco: Architecture and Regionalism, Carla Breeze"
+    },
+    {
+      "hex": "#F5F0E0",
+      "name": "Avorio (Ivory)",
+      "tradition": "Carved elephant ivory and Bakelite cream — used for piano keys, cigarette holders, and inlay details. The warm light against dark surfaces.",
+      "source": "Art Deco: The Golden Age of Graphic Art and Illustration, Michael Robinson"
+    },
+    {
+      "hex": "#2D6B4C",
+      "name": "Smeraldo (Emerald)",
+      "tradition": "Emerald green — from Colombian stones set in platinum Cartier bracelets to the green glass of Lalique vases. Nature's geometry, perfected.",
+      "source": "Cartier: Innovation Through the 20th Century, François Chaille"
+    }
+  ]
+}

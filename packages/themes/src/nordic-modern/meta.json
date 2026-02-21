@@ -1,0 +1,56 @@
+{
+  "id": "nordic-modern",
+  "name": "Nordic Modern",
+  "description": "Nordic Modern — Scandinavian clarity, nature-inspired restraint, and functional warmth from the design traditions of Denmark, Sweden, Finland, and Norway",
+  "foundation": {
+    "story": "Nordic Modern design emerged in the 1950s from the intersection of Bauhaus functionalism and Scandinavian craft traditions. Designers like Alvar Aalto, Arne Jacobsen, and Marimekko proved that mass-produced objects could carry warmth and humanity. The palette draws from fjords, birch forests, lichen-covered granite, and the long blue twilight of northern latitudes.",
+    "philosophy": "Lagom (just the right amount) — democratic beauty through restraint and natural materials",
+    "era": "1950s–present",
+    "harmonyMode": "analogous",
+    "radiusTendency": "moderate",
+    "typographyCategory": "geometric-sans"
+  },
+  "seedColors": [
+    {
+      "hex": "#2B5F83",
+      "name": "Fjordblå",
+      "tradition": "The deep blue-grey of Norwegian fjord water at midday. A defining color of Scandinavian textiles and ceramics from Røros to Fiskars.",
+      "source": "Scandinavian Design, Charlotte & Peter Fiell"
+    },
+    {
+      "hex": "#F5F2EE",
+      "name": "Bjørkehvit (Birch White)",
+      "tradition": "The warm white of birch bark and unbleached Nordic linen. Never pure white — always carrying the warmth of natural fiber.",
+      "source": "Nordic Light: Modern Scandinavian Architecture, Henry Plummer"
+    },
+    {
+      "hex": "#5C7A5E",
+      "name": "Mosegrønn (Moss Green)",
+      "tradition": "The muted green of forest-floor moss and lichen. Present in Finnish ryijy rugs and Danish functionalist interiors.",
+      "source": "Finnish Design: A Concise History, Pekka Korvenmaa"
+    },
+    {
+      "hex": "#C4813C",
+      "name": "Multebær (Cloudberry)",
+      "tradition": "The amber-gold of ripe cloudberries (Rubus chamaemorus), a prized arctic fruit. This warm accent breaks the cool Nordic palette.",
+      "source": "The Nordic Cookbook, Magnus Nilsson"
+    },
+    {
+      "hex": "#7A7D82",
+      "name": "Granitt (Granite)",
+      "tradition": "Norwegian granite grey. The foundation stone of Nordic architecture from stave churches to Sverre Fehn's modernist pavilions.",
+      "source": "New Nordic Architecture & Identity, Kjeld Kjeldsen"
+    },
+    {
+      "hex": "#2E7E7E",
+      "name": "Nordlys (Northern Light)",
+      "tradition": "Teal-green of the aurora borealis, captured in Marimekko prints and Finnish glass by Kaj Franck and Tapio Wirkkala.",
+      "source": "Scandinavian Design: An Introduction, David McFadden"
+    }
+  ],
+  "validation": {
+    "schema": true,
+    "contrast": true,
+    "completeness": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$name": "nihon-minimal",
+  "$description": "Nihon Minimal (日本のミニマル) — the refined austerity of modern Japanese design, from Muji to Naoto Fukasawa, where less is enough",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "Modern Japanese minimalism synthesizes Zen Buddhist emptiness (空, kū) with industrial design precision. Kenya Hara's 'designing white,' Naoto Fukasawa's 'without thought' (無意識のデザイン), and the Muji philosophy of 'no-brand quality goods' all express the same insight: beauty emerges when you remove everything unnecessary. The palette is almost achromatic — warmth from natural materials, not color.",
+      "philosophy": "無印 (Mujirushi) — no-brand, the beauty of nothing; emptiness as fullness",
+      "era": "1980s–present",
+      "harmonyMode": "monochromatic",
+      "radiusTendency": "subtle",
+      "typographyCategory": "geometric-sans"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#151413",
+      "name": "Sumi-iro (墨色)",
+      "tradition": "Concentrated sumi ink — the near-black achieved when an ink stick is ground long on a suzuri stone. The default text tone in Muji packaging and Naoto Fukasawa's product design.",
+      "source": "Designing Design, Kenya Hara"
+    },
+    {
+      "hex": "#F5F0E8",
+      "name": "Kinari (生成)",
+      "tradition": "The natural color of undyed, unbleached cotton or silk. Central to the Muji aesthetic — purity without the sterility of white.",
+      "source": "Ex-formation, Kenya Hara"
+    },
+    {
+      "hex": "#9B9690",
+      "name": "Hai-iro (灰色)",
+      "tradition": "Ash grey — the color of burned incense, weathered wood, and concrete. Japan's most versatile neutral, present in Tadao Ando's architecture.",
+      "source": "Wabi-Sabi: Further Thoughts, Leonard Koren"
+    },
+    {
+      "hex": "#5B8A8A",
+      "name": "Asagi (浅葱)",
+      "tradition": "Pale onion-skin blue-green — a restrained hint of color from nature. Used sparingly in tea ceremony utensils and Edo-period textiles as the subtlest accent.",
+      "source": "The Colors of Japan, Sadao Hibi"
+    }
+  ]
+}

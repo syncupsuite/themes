@@ -1,0 +1,369 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Colors --- */
+  /* Petrolio (Petroleum Teal) 50 */
+  --color-petrolio-petroleum-teal-50: #E9F8FC;
+  /* Petrolio (Petroleum Teal) 100 */
+  --color-petrolio-petroleum-teal-100: #BFD8DD;
+  /* Petrolio (Petroleum Teal) 200 */
+  --color-petrolio-petroleum-teal-200: #97B8C0;
+  /* Petrolio (Petroleum Teal) 300 */
+  --color-petrolio-petroleum-teal-300: #6F99A3;
+  /* Petrolio (Petroleum Teal) 400 */
+  --color-petrolio-petroleum-teal-400: #487B86;
+  /* Petrolio (Petroleum Teal) 500 */
+  --color-petrolio-petroleum-teal-500: #1B5E6B;
+  /* Petrolio (Petroleum Teal) 600 */
+  --color-petrolio-petroleum-teal-600: #074752;
+  /* Petrolio (Petroleum Teal) 700 */
+  --color-petrolio-petroleum-teal-700: #00303A;
+  /* Petrolio (Petroleum Teal) 800 */
+  --color-petrolio-petroleum-teal-800: #001B23;
+  /* Petrolio (Petroleum Teal) 900 */
+  --color-petrolio-petroleum-teal-900: #00080F;
+  /* Champagne Doré (Champagne Gold) 50 */
+  --color-champagne-dor-champagne-gold-50: #FCF5E0;
+  /* Champagne Doré (Champagne Gold) 100 */
+  --color-champagne-dor-champagne-gold-100: #F2E6C5;
+  /* Champagne Doré (Champagne Gold) 200 */
+  --color-champagne-dor-champagne-gold-200: #E7D6A9;
+  /* Champagne Doré (Champagne Gold) 300 */
+  --color-champagne-dor-champagne-gold-300: #DDC78D;
+  /* Champagne Doré (Champagne Gold) 400 */
+  --color-champagne-dor-champagne-gold-400: #D2B870;
+  /* Champagne Doré (Champagne Gold) 500 */
+  --color-champagne-dor-champagne-gold-500: #C8A951;
+  /* Champagne Doré (Champagne Gold) 600 */
+  --color-champagne-dor-champagne-gold-600: #947A2A;
+  /* Champagne Doré (Champagne Gold) 700 */
+  --color-champagne-dor-champagne-gold-700: #644D00;
+  /* Champagne Doré (Champagne Gold) 800 */
+  --color-champagne-dor-champagne-gold-800: #372500;
+  /* Champagne Doré (Champagne Gold) 900 */
+  --color-champagne-dor-champagne-gold-900: #0F0300;
+  /* Onice (Onyx Black) 50 */
+  --color-onice-onyx-black-50: #F5F5F5;
+  /* Onice (Onyx Black) 100 */
+  --color-onice-onyx-black-100: #C4C4C4;
+  /* Onice (Onyx Black) 200 */
+  --color-onice-onyx-black-200: #969696;
+  /* Onice (Onyx Black) 300 */
+  --color-onice-onyx-black-300: #6A6A6A;
+  /* Onice (Onyx Black) 400 */
+  --color-onice-onyx-black-400: #414141;
+  /* Onice (Onyx Black) 500 */
+  --color-onice-onyx-black-500: #1C1C1C;
+  /* Onice (Onyx Black) 600 */
+  --color-onice-onyx-black-600: #161616;
+  /* Onice (Onyx Black) 700 */
+  --color-onice-onyx-black-700: #101010;
+  /* Onice (Onyx Black) 800 */
+  --color-onice-onyx-black-800: #0A0A0A;
+  /* Onice (Onyx Black) 900 */
+  --color-onice-onyx-black-900: #060606;
+  /* Avorio (Ivory) 50 */
+  --color-avorio-ivory-50: #F6F5F1;
+  /* Avorio (Ivory) 100 */
+  --color-avorio-ivory-100: #F6F4EE;
+  /* Avorio (Ivory) 200 */
+  --color-avorio-ivory-200: #F6F3EA;
+  /* Avorio (Ivory) 300 */
+  --color-avorio-ivory-300: #F5F2E7;
+  /* Avorio (Ivory) 400 */
+  --color-avorio-ivory-400: #F5F1E3;
+  /* Avorio (Ivory) 500 */
+  --color-avorio-ivory-500: #F5F0E0;
+  /* Avorio (Ivory) 600 */
+  --color-avorio-ivory-600: #B1AD9F;
+  /* Avorio (Ivory) 700 */
+  --color-avorio-ivory-700: #716E63;
+  /* Avorio (Ivory) 800 */
+  --color-avorio-ivory-800: #38352C;
+  /* Avorio (Ivory) 900 */
+  --color-avorio-ivory-900: #070602;
+  /* Smeraldo (Emerald) 50 */
+  --color-smeraldo-emerald-50: #EAFAF0;
+  /* Smeraldo (Emerald) 100 */
+  --color-smeraldo-emerald-100: #C3DCCD;
+  /* Smeraldo (Emerald) 200 */
+  --color-smeraldo-emerald-200: #9EBFAB;
+  /* Smeraldo (Emerald) 300 */
+  --color-smeraldo-emerald-300: #78A28A;
+  /* Smeraldo (Emerald) 400 */
+  --color-smeraldo-emerald-400: #54866A;
+  /* Smeraldo (Emerald) 500 */
+  --color-smeraldo-emerald-500: #2D6B4C;
+  /* Smeraldo (Emerald) 600 */
+  --color-smeraldo-emerald-600: #195036;
+  /* Smeraldo (Emerald) 700 */
+  --color-smeraldo-emerald-700: #043721;
+  /* Smeraldo (Emerald) 800 */
+  --color-smeraldo-emerald-800: #00200E;
+  /* Smeraldo (Emerald) 900 */
+  --color-smeraldo-emerald-900: #000A01;
+  /* Neutral 50 */
+  --color-neutral-50: #F1FAFC;
+  /* Neutral 100 */
+  --color-neutral-100: #E7F0F2;
+  /* Neutral 200 */
+  --color-neutral-200: #D7E0E2;
+  /* Neutral 300 */
+  --color-neutral-300: #BDC6C8;
+  /* Neutral 400 */
+  --color-neutral-400: #929A9C;
+  /* Neutral 500 */
+  --color-neutral-500: #687072;
+  /* Neutral 600 */
+  --color-neutral-600: #474F50;
+  /* Neutral 700 */
+  --color-neutral-700: #2D3436;
+  /* Neutral 800 */
+  --color-neutral-800: #151C1D;
+  /* Neutral 900 */
+  --color-neutral-900: #040809;
+  /* Accent 50 */
+  --color-accent-50: #FFF0EB;
+  /* Accent 100 */
+  --color-accent-100: #E6C5BE;
+  /* Accent 200 */
+  --color-accent-200: #C79C92;
+  /* Accent 300 */
+  --color-accent-300: #A87469;
+  /* Accent 400 */
+  --color-accent-400: #894E41;
+  /* Accent 500 */
+  --color-accent-500: #6A281B;
+  /* Accent 600 */
+  --color-accent-600: #541A0F;
+  /* Accent 700 */
+  --color-accent-700: #3E0D05;
+  /* Accent 800 */
+  --color-accent-800: #2A0200;
+  /* Accent 900 */
+  --color-accent-900: #160000;
+
+  /* --- Spacing (8px grid) --- */
+  /* Spacing 0 (0px) */
+  --spacing-0: 0px;
+  /* Spacing 1 (4px) */
+  --spacing-1: 4px;
+  /* Spacing 2 (8px) */
+  --spacing-2: 8px;
+  /* Spacing 3 (12px) */
+  --spacing-3: 12px;
+  /* Spacing 4 (16px) */
+  --spacing-4: 16px;
+  /* Spacing 5 (20px) */
+  --spacing-5: 20px;
+  /* Spacing 6 (24px) */
+  --spacing-6: 24px;
+  /* Spacing 8 (32px) */
+  --spacing-8: 32px;
+  /* Spacing 10 (40px) */
+  --spacing-10: 40px;
+  /* Spacing 12 (48px) */
+  --spacing-12: 48px;
+  /* Spacing 16 (64px) */
+  --spacing-16: 64px;
+  /* Spacing 20 (80px) */
+  --spacing-20: 80px;
+  /* Spacing 0.5 (2px) */
+  --spacing-0-5: 2px;
+  /* Spacing 1.5 (6px) */
+  --spacing-1-5: 6px;
+
+  /* --- Font Families --- */
+  /* Heading font family */
+  --font-heading: "Inter", "Futura", system-ui, sans-serif;
+  /* Body font family */
+  --font-body: "Inter", system-ui, sans-serif;
+  /* Monospace font family */
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Font Sizes --- */
+  /* Font size xs */
+  --text-xs: 0.75rem;
+  /* Font size sm */
+  --text-sm: 0.875rem;
+  /* Font size base */
+  --text-base: 1rem;
+  /* Font size lg */
+  --text-lg: 1.125rem;
+  /* Font size xl */
+  --text-xl: 1.25rem;
+  /* Font size 2xl */
+  --text-2xl: 1.5rem;
+  /* Font size 3xl */
+  --text-3xl: 1.875rem;
+  /* Font size 4xl */
+  --text-4xl: 2.25rem;
+
+  /* --- Border Radius --- */
+  /* Border radius none */
+  --radius-none: 0px;
+  /* Border radius sm */
+  --radius-sm: 0px;
+  /* Border radius md */
+  --radius-md: 0px;
+  /* Border radius lg */
+  --radius-lg: 0px;
+  /* Border radius xl */
+  --radius-xl: 0px;
+  /* Border radius full */
+  --radius-full: 9999px;
+
+}
+
+/* Primitive aliases + light mode semantic tokens */
+:root {
+  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */
+  --primitive-color-petrolio-petroleum-teal-50: var(--color-petrolio-petroleum-teal-50);
+  --primitive-color-petrolio-petroleum-teal-100: var(--color-petrolio-petroleum-teal-100);
+  --primitive-color-petrolio-petroleum-teal-200: var(--color-petrolio-petroleum-teal-200);
+  --primitive-color-petrolio-petroleum-teal-300: var(--color-petrolio-petroleum-teal-300);
+  --primitive-color-petrolio-petroleum-teal-400: var(--color-petrolio-petroleum-teal-400);
+  --primitive-color-petrolio-petroleum-teal-500: var(--color-petrolio-petroleum-teal-500);
+  --primitive-color-petrolio-petroleum-teal-600: var(--color-petrolio-petroleum-teal-600);
+  --primitive-color-petrolio-petroleum-teal-700: var(--color-petrolio-petroleum-teal-700);
+  --primitive-color-petrolio-petroleum-teal-800: var(--color-petrolio-petroleum-teal-800);
+  --primitive-color-petrolio-petroleum-teal-900: var(--color-petrolio-petroleum-teal-900);
+  --primitive-color-champagne-dor-champagne-gold-50: var(--color-champagne-dor-champagne-gold-50);
+  --primitive-color-champagne-dor-champagne-gold-100: var(--color-champagne-dor-champagne-gold-100);
+  --primitive-color-champagne-dor-champagne-gold-200: var(--color-champagne-dor-champagne-gold-200);
+  --primitive-color-champagne-dor-champagne-gold-300: var(--color-champagne-dor-champagne-gold-300);
+  --primitive-color-champagne-dor-champagne-gold-400: var(--color-champagne-dor-champagne-gold-400);
+  --primitive-color-champagne-dor-champagne-gold-500: var(--color-champagne-dor-champagne-gold-500);
+  --primitive-color-champagne-dor-champagne-gold-600: var(--color-champagne-dor-champagne-gold-600);
+  --primitive-color-champagne-dor-champagne-gold-700: var(--color-champagne-dor-champagne-gold-700);
+  --primitive-color-champagne-dor-champagne-gold-800: var(--color-champagne-dor-champagne-gold-800);
+  --primitive-color-champagne-dor-champagne-gold-900: var(--color-champagne-dor-champagne-gold-900);
+  --primitive-color-onice-onyx-black-50: var(--color-onice-onyx-black-50);
+  --primitive-color-onice-onyx-black-100: var(--color-onice-onyx-black-100);
+  --primitive-color-onice-onyx-black-200: var(--color-onice-onyx-black-200);
+  --primitive-color-onice-onyx-black-300: var(--color-onice-onyx-black-300);
+  --primitive-color-onice-onyx-black-400: var(--color-onice-onyx-black-400);
+  --primitive-color-onice-onyx-black-500: var(--color-onice-onyx-black-500);
+  --primitive-color-onice-onyx-black-600: var(--color-onice-onyx-black-600);
+  --primitive-color-onice-onyx-black-700: var(--color-onice-onyx-black-700);
+  --primitive-color-onice-onyx-black-800: var(--color-onice-onyx-black-800);
+  --primitive-color-onice-onyx-black-900: var(--color-onice-onyx-black-900);
+  --primitive-color-avorio-ivory-50: var(--color-avorio-ivory-50);
+  --primitive-color-avorio-ivory-100: var(--color-avorio-ivory-100);
+  --primitive-color-avorio-ivory-200: var(--color-avorio-ivory-200);
+  --primitive-color-avorio-ivory-300: var(--color-avorio-ivory-300);
+  --primitive-color-avorio-ivory-400: var(--color-avorio-ivory-400);
+  --primitive-color-avorio-ivory-500: var(--color-avorio-ivory-500);
+  --primitive-color-avorio-ivory-600: var(--color-avorio-ivory-600);
+  --primitive-color-avorio-ivory-700: var(--color-avorio-ivory-700);
+  --primitive-color-avorio-ivory-800: var(--color-avorio-ivory-800);
+  --primitive-color-avorio-ivory-900: var(--color-avorio-ivory-900);
+  --primitive-color-smeraldo-emerald-50: var(--color-smeraldo-emerald-50);
+  --primitive-color-smeraldo-emerald-100: var(--color-smeraldo-emerald-100);
+  --primitive-color-smeraldo-emerald-200: var(--color-smeraldo-emerald-200);
+  --primitive-color-smeraldo-emerald-300: var(--color-smeraldo-emerald-300);
+  --primitive-color-smeraldo-emerald-400: var(--color-smeraldo-emerald-400);
+  --primitive-color-smeraldo-emerald-500: var(--color-smeraldo-emerald-500);
+  --primitive-color-smeraldo-emerald-600: var(--color-smeraldo-emerald-600);
+  --primitive-color-smeraldo-emerald-700: var(--color-smeraldo-emerald-700);
+  --primitive-color-smeraldo-emerald-800: var(--color-smeraldo-emerald-800);
+  --primitive-color-smeraldo-emerald-900: var(--color-smeraldo-emerald-900);
+  --primitive-color-neutral-50: var(--color-neutral-50);
+  --primitive-color-neutral-100: var(--color-neutral-100);
+  --primitive-color-neutral-200: var(--color-neutral-200);
+  --primitive-color-neutral-300: var(--color-neutral-300);
+  --primitive-color-neutral-400: var(--color-neutral-400);
+  --primitive-color-neutral-500: var(--color-neutral-500);
+  --primitive-color-neutral-600: var(--color-neutral-600);
+  --primitive-color-neutral-700: var(--color-neutral-700);
+  --primitive-color-neutral-800: var(--color-neutral-800);
+  --primitive-color-neutral-900: var(--color-neutral-900);
+  --primitive-color-accent-50: var(--color-accent-50);
+  --primitive-color-accent-100: var(--color-accent-100);
+  --primitive-color-accent-200: var(--color-accent-200);
+  --primitive-color-accent-300: var(--color-accent-300);
+  --primitive-color-accent-400: var(--color-accent-400);
+  --primitive-color-accent-500: var(--color-accent-500);
+  --primitive-color-accent-600: var(--color-accent-600);
+  --primitive-color-accent-700: var(--color-accent-700);
+  --primitive-color-accent-800: var(--color-accent-800);
+  --primitive-color-accent-900: var(--color-accent-900);
+
+  /* Semantic tokens */
+  /* Page background */
+  --background-canvas: var(--primitive-color-neutral-50);
+  /* Card/surface background */
+  --background-surface: #FFFFFF;
+  /* Muted background */
+  --background-muted: var(--primitive-color-neutral-100);
+  /* Primary text */
+  --text-primary: var(--primitive-color-neutral-900);
+  /* Secondary text */
+  --text-secondary: var(--primitive-color-neutral-600);
+  /* Muted/disabled text */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on dark backgrounds */
+  --text-inverse: var(--primitive-color-neutral-50);
+  /* Primary interactive (buttons, links) */
+  --interactive-primary: var(--primitive-color-petrolio-petroleum-teal-500);
+  /* Primary interactive hover */
+  --interactive-primary-hover: var(--primitive-color-petrolio-petroleum-teal-600);
+  /* Primary interactive active */
+  --interactive-primary-active: var(--primitive-color-petrolio-petroleum-teal-700);
+  /* Default border */
+  --border-default: var(--primitive-color-neutral-200);
+  /* Strong border */
+  --border-strong: var(--primitive-color-neutral-400);
+  /* Error — WCAG-compliant red */
+  --status-error: #DC2626;
+  /* Success — WCAG-compliant green */
+  --status-success: #16A34A;
+  /* Warning — WCAG AA amber (4.5:1+ on white) */
+  --status-warning: #A16207;
+  /* Info status */
+  --status-info: var(--primitive-color-petrolio-petroleum-teal-500);
+  /* Focus ring color */
+  --focus-ring: var(--primitive-color-petrolio-petroleum-teal-500);
+  /* Keyboard focus indicator */
+  --accessibility-focus-visible: var(--primitive-color-petrolio-petroleum-teal-500);
+}
+
+/* Dark mode semantic tokens */
+[data-theme="dark"] {
+  /* Page background — dark */
+  --background-canvas: var(--primitive-color-neutral-900);
+  /* Card/surface — dark */
+  --background-surface: var(--primitive-color-neutral-800);
+  /* Muted background — dark */
+  --background-muted: var(--primitive-color-neutral-700);
+  /* Primary text — dark */
+  --text-primary: var(--primitive-color-neutral-50);
+  /* Secondary text — dark */
+  --text-secondary: var(--primitive-color-neutral-300);
+  /* Muted text — dark */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on light backgrounds — dark */
+  --text-inverse: var(--primitive-color-neutral-900);
+  /* Primary interactive — dark */
+  --interactive-primary: var(--primitive-color-petrolio-petroleum-teal-400);
+  /* Primary hover — dark */
+  --interactive-primary-hover: var(--primitive-color-petrolio-petroleum-teal-300);
+  /* Primary active — dark */
+  --interactive-primary-active: var(--primitive-color-petrolio-petroleum-teal-200);
+  /* Default border — dark */
+  --border-default: var(--primitive-color-neutral-700);
+  /* Strong border — dark */
+  --border-strong: var(--primitive-color-neutral-500);
+  /* Error — WCAG-compliant red (dark) */
+  --status-error: #EF4444;
+  /* Success — WCAG-compliant green (dark) */
+  --status-success: #22C55E;
+  /* Warning — WCAG-compliant amber (dark) */
+  --status-warning: #EAB308;
+  /* Info — dark */
+  --status-info: var(--primitive-color-petrolio-petroleum-teal-400);
+  /* Focus ring — dark */
+  --focus-ring: var(--primitive-color-petrolio-petroleum-teal-400);
+  /* Keyboard focus — dark */
+  --accessibility-focus-visible: var(--primitive-color-petrolio-petroleum-teal-400);
+}

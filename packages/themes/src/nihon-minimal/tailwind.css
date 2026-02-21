@@ -1,0 +1,339 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Colors --- */
+  /* Sumi-iro (墨色) 50 */
+  --color-sumi-iro-50: #F5F5F5;
+  /* Sumi-iro (墨色) 100 */
+  --color-sumi-iro-100: #C3C2C1;
+  /* Sumi-iro (墨色) 200 */
+  --color-sumi-iro-200: #929291;
+  /* Sumi-iro (墨色) 300 */
+  --color-sumi-iro-300: #656463;
+  /* Sumi-iro (墨色) 400 */
+  --color-sumi-iro-400: #3B3A39;
+  /* Sumi-iro (墨色) 500 */
+  --color-sumi-iro-500: #151413;
+  /* Sumi-iro (墨色) 600 */
+  --color-sumi-iro-600: #11100F;
+  /* Sumi-iro (墨色) 700 */
+  --color-sumi-iro-700: #0D0C0B;
+  /* Sumi-iro (墨色) 800 */
+  --color-sumi-iro-800: #090908;
+  /* Sumi-iro (墨色) 900 */
+  --color-sumi-iro-900: #060605;
+  /* Kinari (生成) 50 */
+  --color-kinari-50: #F6F5F3;
+  /* Kinari (生成) 100 */
+  --color-kinari-100: #F6F4F1;
+  /* Kinari (生成) 200 */
+  --color-kinari-200: #F6F3EE;
+  /* Kinari (生成) 300 */
+  --color-kinari-300: #F5F2EC;
+  /* Kinari (生成) 400 */
+  --color-kinari-400: #F5F1EA;
+  /* Kinari (生成) 500 */
+  --color-kinari-500: #F5F0E8;
+  /* Kinari (生成) 600 */
+  --color-kinari-600: #B1ADA6;
+  /* Kinari (生成) 700 */
+  --color-kinari-700: #716E68;
+  /* Kinari (生成) 800 */
+  --color-kinari-800: #373530;
+  /* Kinari (生成) 900 */
+  --color-kinari-900: #070604;
+  /* Hai-iro (灰色) 50 */
+  --color-hai-iro-50: #F6F5F3;
+  /* Hai-iro (灰色) 100 */
+  --color-hai-iro-100: #E3E1DF;
+  /* Hai-iro (灰色) 200 */
+  --color-hai-iro-200: #D1CECA;
+  /* Hai-iro (灰色) 300 */
+  --color-hai-iro-300: #BFBBB7;
+  /* Hai-iro (灰色) 400 */
+  --color-hai-iro-400: #ADA8A3;
+  /* Hai-iro (灰色) 500 */
+  --color-hai-iro-500: #9B9690;
+  /* Hai-iro (灰色) 600 */
+  --color-hai-iro-600: #716D68;
+  /* Hai-iro (灰色) 700 */
+  --color-hai-iro-700: #4A4642;
+  /* Hai-iro (灰色) 800 */
+  --color-hai-iro-800: #262320;
+  /* Hai-iro (灰色) 900 */
+  --color-hai-iro-900: #070504;
+  /* Asagi (浅葱) 50 */
+  --color-asagi-50: #ECF8F8;
+  /* Asagi (浅葱) 100 */
+  --color-asagi-100: #CEE1E1;
+  /* Asagi (浅葱) 200 */
+  --color-asagi-200: #B1CBCB;
+  /* Asagi (浅葱) 300 */
+  --color-asagi-300: #94B5B5;
+  /* Asagi (浅葱) 400 */
+  --color-asagi-400: #779F9F;
+  /* Asagi (浅葱) 500 */
+  --color-asagi-500: #5B8A8A;
+  /* Asagi (浅葱) 600 */
+  --color-asagi-600: #3D6666;
+  /* Asagi (浅葱) 700 */
+  --color-asagi-700: #214444;
+  /* Asagi (浅葱) 800 */
+  --color-asagi-800: #052425;
+  /* Asagi (浅葱) 900 */
+  --color-asagi-900: #000909;
+  /* Neutral 50 */
+  --color-neutral-50: #FDF7F1;
+  /* Neutral 100 */
+  --color-neutral-100: #F3EDE8;
+  /* Neutral 200 */
+  --color-neutral-200: #E3DDD7;
+  /* Neutral 300 */
+  --color-neutral-300: #C9C3BD;
+  /* Neutral 400 */
+  --color-neutral-400: #9D9792;
+  /* Neutral 500 */
+  --color-neutral-500: #736E69;
+  /* Neutral 600 */
+  --color-neutral-600: #514C47;
+  /* Neutral 700 */
+  --color-neutral-700: #36322D;
+  /* Neutral 800 */
+  --color-neutral-800: #1E1A16;
+  /* Neutral 900 */
+  --color-neutral-900: #0A0704;
+  /* Accent 50 */
+  --color-accent-50: #F9F4F0;
+  /* Accent 100 */
+  --color-accent-100: #D6CFC8;
+  /* Accent 200 */
+  --color-accent-200: #B4ABA2;
+  /* Accent 300 */
+  --color-accent-300: #94887D;
+  /* Accent 400 */
+  --color-accent-400: #74675A;
+  /* Accent 500 */
+  --color-accent-500: #564739;
+  /* Accent 600 */
+  --color-accent-600: #413428;
+  /* Accent 700 */
+  --color-accent-700: #2E2319;
+  /* Accent 800 */
+  --color-accent-800: #1B120A;
+  /* Accent 900 */
+  --color-accent-900: #0A0501;
+
+  /* --- Spacing (8px grid) --- */
+  /* Spacing 0 (0px) */
+  --spacing-0: 0px;
+  /* Spacing 1 (4px) */
+  --spacing-1: 4px;
+  /* Spacing 2 (8px) */
+  --spacing-2: 8px;
+  /* Spacing 3 (12px) */
+  --spacing-3: 12px;
+  /* Spacing 4 (16px) */
+  --spacing-4: 16px;
+  /* Spacing 5 (20px) */
+  --spacing-5: 20px;
+  /* Spacing 6 (24px) */
+  --spacing-6: 24px;
+  /* Spacing 8 (32px) */
+  --spacing-8: 32px;
+  /* Spacing 10 (40px) */
+  --spacing-10: 40px;
+  /* Spacing 12 (48px) */
+  --spacing-12: 48px;
+  /* Spacing 16 (64px) */
+  --spacing-16: 64px;
+  /* Spacing 20 (80px) */
+  --spacing-20: 80px;
+  /* Spacing 0.5 (2px) */
+  --spacing-0-5: 2px;
+  /* Spacing 1.5 (6px) */
+  --spacing-1-5: 6px;
+
+  /* --- Font Families --- */
+  /* Heading font family */
+  --font-heading: "Inter", "Futura", system-ui, sans-serif;
+  /* Body font family */
+  --font-body: "Inter", system-ui, sans-serif;
+  /* Monospace font family */
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Font Sizes --- */
+  /* Font size xs */
+  --text-xs: 0.75rem;
+  /* Font size sm */
+  --text-sm: 0.875rem;
+  /* Font size base */
+  --text-base: 1rem;
+  /* Font size lg */
+  --text-lg: 1.125rem;
+  /* Font size xl */
+  --text-xl: 1.25rem;
+  /* Font size 2xl */
+  --text-2xl: 1.5rem;
+  /* Font size 3xl */
+  --text-3xl: 1.875rem;
+  /* Font size 4xl */
+  --text-4xl: 2.25rem;
+
+  /* --- Border Radius --- */
+  /* Border radius none */
+  --radius-none: 0px;
+  /* Border radius sm */
+  --radius-sm: 2px;
+  /* Border radius md */
+  --radius-md: 4px;
+  /* Border radius lg */
+  --radius-lg: 6px;
+  /* Border radius xl */
+  --radius-xl: 8px;
+  /* Border radius full */
+  --radius-full: 9999px;
+
+}
+
+/* Primitive aliases + light mode semantic tokens */
+:root {
+  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */
+  --primitive-color-sumi-iro-50: var(--color-sumi-iro-50);
+  --primitive-color-sumi-iro-100: var(--color-sumi-iro-100);
+  --primitive-color-sumi-iro-200: var(--color-sumi-iro-200);
+  --primitive-color-sumi-iro-300: var(--color-sumi-iro-300);
+  --primitive-color-sumi-iro-400: var(--color-sumi-iro-400);
+  --primitive-color-sumi-iro-500: var(--color-sumi-iro-500);
+  --primitive-color-sumi-iro-600: var(--color-sumi-iro-600);
+  --primitive-color-sumi-iro-700: var(--color-sumi-iro-700);
+  --primitive-color-sumi-iro-800: var(--color-sumi-iro-800);
+  --primitive-color-sumi-iro-900: var(--color-sumi-iro-900);
+  --primitive-color-kinari-50: var(--color-kinari-50);
+  --primitive-color-kinari-100: var(--color-kinari-100);
+  --primitive-color-kinari-200: var(--color-kinari-200);
+  --primitive-color-kinari-300: var(--color-kinari-300);
+  --primitive-color-kinari-400: var(--color-kinari-400);
+  --primitive-color-kinari-500: var(--color-kinari-500);
+  --primitive-color-kinari-600: var(--color-kinari-600);
+  --primitive-color-kinari-700: var(--color-kinari-700);
+  --primitive-color-kinari-800: var(--color-kinari-800);
+  --primitive-color-kinari-900: var(--color-kinari-900);
+  --primitive-color-hai-iro-50: var(--color-hai-iro-50);
+  --primitive-color-hai-iro-100: var(--color-hai-iro-100);
+  --primitive-color-hai-iro-200: var(--color-hai-iro-200);
+  --primitive-color-hai-iro-300: var(--color-hai-iro-300);
+  --primitive-color-hai-iro-400: var(--color-hai-iro-400);
+  --primitive-color-hai-iro-500: var(--color-hai-iro-500);
+  --primitive-color-hai-iro-600: var(--color-hai-iro-600);
+  --primitive-color-hai-iro-700: var(--color-hai-iro-700);
+  --primitive-color-hai-iro-800: var(--color-hai-iro-800);
+  --primitive-color-hai-iro-900: var(--color-hai-iro-900);
+  --primitive-color-asagi-50: var(--color-asagi-50);
+  --primitive-color-asagi-100: var(--color-asagi-100);
+  --primitive-color-asagi-200: var(--color-asagi-200);
+  --primitive-color-asagi-300: var(--color-asagi-300);
+  --primitive-color-asagi-400: var(--color-asagi-400);
+  --primitive-color-asagi-500: var(--color-asagi-500);
+  --primitive-color-asagi-600: var(--color-asagi-600);
+  --primitive-color-asagi-700: var(--color-asagi-700);
+  --primitive-color-asagi-800: var(--color-asagi-800);
+  --primitive-color-asagi-900: var(--color-asagi-900);
+  --primitive-color-neutral-50: var(--color-neutral-50);
+  --primitive-color-neutral-100: var(--color-neutral-100);
+  --primitive-color-neutral-200: var(--color-neutral-200);
+  --primitive-color-neutral-300: var(--color-neutral-300);
+  --primitive-color-neutral-400: var(--color-neutral-400);
+  --primitive-color-neutral-500: var(--color-neutral-500);
+  --primitive-color-neutral-600: var(--color-neutral-600);
+  --primitive-color-neutral-700: var(--color-neutral-700);
+  --primitive-color-neutral-800: var(--color-neutral-800);
+  --primitive-color-neutral-900: var(--color-neutral-900);
+  --primitive-color-accent-50: var(--color-accent-50);
+  --primitive-color-accent-100: var(--color-accent-100);
+  --primitive-color-accent-200: var(--color-accent-200);
+  --primitive-color-accent-300: var(--color-accent-300);
+  --primitive-color-accent-400: var(--color-accent-400);
+  --primitive-color-accent-500: var(--color-accent-500);
+  --primitive-color-accent-600: var(--color-accent-600);
+  --primitive-color-accent-700: var(--color-accent-700);
+  --primitive-color-accent-800: var(--color-accent-800);
+  --primitive-color-accent-900: var(--color-accent-900);
+
+  /* Semantic tokens */
+  /* Page background */
+  --background-canvas: var(--primitive-color-neutral-50);
+  /* Card/surface background */
+  --background-surface: #FFFFFF;
+  /* Muted background */
+  --background-muted: var(--primitive-color-neutral-100);
+  /* Primary text */
+  --text-primary: var(--primitive-color-neutral-900);
+  /* Secondary text */
+  --text-secondary: var(--primitive-color-neutral-600);
+  /* Muted/disabled text */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on dark backgrounds */
+  --text-inverse: var(--primitive-color-neutral-50);
+  /* Primary interactive (buttons, links) */
+  --interactive-primary: var(--primitive-color-sumi-iro-500);
+  /* Primary interactive hover */
+  --interactive-primary-hover: var(--primitive-color-sumi-iro-600);
+  /* Primary interactive active */
+  --interactive-primary-active: var(--primitive-color-sumi-iro-700);
+  /* Default border */
+  --border-default: var(--primitive-color-neutral-200);
+  /* Strong border */
+  --border-strong: var(--primitive-color-neutral-400);
+  /* Error — WCAG-compliant red */
+  --status-error: #DC2626;
+  /* Success — WCAG-compliant green */
+  --status-success: #16A34A;
+  /* Warning — WCAG AA amber (4.5:1+ on white) */
+  --status-warning: #A16207;
+  /* Info status */
+  --status-info: var(--primitive-color-sumi-iro-500);
+  /* Focus ring color */
+  --focus-ring: var(--primitive-color-sumi-iro-500);
+  /* Keyboard focus indicator */
+  --accessibility-focus-visible: var(--primitive-color-sumi-iro-500);
+}
+
+/* Dark mode semantic tokens */
+[data-theme="dark"] {
+  /* Page background — dark */
+  --background-canvas: var(--primitive-color-neutral-900);
+  /* Card/surface — dark */
+  --background-surface: var(--primitive-color-neutral-800);
+  /* Muted background — dark */
+  --background-muted: var(--primitive-color-neutral-700);
+  /* Primary text — dark */
+  --text-primary: var(--primitive-color-neutral-50);
+  /* Secondary text — dark */
+  --text-secondary: var(--primitive-color-neutral-300);
+  /* Muted text — dark */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on light backgrounds — dark */
+  --text-inverse: var(--primitive-color-neutral-900);
+  /* Primary interactive — dark */
+  --interactive-primary: var(--primitive-color-asagi-400);
+  /* Primary hover — dark */
+  --interactive-primary-hover: var(--primitive-color-asagi-300);
+  /* Primary active — dark */
+  --interactive-primary-active: var(--primitive-color-asagi-200);
+  /* Default border — dark */
+  --border-default: var(--primitive-color-neutral-700);
+  /* Strong border — dark */
+  --border-strong: var(--primitive-color-neutral-500);
+  /* Error — WCAG-compliant red (dark) */
+  --status-error: #EF4444;
+  /* Success — WCAG-compliant green (dark) */
+  --status-success: #22C55E;
+  /* Warning — WCAG-compliant amber (dark) */
+  --status-warning: #EAB308;
+  /* Info — dark */
+  --status-info: var(--primitive-color-asagi-400);
+  /* Focus ring — dark */
+  --focus-ring: var(--primitive-color-asagi-400);
+  /* Keyboard focus — dark */
+  --accessibility-focus-visible: var(--primitive-color-asagi-400);
+}

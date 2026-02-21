@@ -1,0 +1,399 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Colors --- */
+  /* Oltremare (Ultramarine) 50 */
+  --color-oltremare-ultramarine-50: #EAF5FF;
+  /* Oltremare (Ultramarine) 100 */
+  --color-oltremare-ultramarine-100: #C2D2F8;
+  /* Oltremare (Ultramarine) 200 */
+  --color-oltremare-ultramarine-200: #9AAFE2;
+  /* Oltremare (Ultramarine) 300 */
+  --color-oltremare-ultramarine-300: #748DCC;
+  /* Oltremare (Ultramarine) 400 */
+  --color-oltremare-ultramarine-400: #506CB5;
+  /* Oltremare (Ultramarine) 500 */
+  --color-oltremare-ultramarine-500: #2F4A9E;
+  /* Oltremare (Ultramarine) 600 */
+  --color-oltremare-ultramarine-600: #1F357E;
+  /* Oltremare (Ultramarine) 700 */
+  --color-oltremare-ultramarine-700: #10215F;
+  /* Oltremare (Ultramarine) 800 */
+  --color-oltremare-ultramarine-800: #040D41;
+  /* Oltremare (Ultramarine) 900 */
+  --color-oltremare-ultramarine-900: #010026;
+  /* Terra di Siena (Sienna Earth) 50 */
+  --color-terra-di-siena-sienna-earth-50: #FFF0E6;
+  /* Terra di Siena (Sienna Earth) 100 */
+  --color-terra-di-siena-sienna-earth-100: #F3CFC0;
+  /* Terra di Siena (Sienna Earth) 200 */
+  --color-terra-di-siena-sienna-earth-200: #DFAF9A;
+  /* Terra di Siena (Sienna Earth) 300 */
+  --color-terra-di-siena-sienna-earth-300: #CB9076;
+  /* Terra di Siena (Sienna Earth) 400 */
+  --color-terra-di-siena-sienna-earth-400: #B67152;
+  /* Terra di Siena (Sienna Earth) 500 */
+  --color-terra-di-siena-sienna-earth-500: #A0522D;
+  /* Terra di Siena (Sienna Earth) 600 */
+  --color-terra-di-siena-sienna-earth-600: #7B3817;
+  /* Terra di Siena (Sienna Earth) 700 */
+  --color-terra-di-siena-sienna-earth-700: #582001;
+  /* Terra di Siena (Sienna Earth) 800 */
+  --color-terra-di-siena-sienna-earth-800: #370800;
+  /* Terra di Siena (Sienna Earth) 900 */
+  --color-terra-di-siena-sienna-earth-900: #180000;
+  /* Oro (Gold Leaf) 50 */
+  --color-oro-gold-leaf-50: #FDF5DE;
+  /* Oro (Gold Leaf) 100 */
+  --color-oro-gold-leaf-100: #EFE1BE;
+  /* Oro (Gold Leaf) 200 */
+  --color-oro-gold-leaf-200: #E1CE9D;
+  /* Oro (Gold Leaf) 300 */
+  --color-oro-gold-leaf-300: #D3BB7C;
+  /* Oro (Gold Leaf) 400 */
+  --color-oro-gold-leaf-400: #C6A859;
+  /* Oro (Gold Leaf) 500 */
+  --color-oro-gold-leaf-500: #B8952F;
+  /* Oro (Gold Leaf) 600 */
+  --color-oro-gold-leaf-600: #896B01;
+  /* Oro (Gold Leaf) 700 */
+  --color-oro-gold-leaf-700: #5D4400;
+  /* Oro (Gold Leaf) 800 */
+  --color-oro-gold-leaf-800: #352000;
+  /* Oro (Gold Leaf) 900 */
+  --color-oro-gold-leaf-900: #100300;
+  /* Verdaccio 50 */
+  --color-verdaccio-50: #F3F7EA;
+  /* Verdaccio 100 */
+  --color-verdaccio-100: #D3DAC5;
+  /* Verdaccio 200 */
+  --color-verdaccio-200: #B4BDA1;
+  /* Verdaccio 300 */
+  --color-verdaccio-300: #96A17E;
+  /* Verdaccio 400 */
+  --color-verdaccio-400: #7A865C;
+  /* Verdaccio 500 */
+  --color-verdaccio-500: #5E6B3A;
+  /* Verdaccio 600 */
+  --color-verdaccio-600: #444F25;
+  /* Verdaccio 700 */
+  --color-verdaccio-700: #2C3510;
+  /* Verdaccio 800 */
+  --color-verdaccio-800: #161D00;
+  /* Verdaccio 900 */
+  --color-verdaccio-900: #040700;
+  /* Pergamena (Parchment) 50 */
+  --color-pergamena-parchment-50: #F7F5F0;
+  /* Pergamena (Parchment) 100 */
+  --color-pergamena-parchment-100: #F6F2EB;
+  /* Pergamena (Parchment) 200 */
+  --color-pergamena-parchment-200: #F5F0E5;
+  /* Pergamena (Parchment) 300 */
+  --color-pergamena-parchment-300: #F4EDE0;
+  /* Pergamena (Parchment) 400 */
+  --color-pergamena-parchment-400: #F3EBDA;
+  /* Pergamena (Parchment) 500 */
+  --color-pergamena-parchment-500: #F2E8D5;
+  /* Pergamena (Parchment) 600 */
+  --color-pergamena-parchment-600: #AFA797;
+  /* Pergamena (Parchment) 700 */
+  --color-pergamena-parchment-700: #716A5D;
+  /* Pergamena (Parchment) 800 */
+  --color-pergamena-parchment-800: #383329;
+  /* Pergamena (Parchment) 900 */
+  --color-pergamena-parchment-900: #080502;
+  /* Ombra Naturale (Raw Umber) 50 */
+  --color-ombra-naturale-raw-umber-50: #FFF3E9;
+  /* Ombra Naturale (Raw Umber) 100 */
+  --color-ombra-naturale-raw-umber-100: #E0CDBF;
+  /* Ombra Naturale (Raw Umber) 200 */
+  --color-ombra-naturale-raw-umber-200: #C2A996;
+  /* Ombra Naturale (Raw Umber) 300 */
+  --color-ombra-naturale-raw-umber-300: #A5866F;
+  /* Ombra Naturale (Raw Umber) 400 */
+  --color-ombra-naturale-raw-umber-400: #876449;
+  /* Ombra Naturale (Raw Umber) 500 */
+  --color-ombra-naturale-raw-umber-500: #6B4423;
+  /* Ombra Naturale (Raw Umber) 600 */
+  --color-ombra-naturale-raw-umber-600: #523114;
+  /* Ombra Naturale (Raw Umber) 700 */
+  --color-ombra-naturale-raw-umber-700: #3B1F05;
+  /* Ombra Naturale (Raw Umber) 800 */
+  --color-ombra-naturale-raw-umber-800: #250E00;
+  /* Ombra Naturale (Raw Umber) 900 */
+  --color-ombra-naturale-raw-umber-900: #110200;
+  /* Neutral 50 */
+  --color-neutral-50: #F5F8FF;
+  /* Neutral 100 */
+  --color-neutral-100: #EBEEF6;
+  /* Neutral 200 */
+  --color-neutral-200: #DBDEE6;
+  /* Neutral 300 */
+  --color-neutral-300: #C1C4CC;
+  /* Neutral 400 */
+  --color-neutral-400: #95989F;
+  /* Neutral 500 */
+  --color-neutral-500: #6C6F75;
+  /* Neutral 600 */
+  --color-neutral-600: #4A4D53;
+  /* Neutral 700 */
+  --color-neutral-700: #303339;
+  /* Neutral 800 */
+  --color-neutral-800: #181B20;
+  /* Neutral 900 */
+  --color-neutral-900: #06070C;
+  /* Accent 50 */
+  --color-accent-50: #FFECEF;
+  /* Accent 100 */
+  --color-accent-100: #F8C6CC;
+  /* Accent 200 */
+  --color-accent-200: #E3A0A9;
+  /* Accent 300 */
+  --color-accent-300: #CD7C88;
+  /* Accent 400 */
+  --color-accent-400: #B55768;
+  /* Accent 500 */
+  --color-accent-500: #9D2F4A;
+  /* Accent 600 */
+  --color-accent-600: #7A1A34;
+  /* Accent 700 */
+  --color-accent-700: #590320;
+  /* Accent 800 */
+  --color-accent-800: #3A000D;
+  /* Accent 900 */
+  --color-accent-900: #1C0001;
+
+  /* --- Spacing (8px grid) --- */
+  /* Spacing 0 (0px) */
+  --spacing-0: 0px;
+  /* Spacing 1 (4px) */
+  --spacing-1: 4px;
+  /* Spacing 2 (8px) */
+  --spacing-2: 8px;
+  /* Spacing 3 (12px) */
+  --spacing-3: 12px;
+  /* Spacing 4 (16px) */
+  --spacing-4: 16px;
+  /* Spacing 5 (20px) */
+  --spacing-5: 20px;
+  /* Spacing 6 (24px) */
+  --spacing-6: 24px;
+  /* Spacing 8 (32px) */
+  --spacing-8: 32px;
+  /* Spacing 10 (40px) */
+  --spacing-10: 40px;
+  /* Spacing 12 (48px) */
+  --spacing-12: 48px;
+  /* Spacing 16 (64px) */
+  --spacing-16: 64px;
+  /* Spacing 20 (80px) */
+  --spacing-20: 80px;
+  /* Spacing 0.5 (2px) */
+  --spacing-0-5: 2px;
+  /* Spacing 1.5 (6px) */
+  --spacing-1-5: 6px;
+
+  /* --- Font Families --- */
+  /* Heading font family */
+  --font-heading: "Cormorant Garamond", "Didot", Georgia, serif;
+  /* Body font family */
+  --font-body: "Source Serif 4", Georgia, serif;
+  /* Monospace font family */
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Font Sizes --- */
+  /* Font size xs */
+  --text-xs: 0.75rem;
+  /* Font size sm */
+  --text-sm: 0.875rem;
+  /* Font size base */
+  --text-base: 1rem;
+  /* Font size lg */
+  --text-lg: 1.125rem;
+  /* Font size xl */
+  --text-xl: 1.25rem;
+  /* Font size 2xl */
+  --text-2xl: 1.5rem;
+  /* Font size 3xl */
+  --text-3xl: 1.875rem;
+  /* Font size 4xl */
+  --text-4xl: 2.25rem;
+
+  /* --- Border Radius --- */
+  /* Border radius none */
+  --radius-none: 0px;
+  /* Border radius sm */
+  --radius-sm: 4px;
+  /* Border radius md */
+  --radius-md: 8px;
+  /* Border radius lg */
+  --radius-lg: 12px;
+  /* Border radius xl */
+  --radius-xl: 16px;
+  /* Border radius full */
+  --radius-full: 9999px;
+
+}
+
+/* Primitive aliases + light mode semantic tokens */
+:root {
+  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */
+  --primitive-color-oltremare-ultramarine-50: var(--color-oltremare-ultramarine-50);
+  --primitive-color-oltremare-ultramarine-100: var(--color-oltremare-ultramarine-100);
+  --primitive-color-oltremare-ultramarine-200: var(--color-oltremare-ultramarine-200);
+  --primitive-color-oltremare-ultramarine-300: var(--color-oltremare-ultramarine-300);
+  --primitive-color-oltremare-ultramarine-400: var(--color-oltremare-ultramarine-400);
+  --primitive-color-oltremare-ultramarine-500: var(--color-oltremare-ultramarine-500);
+  --primitive-color-oltremare-ultramarine-600: var(--color-oltremare-ultramarine-600);
+  --primitive-color-oltremare-ultramarine-700: var(--color-oltremare-ultramarine-700);
+  --primitive-color-oltremare-ultramarine-800: var(--color-oltremare-ultramarine-800);
+  --primitive-color-oltremare-ultramarine-900: var(--color-oltremare-ultramarine-900);
+  --primitive-color-terra-di-siena-sienna-earth-50: var(--color-terra-di-siena-sienna-earth-50);
+  --primitive-color-terra-di-siena-sienna-earth-100: var(--color-terra-di-siena-sienna-earth-100);
+  --primitive-color-terra-di-siena-sienna-earth-200: var(--color-terra-di-siena-sienna-earth-200);
+  --primitive-color-terra-di-siena-sienna-earth-300: var(--color-terra-di-siena-sienna-earth-300);
+  --primitive-color-terra-di-siena-sienna-earth-400: var(--color-terra-di-siena-sienna-earth-400);
+  --primitive-color-terra-di-siena-sienna-earth-500: var(--color-terra-di-siena-sienna-earth-500);
+  --primitive-color-terra-di-siena-sienna-earth-600: var(--color-terra-di-siena-sienna-earth-600);
+  --primitive-color-terra-di-siena-sienna-earth-700: var(--color-terra-di-siena-sienna-earth-700);
+  --primitive-color-terra-di-siena-sienna-earth-800: var(--color-terra-di-siena-sienna-earth-800);
+  --primitive-color-terra-di-siena-sienna-earth-900: var(--color-terra-di-siena-sienna-earth-900);
+  --primitive-color-oro-gold-leaf-50: var(--color-oro-gold-leaf-50);
+  --primitive-color-oro-gold-leaf-100: var(--color-oro-gold-leaf-100);
+  --primitive-color-oro-gold-leaf-200: var(--color-oro-gold-leaf-200);
+  --primitive-color-oro-gold-leaf-300: var(--color-oro-gold-leaf-300);
+  --primitive-color-oro-gold-leaf-400: var(--color-oro-gold-leaf-400);
+  --primitive-color-oro-gold-leaf-500: var(--color-oro-gold-leaf-500);
+  --primitive-color-oro-gold-leaf-600: var(--color-oro-gold-leaf-600);
+  --primitive-color-oro-gold-leaf-700: var(--color-oro-gold-leaf-700);
+  --primitive-color-oro-gold-leaf-800: var(--color-oro-gold-leaf-800);
+  --primitive-color-oro-gold-leaf-900: var(--color-oro-gold-leaf-900);
+  --primitive-color-verdaccio-50: var(--color-verdaccio-50);
+  --primitive-color-verdaccio-100: var(--color-verdaccio-100);
+  --primitive-color-verdaccio-200: var(--color-verdaccio-200);
+  --primitive-color-verdaccio-300: var(--color-verdaccio-300);
+  --primitive-color-verdaccio-400: var(--color-verdaccio-400);
+  --primitive-color-verdaccio-500: var(--color-verdaccio-500);
+  --primitive-color-verdaccio-600: var(--color-verdaccio-600);
+  --primitive-color-verdaccio-700: var(--color-verdaccio-700);
+  --primitive-color-verdaccio-800: var(--color-verdaccio-800);
+  --primitive-color-verdaccio-900: var(--color-verdaccio-900);
+  --primitive-color-pergamena-parchment-50: var(--color-pergamena-parchment-50);
+  --primitive-color-pergamena-parchment-100: var(--color-pergamena-parchment-100);
+  --primitive-color-pergamena-parchment-200: var(--color-pergamena-parchment-200);
+  --primitive-color-pergamena-parchment-300: var(--color-pergamena-parchment-300);
+  --primitive-color-pergamena-parchment-400: var(--color-pergamena-parchment-400);
+  --primitive-color-pergamena-parchment-500: var(--color-pergamena-parchment-500);
+  --primitive-color-pergamena-parchment-600: var(--color-pergamena-parchment-600);
+  --primitive-color-pergamena-parchment-700: var(--color-pergamena-parchment-700);
+  --primitive-color-pergamena-parchment-800: var(--color-pergamena-parchment-800);
+  --primitive-color-pergamena-parchment-900: var(--color-pergamena-parchment-900);
+  --primitive-color-ombra-naturale-raw-umber-50: var(--color-ombra-naturale-raw-umber-50);
+  --primitive-color-ombra-naturale-raw-umber-100: var(--color-ombra-naturale-raw-umber-100);
+  --primitive-color-ombra-naturale-raw-umber-200: var(--color-ombra-naturale-raw-umber-200);
+  --primitive-color-ombra-naturale-raw-umber-300: var(--color-ombra-naturale-raw-umber-300);
+  --primitive-color-ombra-naturale-raw-umber-400: var(--color-ombra-naturale-raw-umber-400);
+  --primitive-color-ombra-naturale-raw-umber-500: var(--color-ombra-naturale-raw-umber-500);
+  --primitive-color-ombra-naturale-raw-umber-600: var(--color-ombra-naturale-raw-umber-600);
+  --primitive-color-ombra-naturale-raw-umber-700: var(--color-ombra-naturale-raw-umber-700);
+  --primitive-color-ombra-naturale-raw-umber-800: var(--color-ombra-naturale-raw-umber-800);
+  --primitive-color-ombra-naturale-raw-umber-900: var(--color-ombra-naturale-raw-umber-900);
+  --primitive-color-neutral-50: var(--color-neutral-50);
+  --primitive-color-neutral-100: var(--color-neutral-100);
+  --primitive-color-neutral-200: var(--color-neutral-200);
+  --primitive-color-neutral-300: var(--color-neutral-300);
+  --primitive-color-neutral-400: var(--color-neutral-400);
+  --primitive-color-neutral-500: var(--color-neutral-500);
+  --primitive-color-neutral-600: var(--color-neutral-600);
+  --primitive-color-neutral-700: var(--color-neutral-700);
+  --primitive-color-neutral-800: var(--color-neutral-800);
+  --primitive-color-neutral-900: var(--color-neutral-900);
+  --primitive-color-accent-50: var(--color-accent-50);
+  --primitive-color-accent-100: var(--color-accent-100);
+  --primitive-color-accent-200: var(--color-accent-200);
+  --primitive-color-accent-300: var(--color-accent-300);
+  --primitive-color-accent-400: var(--color-accent-400);
+  --primitive-color-accent-500: var(--color-accent-500);
+  --primitive-color-accent-600: var(--color-accent-600);
+  --primitive-color-accent-700: var(--color-accent-700);
+  --primitive-color-accent-800: var(--color-accent-800);
+  --primitive-color-accent-900: var(--color-accent-900);
+
+  /* Semantic tokens */
+  /* Page background */
+  --background-canvas: var(--primitive-color-neutral-50);
+  /* Card/surface background */
+  --background-surface: #FFFFFF;
+  /* Muted background */
+  --background-muted: var(--primitive-color-neutral-100);
+  /* Primary text */
+  --text-primary: var(--primitive-color-neutral-900);
+  /* Secondary text */
+  --text-secondary: var(--primitive-color-neutral-600);
+  /* Muted/disabled text */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on dark backgrounds */
+  --text-inverse: var(--primitive-color-neutral-50);
+  /* Primary interactive (buttons, links) */
+  --interactive-primary: var(--primitive-color-oltremare-ultramarine-500);
+  /* Primary interactive hover */
+  --interactive-primary-hover: var(--primitive-color-oltremare-ultramarine-600);
+  /* Primary interactive active */
+  --interactive-primary-active: var(--primitive-color-oltremare-ultramarine-700);
+  /* Default border */
+  --border-default: var(--primitive-color-neutral-200);
+  /* Strong border */
+  --border-strong: var(--primitive-color-neutral-400);
+  /* Error — WCAG-compliant red */
+  --status-error: #DC2626;
+  /* Success — WCAG-compliant green */
+  --status-success: #16A34A;
+  /* Warning — WCAG AA amber (4.5:1+ on white) */
+  --status-warning: #A16207;
+  /* Info status */
+  --status-info: var(--primitive-color-oltremare-ultramarine-500);
+  /* Focus ring color */
+  --focus-ring: var(--primitive-color-oltremare-ultramarine-500);
+  /* Keyboard focus indicator */
+  --accessibility-focus-visible: var(--primitive-color-oltremare-ultramarine-500);
+}
+
+/* Dark mode semantic tokens */
+[data-theme="dark"] {
+  /* Page background — dark */
+  --background-canvas: var(--primitive-color-neutral-900);
+  /* Card/surface — dark */
+  --background-surface: var(--primitive-color-neutral-800);
+  /* Muted background — dark */
+  --background-muted: var(--primitive-color-neutral-700);
+  /* Primary text — dark */
+  --text-primary: var(--primitive-color-neutral-50);
+  /* Secondary text — dark */
+  --text-secondary: var(--primitive-color-neutral-300);
+  /* Muted text — dark */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on light backgrounds — dark */
+  --text-inverse: var(--primitive-color-neutral-900);
+  /* Primary interactive — dark */
+  --interactive-primary: var(--primitive-color-oltremare-ultramarine-400);
+  /* Primary hover — dark */
+  --interactive-primary-hover: var(--primitive-color-oltremare-ultramarine-300);
+  /* Primary active — dark */
+  --interactive-primary-active: var(--primitive-color-oltremare-ultramarine-200);
+  /* Default border — dark */
+  --border-default: var(--primitive-color-neutral-700);
+  /* Strong border — dark */
+  --border-strong: var(--primitive-color-neutral-500);
+  /* Error — WCAG-compliant red (dark) */
+  --status-error: #EF4444;
+  /* Success — WCAG-compliant green (dark) */
+  --status-success: #22C55E;
+  /* Warning — WCAG-compliant amber (dark) */
+  --status-warning: #EAB308;
+  /* Info — dark */
+  --status-info: var(--primitive-color-oltremare-ultramarine-400);
+  /* Focus ring — dark */
+  --focus-ring: var(--primitive-color-oltremare-ultramarine-400);
+  /* Keyboard focus — dark */
+  --accessibility-focus-visible: var(--primitive-color-oltremare-ultramarine-400);
+}

@@ -1,0 +1,52 @@
+{
+  "$name": "shuimo-modern",
+  "$description": "Shuǐmò Modern (水墨) — Chinese ink wash painting reimagined for digital interfaces, where emptiness speaks as loudly as mark-making",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "Shuǐmò (水墨, water-ink) painting distills landscape and emotion to pure tonality — ink diluted across paper, from jet black to pale wash. Originating in Tang Dynasty and perfected through Song and Yuan masters like Mi Fu and Ni Zan, it values the space between strokes. This modern interpretation preserves the tonal hierarchy while adding mineral pigment accents from traditional palette practice.",
+      "philosophy": "留白 (Liúbái) — the eloquence of empty space; what is left unpainted matters as much as what is painted",
+      "era": "Tang Dynasty (618 CE) through contemporary ink art",
+      "harmonyMode": "monochromatic",
+      "radiusTendency": "subtle",
+      "typographyCategory": "humanist-serif"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#151413",
+      "name": "Mò Shí (墨石)",
+      "tradition": "Ink stone — the She inkstone (歙砚) from Anhui, on which solid ink sticks are ground with water to create painting medium. Nearly black, with a warm undertone from soot and animal glue.",
+      "source": "The Art of Chinese Calligraphy, Jean Long"
+    },
+    {
+      "hex": "#F4EFE1",
+      "name": "Xuān Zhǐ (宣紙)",
+      "tradition": "Xuan paper ground — the warm, absorbent surface that receives ink wash. Its tone is alive, never sterile white.",
+      "source": "Paper and Printing (Science and Civilisation in China), Tsien Tsuen-Hsuin"
+    },
+    {
+      "hex": "#4A6FA5",
+      "name": "Qīng Huā (青花)",
+      "tradition": "Blue-and-white mineral cobalt from Song Dynasty ceramics. The only chromatic color regularly paired with ink wash in literati painting traditions.",
+      "source": "Chinese Ceramics: From the Paleolithic Period to the Qing Dynasty, Li Zhiyan"
+    },
+    {
+      "hex": "#B5473E",
+      "name": "Zhū Yìn (朱印)",
+      "tradition": "Cinnabar seal impression — the vermilion chop mark stamped on finished paintings, the artist's signature in red against ink monochrome.",
+      "source": "Artists' Seals in Chinese Painting, Wang Fangyu"
+    },
+    {
+      "hex": "#8B8680",
+      "name": "Yān Huī (烟灰)",
+      "tradition": "Smoke ash grey — the color of incense residue in a scholar's studio, where painting was a meditative practice.",
+      "source": "Elegant Gathering of the Chinese Literati, Li Chu-tsing"
+    },
+    {
+      "hex": "#5E8C6E",
+      "name": "Qīng Zhú (青竹)",
+      "tradition": "Bamboo green — the living frame around ink paintings. Bamboo was both subject and symbol: flexible, hollow, upright. One of the Four Gentlemen (四君子).",
+      "source": "The Mustard Seed Garden Manual of Painting, Wang Gai"
+    }
+  ]
+}
