@@ -33,15 +33,18 @@ export {
 export {
   PROTECTED_TOKEN_PATHS,
   REQUIRED_SEMANTIC_TOKENS,
+  CONTRAST_PAIRS,
   PERF_BUDGETS,
 } from './constants';
+export type { ContrastPair } from './constants';
 
 // Validation
-export type { ValidationResult, ValidationError, ValidationWarning } from './validation';
+export type { ValidationResult, ValidationError, ValidationWarning, ContrastAuditResult, ContrastPairResult } from './validation';
 export {
   validateSchema,
   validateCompleteness,
   validateContrast,
+  validateThemeContrast,
   validateOverride,
   validateReferences,
 } from './validation';

@@ -6,7 +6,7 @@
 
 import type { DTCGRoot, DTCGTokenGroup, CulturalFoundation, SeedColor, FoundationMeta } from '@syncupsuite/tokens';
 import { slugify } from '@syncupsuite/tokens';
-import { generateLightnessScale, generateNeutrals, getHue } from './color';
+import { hexToOklch, generateLightnessScale, generateNeutrals, getHue } from './color';
 import { generateHarmonyAccents } from './harmony';
 import { getFontStacks, hueToTypographyCategory, TYPE_SCALE, WEIGHT_SCALE, LINE_HEIGHT_SCALE } from './typography';
 
@@ -208,9 +208,42 @@ function buildRadiusPrimitives(tendency: CulturalFoundation['radiusTendency']): 
   ) as DTCGTokenGroup;
 }
 
+/**
+ * Select the best seed for dark-mode interactive colors.
+ *
+ * When the primary seed is very dark (OKLCH L < 0.2), its lightness scale
+ * produces steps that lack contrast on dark backgrounds. In that case,
+ * pick the most chromatic seed in a usable lightness range.
+ *
+ * For Swiss: Schwarz (L≈0.06) → falls through to Rot (highest chroma, L≈0.61).
+ */
+function selectDarkInteractiveId(seeds: SeedColor[], primaryId: string): string {
+  const primaryOklch = hexToOklch(seeds[0].hex);
+
+  // If the primary is light enough, keep it for dark mode too
+  if (primaryOklch.l >= 0.2) return primaryId;
+
+  // Find the most chromatic seed in a usable lightness range
+  let bestSeed: SeedColor | null = null;
+  let bestChroma = -1;
+  for (const seed of seeds) {
+    const oklch = hexToOklch(seed.hex);
+    // Usable range: not too dark to fail on dark backgrounds, not too light to look washed
+    if (oklch.l > 0.2 && oklch.l < 0.85 && oklch.c > bestChroma) {
+      bestChroma = oklch.c;
+      bestSeed = seed;
+    }
+  }
+
+  return bestSeed ? slugify(bestSeed.name) : primaryId;
+}
+
 function buildSemanticTokens(seeds: SeedColor[]): { light: DTCGTokenGroup; dark: DTCGTokenGroup } {
   // Derive key color references from first seed
   const primaryId = slugify(seeds[0].name);
+
+  // Pick a suitable color for dark-mode interactive (may differ from primary for very dark seeds)
+  const darkInteractiveId = selectDarkInteractiveId(seeds, primaryId);
 
   // Find a warm/red seed for error, or fallback
   const errorSeed = seeds.find((s) => {
@@ -246,7 +279,7 @@ function buildSemanticTokens(seeds: SeedColor[]): { light: DTCGTokenGroup; dark:
       status: {
         error: { $type: 'color', $value: '#DC2626', $description: 'Error — WCAG-compliant red' },
         success: { $type: 'color', $value: '#16A34A', $description: 'Success — WCAG-compliant green' },
-        warning: { $type: 'color', $value: '#CA8A04', $description: 'Warning — WCAG-compliant amber' },
+        warning: { $type: 'color', $value: '#A16207', $description: 'Warning — WCAG AA amber (4.5:1+ on white)' },
         info: { $type: 'color', $value: `{primitive.color.${primaryId}.500}`, $description: 'Info status' },
       } as DTCGTokenGroup,
       focus: {
@@ -269,9 +302,9 @@ function buildSemanticTokens(seeds: SeedColor[]): { light: DTCGTokenGroup; dark:
         inverse: { $type: 'color', $value: '{primitive.color.neutral.900}', $description: 'Text on light backgrounds — dark' },
       } as DTCGTokenGroup,
       interactive: {
-        primary: { $type: 'color', $value: `{primitive.color.${primaryId}.400}`, $description: 'Primary interactive — dark' },
-        'primary-hover': { $type: 'color', $value: `{primitive.color.${primaryId}.300}`, $description: 'Primary hover — dark' },
-        'primary-active': { $type: 'color', $value: `{primitive.color.${primaryId}.200}`, $description: 'Primary active — dark' },
+        primary: { $type: 'color', $value: `{primitive.color.${darkInteractiveId}.400}`, $description: 'Primary interactive — dark' },
+        'primary-hover': { $type: 'color', $value: `{primitive.color.${darkInteractiveId}.300}`, $description: 'Primary hover — dark' },
+        'primary-active': { $type: 'color', $value: `{primitive.color.${darkInteractiveId}.200}`, $description: 'Primary active — dark' },
       } as DTCGTokenGroup,
       border: {
         default: { $type: 'color', $value: '{primitive.color.neutral.700}', $description: 'Default border — dark' },
@@ -281,13 +314,13 @@ function buildSemanticTokens(seeds: SeedColor[]): { light: DTCGTokenGroup; dark:
         error: { $type: 'color', $value: '#EF4444', $description: 'Error — WCAG-compliant red (dark)' },
         success: { $type: 'color', $value: '#22C55E', $description: 'Success — WCAG-compliant green (dark)' },
         warning: { $type: 'color', $value: '#EAB308', $description: 'Warning — WCAG-compliant amber (dark)' },
-        info: { $type: 'color', $value: `{primitive.color.${primaryId}.400}`, $description: 'Info — dark' },
+        info: { $type: 'color', $value: `{primitive.color.${darkInteractiveId}.400}`, $description: 'Info — dark' },
       } as DTCGTokenGroup,
       focus: {
-        ring: { $type: 'color', $value: `{primitive.color.${primaryId}.400}`, $description: 'Focus ring — dark' },
+        ring: { $type: 'color', $value: `{primitive.color.${darkInteractiveId}.400}`, $description: 'Focus ring — dark' },
       } as DTCGTokenGroup,
       accessibility: {
-        'focus-visible': { $type: 'color', $value: `{primitive.color.${primaryId}.400}`, $description: 'Keyboard focus — dark' },
+        'focus-visible': { $type: 'color', $value: `{primitive.color.${darkInteractiveId}.400}`, $description: 'Keyboard focus — dark' },
       } as DTCGTokenGroup,
     },
   };

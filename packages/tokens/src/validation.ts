@@ -1,6 +1,6 @@
 import type { DTCGToken } from './types';
-import { walkTokens, resolvePath } from './utilities';
-import { PROTECTED_TOKEN_PATHS, REQUIRED_SEMANTIC_TOKENS } from './constants';
+import { walkTokens, resolvePath, isToken } from './utilities';
+import { PROTECTED_TOKEN_PATHS, REQUIRED_SEMANTIC_TOKENS, CONTRAST_PAIRS } from './constants';
 
 export interface ValidationResult {
   valid: boolean;
@@ -118,6 +118,98 @@ export function validateReferences(tokens: Record<string, unknown>): ValidationR
   });
 
   return { valid: errors.length === 0, errors, warnings: [] };
+}
+
+// --- Theme-level contrast audit ---
+
+export interface ContrastPairResult {
+  label: string;
+  fg: string;
+  bg: string;
+  fgHex: string;
+  bgHex: string;
+  ratio: number;
+  required: number;
+  passes: boolean;
+}
+
+export interface ContrastAuditResult {
+  passes: boolean;
+  pairs: ContrastPairResult[];
+  failures: ContrastPairResult[];
+}
+
+/**
+ * Resolve a DTCG token value to a concrete hex color.
+ * Handles both direct hex values (#FFFFFF) and references ({primitive.color.neutral.900}).
+ * References are resolved recursively in case of chained references.
+ */
+function resolveTokenHex(tokens: Record<string, unknown>, tokenPath: string, depth = 0): string | null {
+  if (depth > 10) return null; // prevent infinite reference loops
+
+  const node = resolvePath(tokens, tokenPath);
+  if (!node || typeof node !== 'object') return null;
+
+  const token = node as Record<string, unknown>;
+  const value = token.$value;
+  if (typeof value !== 'string') return null;
+
+  // Direct hex value
+  if (value.startsWith('#')) return value;
+
+  // DTCG reference: {path.to.token}
+  const refMatch = value.match(/^\{([^}]+)\}$/);
+  if (refMatch) {
+    return resolveTokenHex(tokens, refMatch[1], depth + 1);
+  }
+
+  return null;
+}
+
+/**
+ * Audit an entire token tree for WCAG contrast compliance.
+ *
+ * Checks all critical semantic foreground/background pairs defined in CONTRAST_PAIRS.
+ * Resolves DTCG {reference} values to concrete hex colors before computing contrast.
+ *
+ * Returns `passes: true` only if every pair meets its required minimum ratio.
+ */
+export function validateThemeContrast(tokens: Record<string, unknown>): ContrastAuditResult {
+  const pairs: ContrastPairResult[] = [];
+
+  for (const pair of CONTRAST_PAIRS) {
+    const fgHex = resolveTokenHex(tokens, pair.fg);
+    const bgHex = resolveTokenHex(tokens, pair.bg);
+
+    if (!fgHex || !bgHex) {
+      // Token not resolvable — skip (completeness validation catches missing tokens)
+      continue;
+    }
+
+    const fgLum = relativeLuminance(hexToRgb(fgHex));
+    const bgLum = relativeLuminance(hexToRgb(bgHex));
+    const ratio = Math.round(contrastRatio(fgLum, bgLum) * 100) / 100;
+    const passes = ratio >= pair.minRatio;
+
+    pairs.push({
+      label: pair.label,
+      fg: pair.fg,
+      bg: pair.bg,
+      fgHex,
+      bgHex,
+      ratio,
+      required: pair.minRatio,
+      passes,
+    });
+  }
+
+  const failures = pairs.filter((p) => !p.passes);
+
+  return {
+    passes: failures.length === 0,
+    pairs,
+    failures,
+  };
 }
 
 // --- Color math helpers ---

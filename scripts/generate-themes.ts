@@ -16,7 +16,7 @@ import { gzipSync } from 'node:zlib';
 import { buildFoundation } from '@syncupsuite/foundations';
 import type { FoundationData } from '@syncupsuite/foundations';
 import { transformToTailwindV4, transformToCSS } from '@syncupsuite/transformers';
-import { validateSchema, validateCompleteness, PERF_BUDGETS } from '@syncupsuite/tokens';
+import { validateSchema, validateCompleteness, validateThemeContrast, PERF_BUDGETS } from '@syncupsuite/tokens';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -80,10 +80,11 @@ for (const file of foundationFiles) {
   // Validate
   const schemaResult = validateSchema(tokens as Record<string, unknown>);
   const completenessResult = validateCompleteness(tokens as Record<string, unknown>);
+  const contrastResult = validateThemeContrast(tokens as Record<string, unknown>);
 
   meta.validation = {
     schema: schemaResult.valid,
-    contrast: null, // not yet computed — see ADR-005
+    contrast: contrastResult.passes,
     completeness: completenessResult.valid,
   };
 
@@ -94,6 +95,13 @@ for (const file of foundationFiles) {
   if (!completenessResult.valid) {
     console.error(`  Completeness errors:`, completenessResult.errors);
     hasErrors = true;
+  }
+  if (!contrastResult.passes) {
+    console.error(`  Contrast failures (${contrastResult.failures.length}):`);
+    for (const f of contrastResult.failures) {
+      console.error(`    ${f.label}: ${f.fgHex} on ${f.bgHex} = ${f.ratio}:1 (need ${f.required}:1)`);
+    }
+    // Contrast failures are warnings, not blockers — themes still generate but meta shows false
   }
 
   // Generate CSS outputs
@@ -157,6 +165,7 @@ for (const file of foundationFiles) {
   console.log(`  tailwind.css: ${tailwindCss.length} bytes`);
   console.log(`  properties: ${propertyCount} (budget: ${PERF_BUDGETS.maxProperties})`);
   console.log(`  schema: ${schemaResult.valid ? 'PASS' : 'FAIL'}`);
+  console.log(`  contrast: ${contrastResult.passes ? 'PASS' : 'FAIL'} (${contrastResult.pairs.length} pairs, ${contrastResult.failures.length} failures)`);
   console.log(`  completeness: ${completenessResult.valid ? 'PASS' : 'FAIL'}`);
 }
 

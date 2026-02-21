@@ -4,165 +4,165 @@
 :root {
   /* --- Primitive Colors --- */
   /* Schwarz 50 */
-  --primitive-color-schwarz-50: #F2F2F2;
+  --primitive-color-schwarz-50: #F5F5F5;
   /* Schwarz 100 */
-  --primitive-color-schwarz-100: #E6E6E6;
+  --primitive-color-schwarz-100: #C1C1C1;
   /* Schwarz 200 */
-  --primitive-color-schwarz-200: #CCCCCC;
+  --primitive-color-schwarz-200: #909090;
   /* Schwarz 300 */
-  --primitive-color-schwarz-300: #B3B3B3;
+  --primitive-color-schwarz-300: #626262;
   /* Schwarz 400 */
-  --primitive-color-schwarz-400: #999999;
+  --primitive-color-schwarz-400: #373737;
   /* Schwarz 500 */
-  --primitive-color-schwarz-500: #121212;
+  --primitive-color-schwarz-500: #111111;
   /* Schwarz 600 */
-  --primitive-color-schwarz-600: #262626;
+  --primitive-color-schwarz-600: #0E0E0E;
   /* Schwarz 700 */
-  --primitive-color-schwarz-700: #1A1A1A;
+  --primitive-color-schwarz-700: #0B0B0B;
   /* Schwarz 800 */
-  --primitive-color-schwarz-800: #121212;
+  --primitive-color-schwarz-800: #080808;
   /* Schwarz 900 */
-  --primitive-color-schwarz-900: #0A0A0A;
+  --primitive-color-schwarz-900: #060606;
   /* Weiss 50 */
-  --primitive-color-weiss-50: #F2F2F2;
+  --primitive-color-weiss-50: #F5F5F5;
   /* Weiss 100 */
-  --primitive-color-weiss-100: #E6E6E6;
+  --primitive-color-weiss-100: #F6F6F6;
   /* Weiss 200 */
-  --primitive-color-weiss-200: #CCCCCC;
+  --primitive-color-weiss-200: #F7F7F7;
   /* Weiss 300 */
-  --primitive-color-weiss-300: #B3B3B3;
+  --primitive-color-weiss-300: #F8F8F8;
   /* Weiss 400 */
-  --primitive-color-weiss-400: #999999;
+  --primitive-color-weiss-400: #F9F9F9;
   /* Weiss 500 */
   --primitive-color-weiss-500: #FAFAFA;
   /* Weiss 600 */
-  --primitive-color-weiss-600: #E6E6E6;
+  --primitive-color-weiss-600: #B4B4B4;
   /* Weiss 700 */
-  --primitive-color-weiss-700: #CCCCCC;
+  --primitive-color-weiss-700: #727272;
   /* Weiss 800 */
-  --primitive-color-weiss-800: #B3B3B3;
+  --primitive-color-weiss-800: #373737;
   /* Weiss 900 */
-  --primitive-color-weiss-900: #999999;
+  --primitive-color-weiss-900: #060606;
   /* Rot (Signal Red) 50 */
-  --primitive-color-rot-signal-red-50: #F5EFEF;
+  --primitive-color-rot-signal-red-50: #FFE8E1;
   /* Rot (Signal Red) 100 */
-  --primitive-color-rot-signal-red-100: #ECE0DF;
+  --primitive-color-rot-signal-red-100: #FFC8BE;
   /* Rot (Signal Red) 200 */
-  --primitive-color-rot-signal-red-200: #F5A5A3;
+  --primitive-color-rot-signal-red-200: #FFA79B;
   /* Rot (Signal Red) 300 */
-  --primitive-color-rot-signal-red-300: #F07775;
+  --primitive-color-rot-signal-red-300: #FF8578;
   /* Rot (Signal Red) 400 */
-  --primitive-color-rot-signal-red-400: #EB4A47;
+  --primitive-color-rot-signal-red-400: #F56055;
   /* Rot (Signal Red) 500 */
-  --primitive-color-rot-signal-red-500: #E83430;
+  --primitive-color-rot-signal-red-500: #E8322E;
   /* Rot (Signal Red) 600 */
-  --primitive-color-rot-signal-red-600: #D81B18;
+  --primitive-color-rot-signal-red-600: #B40510;
   /* Rot (Signal Red) 700 */
-  --primitive-color-rot-signal-red-700: #AA1513;
+  --primitive-color-rot-signal-red-700: #820000;
   /* Rot (Signal Red) 800 */
-  --primitive-color-rot-signal-red-800: #7C100E;
+  --primitive-color-rot-signal-red-800: #530000;
   /* Rot (Signal Red) 900 */
-  --primitive-color-rot-signal-red-900: #4E0A09;
+  --primitive-color-rot-signal-red-900: #260000;
   /* Mittelgrau 50 */
-  --primitive-color-mittelgrau-50: #F2F2F2;
+  --primitive-color-mittelgrau-50: #F5F5F5;
   /* Mittelgrau 100 */
-  --primitive-color-mittelgrau-100: #E6E6E6;
+  --primitive-color-mittelgrau-100: #D8D8D8;
   /* Mittelgrau 200 */
-  --primitive-color-mittelgrau-200: #CCCCCC;
+  --primitive-color-mittelgrau-200: #BDBDBD;
   /* Mittelgrau 300 */
-  --primitive-color-mittelgrau-300: #B3B3B3;
+  --primitive-color-mittelgrau-300: #A2A2A2;
   /* Mittelgrau 400 */
-  --primitive-color-mittelgrau-400: #999999;
+  --primitive-color-mittelgrau-400: #878787;
   /* Mittelgrau 500 */
   --primitive-color-mittelgrau-500: #6E6E6E;
   /* Mittelgrau 600 */
-  --primitive-color-mittelgrau-600: #595959;
+  --primitive-color-mittelgrau-600: #515151;
   /* Mittelgrau 700 */
-  --primitive-color-mittelgrau-700: #404040;
+  --primitive-color-mittelgrau-700: #353535;
   /* Mittelgrau 800 */
-  --primitive-color-mittelgrau-800: #262626;
+  --primitive-color-mittelgrau-800: #1C1C1C;
   /* Mittelgrau 900 */
-  --primitive-color-mittelgrau-900: #0D0D0D;
+  --primitive-color-mittelgrau-900: #060606;
   /* Hellgrau 50 */
-  --primitive-color-hellgrau-50: #F2F2F2;
+  --primitive-color-hellgrau-50: #F5F5F5;
   /* Hellgrau 100 */
-  --primitive-color-hellgrau-100: #E6E6E6;
+  --primitive-color-hellgrau-100: #EEEEEE;
   /* Hellgrau 200 */
-  --primitive-color-hellgrau-200: #CCCCCC;
+  --primitive-color-hellgrau-200: #E8E8E8;
   /* Hellgrau 300 */
-  --primitive-color-hellgrau-300: #B3B3B3;
+  --primitive-color-hellgrau-300: #E1E1E1;
   /* Hellgrau 400 */
-  --primitive-color-hellgrau-400: #999999;
+  --primitive-color-hellgrau-400: #DBDBDB;
   /* Hellgrau 500 */
   --primitive-color-hellgrau-500: #D4D4D4;
   /* Hellgrau 600 */
-  --primitive-color-hellgrau-600: #BFBFBF;
+  --primitive-color-hellgrau-600: #999999;
   /* Hellgrau 700 */
-  --primitive-color-hellgrau-700: #A6A6A6;
+  --primitive-color-hellgrau-700: #626262;
   /* Hellgrau 800 */
-  --primitive-color-hellgrau-800: #8C8C8C;
+  --primitive-color-hellgrau-800: #303030;
   /* Hellgrau 900 */
-  --primitive-color-hellgrau-900: #737373;
+  --primitive-color-hellgrau-900: #060606;
   /* Dunkelblau 50 */
-  --primitive-color-dunkelblau-50: #F0F2F4;
+  --primitive-color-dunkelblau-50: #EDF6FF;
   /* Dunkelblau 100 */
-  --primitive-color-dunkelblau-100: #E1E5EA;
+  --primitive-color-dunkelblau-100: #BFCEDE;
   /* Dunkelblau 200 */
-  --primitive-color-dunkelblau-200: #AFCBE9;
+  --primitive-color-dunkelblau-200: #93A6BD;
   /* Dunkelblau 300 */
-  --primitive-color-dunkelblau-300: #88B1DD;
+  --primitive-color-dunkelblau-300: #69819C;
   /* Dunkelblau 400 */
-  --primitive-color-dunkelblau-400: #6097D2;
+  --primitive-color-dunkelblau-400: #415C7B;
   /* Dunkelblau 500 */
-  --primitive-color-dunkelblau-500: #1A3A5B;
+  --primitive-color-dunkelblau-500: #1A3A5C;
   /* Dunkelblau 600 */
-  --primitive-color-dunkelblau-600: #11263C;
+  --primitive-color-dunkelblau-600: #0F2C49;
   /* Dunkelblau 700 */
-  --primitive-color-dunkelblau-700: #111922;
+  --primitive-color-dunkelblau-700: #061E37;
   /* Dunkelblau 800 */
-  --primitive-color-dunkelblau-800: #0C1218;
+  --primitive-color-dunkelblau-800: #011125;
   /* Dunkelblau 900 */
-  --primitive-color-dunkelblau-900: #070A0E;
+  --primitive-color-dunkelblau-900: #000615;
   /* Neutral 50 */
-  --primitive-color-neutral-50: #F8F7F7;
+  --primitive-color-neutral-50: #FBF8F1;
   /* Neutral 100 */
-  --primitive-color-neutral-100: #F0EFEF;
+  --primitive-color-neutral-100: #F1EEE7;
   /* Neutral 200 */
-  --primitive-color-neutral-200: #E1DFDF;
+  --primitive-color-neutral-200: #E0DED7;
   /* Neutral 300 */
-  --primitive-color-neutral-300: #C9C5C5;
+  --primitive-color-neutral-300: #C6C4BD;
   /* Neutral 400 */
-  --primitive-color-neutral-400: #A19B9B;
+  --primitive-color-neutral-400: #9B9891;
   /* Neutral 500 */
-  --primitive-color-neutral-500: #797272;
+  --primitive-color-neutral-500: #716E68;
   /* Neutral 600 */
-  --primitive-color-neutral-600: #5F5959;
+  --primitive-color-neutral-600: #4F4D47;
   /* Neutral 700 */
-  --primitive-color-neutral-700: #444040;
+  --primitive-color-neutral-700: #35332D;
   /* Neutral 800 */
-  --primitive-color-neutral-800: #2A2828;
+  --primitive-color-neutral-800: #1C1A15;
   /* Neutral 900 */
-  --primitive-color-neutral-900: #151414;
+  --primitive-color-neutral-900: #090704;
   /* Accent 50 */
-  --primitive-color-accent-50: #F3F2F2;
+  --primitive-color-accent-50: #FAF3F3;
   /* Accent 100 */
-  --primitive-color-accent-100: #E7E4E4;
+  --primitive-color-accent-100: #D5CBCB;
   /* Accent 200 */
-  --primitive-color-accent-200: #D4C4C4;
+  --primitive-color-accent-200: #B1A4A4;
   /* Accent 300 */
-  --primitive-color-accent-300: #BEA7A7;
+  --primitive-color-accent-300: #8F7F7F;
   /* Accent 400 */
-  --primitive-color-accent-400: #A88A8A;
+  --primitive-color-accent-400: #6E5B5B;
   /* Accent 500 */
-  --primitive-color-accent-500: #4F3B3B;
+  --primitive-color-accent-500: #4E3A3A;
   /* Accent 600 */
-  --primitive-color-accent-600: #382929;
+  --primitive-color-accent-600: #3C2B2B;
   /* Accent 700 */
-  --primitive-color-accent-700: #1C1717;
+  --primitive-color-accent-700: #2B1C1C;
   /* Accent 800 */
-  --primitive-color-accent-800: #131010;
+  --primitive-color-accent-800: #1A0F0F;
   /* Accent 900 */
-  --primitive-color-accent-900: #0B0909;
+  --primitive-color-accent-900: #0B0404;
 
   /* --- Typography --- */
   /* Heading font family */
@@ -275,8 +275,8 @@
   --status-error: #DC2626;
   /* Success — WCAG-compliant green */
   --status-success: #16A34A;
-  /* Warning — WCAG-compliant amber */
-  --status-warning: #CA8A04;
+  /* Warning — WCAG AA amber (4.5:1+ on white) */
+  --status-warning: #A16207;
   /* Info status */
   --status-info: var(--primitive-color-schwarz-500);
   /* Focus ring color */
@@ -301,11 +301,11 @@
   /* Text on light backgrounds — dark */
   --text-inverse: var(--primitive-color-neutral-900);
   /* Primary interactive — dark */
-  --interactive-primary: var(--primitive-color-schwarz-400);
+  --interactive-primary: var(--primitive-color-rot-signal-red-400);
   /* Primary hover — dark */
-  --interactive-primary-hover: var(--primitive-color-schwarz-300);
+  --interactive-primary-hover: var(--primitive-color-rot-signal-red-300);
   /* Primary active — dark */
-  --interactive-primary-active: var(--primitive-color-schwarz-200);
+  --interactive-primary-active: var(--primitive-color-rot-signal-red-200);
   /* Default border — dark */
   --border-default: var(--primitive-color-neutral-700);
   /* Strong border — dark */
@@ -317,9 +317,9 @@
   /* Warning — WCAG-compliant amber (dark) */
   --status-warning: #EAB308;
   /* Info — dark */
-  --status-info: var(--primitive-color-schwarz-400);
+  --status-info: var(--primitive-color-rot-signal-red-400);
   /* Focus ring — dark */
-  --focus-ring: var(--primitive-color-schwarz-400);
+  --focus-ring: var(--primitive-color-rot-signal-red-400);
   /* Keyboard focus — dark */
-  --accessibility-focus-visible: var(--primitive-color-schwarz-400);
+  --accessibility-focus-visible: var(--primitive-color-rot-signal-red-400);
 }

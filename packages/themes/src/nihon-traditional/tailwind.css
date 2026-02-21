@@ -3,185 +3,185 @@
 @theme {
   /* --- Colors --- */
   /* Hanada (縹) 50 */
-  --color-hanada-50: #F1F2F4;
+  --color-hanada-50: #EDF6FF;
   /* Hanada (縹) 100 */
-  --color-hanada-100: #E2E5E9;
+  --color-hanada-100: #C4D2E2;
   /* Hanada (縹) 200 */
-  --color-hanada-200: #B7CBE1;
+  --color-hanada-200: #9CAEC4;
   /* Hanada (縹) 300 */
-  --color-hanada-300: #93B0D2;
+  --color-hanada-300: #768CA6;
   /* Hanada (縹) 400 */
-  --color-hanada-400: #6F96C3;
+  --color-hanada-400: #516B89;
   /* Hanada (縹) 500 */
-  --color-hanada-500: #2D4A6C;
+  --color-hanada-500: #2E4B6D;
   /* Hanada (縹) 600 */
-  --color-hanada-600: #21374F;
+  --color-hanada-600: #1F3855;
   /* Hanada (縹) 700 */
-  --color-hanada-700: #171E26;
+  --color-hanada-700: #10263E;
   /* Hanada (縹) 800 */
-  --color-hanada-800: #0D1216;
+  --color-hanada-800: #041429;
   /* Hanada (縹) 900 */
-  --color-hanada-900: #080A0D;
+  --color-hanada-900: #000614;
   /* Sakura-nezumi (桜鼠) 50 */
-  --color-sakura-nezumi-50: #F3F2F2;
+  --color-sakura-nezumi-50: #F8F4F3;
   /* Sakura-nezumi (桜鼠) 100 */
-  --color-sakura-nezumi-100: #E7E5E4;
+  --color-sakura-nezumi-100: #EBE3E2;
   /* Sakura-nezumi (桜鼠) 200 */
-  --color-sakura-nezumi-200: #D2C8C6;
+  --color-sakura-nezumi-200: #DDD3D1;
   /* Sakura-nezumi (桜鼠) 300 */
-  --color-sakura-nezumi-300: #BCADA9;
+  --color-sakura-nezumi-300: #D0C3C0;
   /* Sakura-nezumi (桜鼠) 400 */
-  --color-sakura-nezumi-400: #A5918D;
+  --color-sakura-nezumi-400: #C2B4B0;
   /* Sakura-nezumi (桜鼠) 500 */
-  --color-sakura-nezumi-500: #B5A4A1;
+  --color-sakura-nezumi-500: #B5A4A0;
   /* Sakura-nezumi (桜鼠) 600 */
-  --color-sakura-nezumi-600: #A38F8A;
+  --color-sakura-nezumi-600: #857673;
   /* Sakura-nezumi (桜鼠) 700 */
-  --color-sakura-nezumi-700: #8C736E;
+  --color-sakura-nezumi-700: #574C49;
   /* Sakura-nezumi (桜鼠) 800 */
-  --color-sakura-nezumi-800: #6F5C58;
+  --color-sakura-nezumi-800: #2E2523;
   /* Sakura-nezumi (桜鼠) 900 */
-  --color-sakura-nezumi-900: #534441;
+  --color-sakura-nezumi-900: #0A0504;
   /* Wasurenagusa-iro (勿忘草色) 50 */
-  --color-wasurenagusa-iro-50: #F1F3F4;
+  --color-wasurenagusa-iro-50: #EBF7FF;
   /* Wasurenagusa-iro (勿忘草色) 100 */
-  --color-wasurenagusa-iro-100: #E2E6E9;
+  --color-wasurenagusa-iro-100: #D4E7F6;
   /* Wasurenagusa-iro (勿忘草色) 200 */
-  --color-wasurenagusa-iro-200: #B6D0E2;
+  --color-wasurenagusa-iro-200: #BED8EB;
   /* Wasurenagusa-iro (勿忘草色) 300 */
-  --color-wasurenagusa-iro-300: #91B8D4;
+  --color-wasurenagusa-iro-300: #A7C8E1;
   /* Wasurenagusa-iro (勿忘草色) 400 */
-  --color-wasurenagusa-iro-400: #6CA0C6;
+  --color-wasurenagusa-iro-400: #91B9D7;
   /* Wasurenagusa-iro (勿忘草色) 500 */
   --color-wasurenagusa-iro-500: #7BAACC;
   /* Wasurenagusa-iro (勿忘草色) 600 */
-  --color-wasurenagusa-iro-600: #5D97C0;
+  --color-wasurenagusa-iro-600: #537C99;
   /* Wasurenagusa-iro (勿忘草色) 700 */
-  --color-wasurenagusa-iro-700: #427EA9;
+  --color-wasurenagusa-iro-700: #2E5169;
   /* Wasurenagusa-iro (勿忘草色) 800 */
-  --color-wasurenagusa-iro-800: #336384;
+  --color-wasurenagusa-iro-800: #0B293C;
   /* Wasurenagusa-iro (勿忘草色) 900 */
-  --color-wasurenagusa-iro-900: #25475F;
+  --color-wasurenagusa-iro-900: #000614;
   /* Kitsune-iro (狐色) 50 */
-  --color-kitsune-iro-50: #F4F3F1;
+  --color-kitsune-iro-50: #FCF4E5;
   /* Kitsune-iro (狐色) 100 */
-  --color-kitsune-iro-100: #E9E7E2;
+  --color-kitsune-iro-100: #F1E5CD;
   /* Kitsune-iro (狐色) 200 */
-  --color-kitsune-iro-200: #E2D4B6;
+  --color-kitsune-iro-200: #E6D6B5;
   /* Kitsune-iro (狐色) 300 */
-  --color-kitsune-iro-300: #D4BF91;
+  --color-kitsune-iro-300: #DBC79D;
   /* Kitsune-iro (狐色) 400 */
-  --color-kitsune-iro-400: #C6A96C;
+  --color-kitsune-iro-400: #D1B885;
   /* Kitsune-iro (狐色) 500 */
   --color-kitsune-iro-500: #C6A96C;
   /* Kitsune-iro (狐色) 600 */
-  --color-kitsune-iro-600: #BA984F;
+  --color-kitsune-iro-600: #927A45;
   /* Kitsune-iro (狐色) 700 */
-  --color-kitsune-iro-700: #9A7C3C;
+  --color-kitsune-iro-700: #624D1F;
   /* Kitsune-iro (狐色) 800 */
-  --color-kitsune-iro-800: #765F2E;
+  --color-kitsune-iro-800: #362500;
   /* Kitsune-iro (狐色) 900 */
-  --color-kitsune-iro-900: #51411F;
+  --color-kitsune-iro-900: #0E0400;
   /* Enji (臙脂) 50 */
-  --color-enji-50: #F4F0F1;
+  --color-enji-50: #FFEDEE;
   /* Enji (臙脂) 100 */
-  --color-enji-100: #E9E2E3;
+  --color-enji-100: #F6C8CA;
   /* Enji (臙脂) 200 */
-  --color-enji-200: #E3B5BA;
+  --color-enji-200: #E0A5A7;
   /* Enji (臙脂) 300 */
-  --color-enji-300: #D59098;
+  --color-enji-300: #CA8286;
   /* Enji (臙脂) 400 */
-  --color-enji-400: #C76B76;
+  --color-enji-400: #B35F66;
   /* Enji (臙脂) 500 */
-  --color-enji-500: #9B3B46;
+  --color-enji-500: #9B3B47;
   /* Enji (臙脂) 600 */
-  --color-enji-600: #7E3039;
+  --color-enji-600: #782531;
   /* Enji (臙脂) 700 */
-  --color-enji-700: #592228;
+  --color-enji-700: #570F1D;
   /* Enji (臙脂) 800 */
-  --color-enji-800: #2D1A1C;
+  --color-enji-800: #38000A;
   /* Enji (臙脂) 900 */
-  --color-enji-900: #0D0708;
+  --color-enji-900: #1A0000;
   /* Rikyuu-nezumi (利休鼠) 50 */
-  --color-rikyuu-nezumi-50: #F2F2F2;
+  --color-rikyuu-nezumi-50: #F5F5F3;
   /* Rikyuu-nezumi (利休鼠) 100 */
-  --color-rikyuu-nezumi-100: #E6E6E5;
+  --color-rikyuu-nezumi-100: #DBDCD8;
   /* Rikyuu-nezumi (利休鼠) 200 */
-  --color-rikyuu-nezumi-200: #CDCECA;
+  --color-rikyuu-nezumi-200: #C2C3BE;
   /* Rikyuu-nezumi (利休鼠) 300 */
-  --color-rikyuu-nezumi-300: #B4B6AF;
+  --color-rikyuu-nezumi-300: #A9ABA5;
   /* Rikyuu-nezumi (利休鼠) 400 */
-  --color-rikyuu-nezumi-400: #9A9D95;
+  --color-rikyuu-nezumi-400: #91948C;
   /* Rikyuu-nezumi (利休鼠) 500 */
-  --color-rikyuu-nezumi-500: #797D73;
+  --color-rikyuu-nezumi-500: #7A7D74;
   /* Rikyuu-nezumi (利休鼠) 600 */
-  --color-rikyuu-nezumi-600: #65675F;
+  --color-rikyuu-nezumi-600: #595C54;
   /* Rikyuu-nezumi (利休鼠) 700 */
-  --color-rikyuu-nezumi-700: #4B4D47;
+  --color-rikyuu-nezumi-700: #3A3C36;
   /* Rikyuu-nezumi (利休鼠) 800 */
-  --color-rikyuu-nezumi-800: #31322F;
+  --color-rikyuu-nezumi-800: #1D1F1A;
   /* Rikyuu-nezumi (利休鼠) 900 */
-  --color-rikyuu-nezumi-900: #171716;
+  --color-rikyuu-nezumi-900: #050604;
   /* Shironeri (白練) 50 */
-  --color-shironeri-50: #F4F3F0;
+  --color-shironeri-50: #F7F5F1;
   /* Shironeri (白練) 100 */
-  --color-shironeri-100: #E9E7E2;
+  --color-shironeri-100: #F6F3ED;
   /* Shironeri (白練) 200 */
-  --color-shironeri-200: #E5D6B3;
+  --color-shironeri-200: #F5F1E9;
   /* Shironeri (白練) 300 */
-  --color-shironeri-300: #D8C18D;
+  --color-shironeri-300: #F4F0E4;
   /* Shironeri (白練) 400 */
-  --color-shironeri-400: #CBAD67;
+  --color-shironeri-400: #F4EEE0;
   /* Shironeri (白練) 500 */
-  --color-shironeri-500: #EBE9E5;
+  --color-shironeri-500: #F3ECDC;
   /* Shironeri (白練) 600 */
-  --color-shironeri-600: #E9DCBE;
+  --color-shironeri-600: #B0AA9C;
   /* Shironeri (白練) 700 */
-  --color-shironeri-700: #DCC898;
+  --color-shironeri-700: #716C61;
   /* Shironeri (白練) 800 */
-  --color-shironeri-800: #CFB372;
+  --color-shironeri-800: #38342B;
   /* Shironeri (白練) 900 */
-  --color-shironeri-900: #C29F4C;
+  --color-shironeri-900: #080502;
   /* Neutral 50 */
-  --color-neutral-50: #F7F7F8;
+  --color-neutral-50: #F4F9FF;
   /* Neutral 100 */
-  --color-neutral-100: #EFF0F0;
+  --color-neutral-100: #EAEFF5;
   /* Neutral 200 */
-  --color-neutral-200: #DFE0E2;
+  --color-neutral-200: #D9DEE5;
   /* Neutral 300 */
-  --color-neutral-300: #C5C7C9;
+  --color-neutral-300: #C0C5CB;
   /* Neutral 400 */
-  --color-neutral-400: #9A9EA2;
+  --color-neutral-400: #94999E;
   /* Neutral 500 */
-  --color-neutral-500: #71757A;
+  --color-neutral-500: #6B6F74;
   /* Neutral 600 */
-  --color-neutral-600: #585C5F;
+  --color-neutral-600: #494D53;
   /* Neutral 700 */
-  --color-neutral-700: #404245;
+  --color-neutral-700: #2F3338;
   /* Neutral 800 */
-  --color-neutral-800: #27292A;
+  --color-neutral-800: #171B1F;
   /* Neutral 900 */
-  --color-neutral-900: #141415;
+  --color-neutral-900: #05080B;
   /* Accent 50 */
-  --color-accent-50: #F3F4F1;
+  --color-accent-50: #F3F8E7;
   /* Accent 100 */
-  --color-accent-100: #E7E9E2;
+  --color-accent-100: #D3DAC1;
   /* Accent 200 */
-  --color-accent-200: #D7E1B7;
+  --color-accent-200: #B4BE9B;
   /* Accent 300 */
-  --color-accent-300: #C3D293;
+  --color-accent-300: #96A276;
   /* Accent 400 */
-  --color-accent-400: #AFC36F;
+  --color-accent-400: #798752;
   /* Accent 500 */
   --color-accent-500: #5D6C2D;
   /* Accent 600 */
-  --color-accent-600: #444F21;
+  --color-accent-600: #445018;
   /* Accent 700 */
-  --color-accent-700: #232617;
+  --color-accent-700: #2C3603;
   /* Accent 800 */
-  --color-accent-800: #14160D;
+  --color-accent-800: #161D00;
   /* Accent 900 */
-  --color-accent-900: #0C0D08;
+  --color-accent-900: #040800;
 
   /* --- Spacing (8px grid) --- */
   /* Spacing 0 (0px) */
@@ -378,8 +378,8 @@
   --status-error: #DC2626;
   /* Success — WCAG-compliant green */
   --status-success: #16A34A;
-  /* Warning — WCAG-compliant amber */
-  --status-warning: #CA8A04;
+  /* Warning — WCAG AA amber (4.5:1+ on white) */
+  --status-warning: #A16207;
   /* Info status */
   --status-info: var(--primitive-color-hanada-500);
   /* Focus ring color */

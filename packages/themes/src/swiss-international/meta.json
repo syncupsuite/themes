@@ -50,7 +50,7 @@
   ],
   "validation": {
     "schema": true,
-    "contrast": null,
+    "contrast": true,
     "completeness": true
   }
 }
