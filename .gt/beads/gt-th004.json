@@ -1,0 +1,21 @@
+{
+  "id": "gt-th004",
+  "title": "Extract BSU production theme foundation data",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Extract foundation JSON for the 4 BSU production themes from habitusnet/syncup source. Each needs cultural provenance documentation and seed color verification. Themes: Wiener Werkstatte, Milanese Design, De Stijl, Swiss Modernist.",
+  "acceptance_criteria": [
+    "Foundation JSON files for wiener-werkstatte, milanese-design, de-stijl, swiss-modernist",
+    "Cultural story fields populated in each foundation",
+    "Seed colors trace to verifiable cultural references",
+    "Files placed in packages/foundations/data/"
+  ],
+  "repo": "syncupsuite/themes",
+  "convoy": "convoy-012",
+  "cross_repo_dependency": "habitusnet/syncup — Felix provides source data or access",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 2.1",
+    "context": "4 themes running in BSU production but not yet in npm package"
+  }
+}

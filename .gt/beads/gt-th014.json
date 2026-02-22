@@ -1,0 +1,22 @@
+{
+  "id": "gt-th014",
+  "title": "Implement mergeTokenTrees() for tier stacking",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "L",
+  "description": "Implement the token merge function that applies T1/T2 overrides to a T0 base while respecting protected token paths. Protected tokens (accessibility constraints) cannot be overridden. T2 overrides cannot modify T1-locked tokens. Respects $extensions.syncupsuite.protected flag.",
+  "acceptance_criteria": [
+    "mergeTokenTrees(base, overrides, tier) exported from tokens package",
+    "Protected tokens (accessibility constraints) cannot be overridden at any tier",
+    "T2 overrides cannot modify T1-locked tokens",
+    "$extensions.syncupsuite.protected flag respected",
+    "Comprehensive tests for override hierarchy, protection enforcement, edge cases"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-004",
+  "convoy": "convoy-014",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 6.1",
+    "context": "Phase 4 — multi-tenant tier stacking governance"
+  }
+}

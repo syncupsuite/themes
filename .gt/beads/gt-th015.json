@@ -1,0 +1,21 @@
+{
+  "id": "gt-th015",
+  "title": "Tier stacking validation (WCAG on merged output)",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Add validation that ensures merged token trees still pass WCAG contrast requirements. Provides clear error messages identifying which override broke which constraint. Integrated into generator as optional merge step.",
+  "acceptance_criteria": [
+    "validateMergedTheme() runs contrast checks on merged output",
+    "Clear error messages identifying which override broke which constraint",
+    "Integrated into generator as optional merge step"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-004",
+  "convoy": "convoy-014",
+  "blocked_by": ["gt-th014"],
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 6.2",
+    "context": "Phase 4 — ensure tier overrides don't break accessibility"
+  }
+}

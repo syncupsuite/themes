@@ -1,0 +1,21 @@
+{
+  "id": "gt-th012",
+  "title": "Define npm package convention for community themes",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Define naming convention and package structure for community theme packages (@syncupsuite/theme-* or syncupsuite-theme-*). Create validation script and template package for contributors.",
+  "acceptance_criteria": [
+    "Naming convention documented",
+    "Required package.json fields defined (keywords, main/exports)",
+    "Validation script that checks community packages against schema",
+    "Template package for contributors"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-007",
+  "convoy": "convoy-014",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 5.1",
+    "context": "Phase 4 — community theme ecosystem enablement"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "gt-th005",
+  "title": "Pipeline integration and validation for BSU themes",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Run the 4 BSU themes through the standard pipeline: pnpm generate → schema → contrast → completeness → perf budgets. Fix any issues found.",
+  "acceptance_criteria": [
+    "All 4 themes pass schema validation",
+    "All 4 themes pass 20 WCAG AA contrast pairs",
+    "All 4 themes pass completeness check",
+    "All 4 themes within performance budgets",
+    "Total theme count: 12"
+  ],
+  "repo": "syncupsuite/themes",
+  "convoy": "convoy-012",
+  "blocked_by": ["gt-th004"],
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 2.2",
+    "context": "Standard pipeline validation for absorbed themes"
+  }
+}

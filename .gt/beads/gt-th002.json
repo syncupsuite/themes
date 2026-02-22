@@ -1,0 +1,22 @@
+{
+  "id": "gt-th002",
+  "title": "Snapshot baselines for all 8 themes",
+  "type": "chore",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Capture baseline screenshots for all 8 themes (20 snapshots each = 160 total). Scenarios: backgrounds, text hierarchy, interactive states, borders, status colors, focus rings, dark mode variants.",
+  "acceptance_criteria": [
+    "20 snapshot scenarios per theme (160 total baselines)",
+    "Baselines committed to packages/themes/tests/visual/__snapshots__/",
+    "pnpm test:visual script runs comparison",
+    "CI fails on pixel drift beyond configurable threshold"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-005",
+  "convoy": "convoy-011",
+  "blocked_by": ["gt-th001"],
+  "evidence": {
+    "source": "docs/adr/ADR-005-ci-snapshot-matrix.md",
+    "context": "20 snapshots per theme covering key UI patterns"
+  }
+}

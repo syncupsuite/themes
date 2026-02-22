@@ -1,0 +1,20 @@
+{
+  "id": "gt-th011",
+  "title": "Refresh README with current state",
+  "type": "docs",
+  "status": "pending",
+  "complexity": "S",
+  "description": "Update root README and per-package READMEs to reflect current state: 8 themes, semantic color API, dark mode, Tailwind integration. Include usage examples for bg-canvas, text-foreground, etc.",
+  "acceptance_criteria": [
+    "Root README lists all 8 themes with descriptions",
+    "Semantic color API usage examples (bg-canvas, text-foreground, etc.)",
+    "Dark mode section ([data-theme=\"dark\"])",
+    "Per-package READMEs accurate for current exports"
+  ],
+  "repo": "syncupsuite/themes",
+  "convoy": "convoy-013",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 4.2",
+    "context": "README outdated after 8-theme expansion and semantic color API"
+  }
+}

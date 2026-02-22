@@ -1,0 +1,22 @@
+{
+  "id": "gt-th008",
+  "title": "Define adapter interface and refactor existing transformers",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Create a TypeScript Adapter interface that all output adapters implement. Refactor existing transformToCSS and transformToTailwindV4 to implement the interface. Preserve existing function signatures as wrappers (no breaking changes).",
+  "acceptance_criteria": [
+    "Adapter interface: transform(tokens: FlatToken[], options: AdapterOptions): string",
+    "Existing transformToCSS and transformToTailwindV4 refactored to implement the interface",
+    "No breaking changes to public API (existing function signatures preserved as wrappers)",
+    "Unit tests for adapter contract compliance"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-006",
+  "convoy": "convoy-013",
+  "blocked_by": ["gt-th007"],
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 3.2",
+    "context": "Uniform adapter interface enables community output formats"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "gt-th013",
+  "title": "Implement registry discovery function",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Implement discoverThemes() that discovers installed theme packages via node_modules scanning or package.json dependencies. Returns unified theme manifest with metadata. Must work in both Node.js and edge runtime contexts.",
+  "acceptance_criteria": [
+    "discoverThemes() function exported from themes package",
+    "Finds all packages matching naming convention",
+    "Returns unified theme manifest with metadata",
+    "Works in both Node.js and edge runtime contexts"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-007",
+  "convoy": "convoy-014",
+  "blocked_by": ["gt-th012"],
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 5.2",
+    "context": "Phase 4 — runtime theme discovery for npm-based registry"
+  }
+}

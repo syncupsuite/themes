@@ -1,0 +1,21 @@
+{
+  "id": "gt-th001",
+  "title": "Playwright visual regression test harness",
+  "type": "chore",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Set up Playwright in the themes monorepo with a minimal HTML test page that renders theme tokens as visual components (buttons, cards, forms, text, status badges). Test page accepts ?theme= query param to load different themes.",
+  "acceptance_criteria": [
+    "Playwright config in packages/themes/playwright.config.ts",
+    "Test page in packages/themes/tests/visual/ renders all semantic token categories",
+    "Page accepts ?theme=swiss-international query param",
+    "Runs headless in CI (GitHub Actions)"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-005",
+  "convoy": "convoy-011",
+  "evidence": {
+    "source": "docs/adr/ADR-005-ci-snapshot-matrix.md",
+    "context": "ADR-005 accepted — implement before adding themes beyond the current 8"
+  }
+}

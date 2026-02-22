@@ -1,0 +1,20 @@
+{
+  "id": "gt-th003",
+  "title": "Build-time performance budget enforcement",
+  "type": "chore",
+  "status": "pending",
+  "complexity": "S",
+  "description": "Make performance budget checks in the generator fail the build (non-zero exit) instead of just logging. Current budgets: 20,480B gzipped CSS, 500 properties.",
+  "acceptance_criteria": [
+    "Generator exits with non-zero code if maxCssGzipped or maxProperties exceeded",
+    "Budget overrides per-theme configurable in foundation JSON",
+    "Existing themes still pass (all currently within budgets)"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-005",
+  "convoy": "convoy-011",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 1.3",
+    "context": "Currently budgets are checked but do not fail the build"
+  }
+}

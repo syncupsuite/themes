@@ -1,0 +1,13 @@
+{
+  "id": "convoy-011",
+  "name": "Visual Regression & Performance Gates",
+  "theme": "Establish visual regression testing with Playwright and enforce performance budgets at build time. Prevents theme drift and CSS bloat.",
+  "phase": "3.1",
+  "status": "pending",
+  "beads": ["gt-th001", "gt-th002", "gt-th003"],
+  "owner": "Iris",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Epic 1",
+    "adr": "ADR-005"
+  }
+}

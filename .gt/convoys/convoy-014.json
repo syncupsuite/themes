@@ -1,0 +1,13 @@
+{
+  "id": "convoy-014",
+  "name": "Ecosystem Extensibility (Vision)",
+  "theme": "Phase 4 vision: npm-based theme registry with community package conventions, runtime discovery, and multi-tenant tier stacking with WCAG-safe overrides.",
+  "phase": "4.1–4.2",
+  "status": "pending",
+  "beads": ["gt-th012", "gt-th013", "gt-th014", "gt-th015"],
+  "owner": "Iris",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Epics 5 & 6",
+    "adr": "ADR-004, ADR-007"
+  }
+}

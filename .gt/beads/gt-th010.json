@@ -1,0 +1,19 @@
+{
+  "id": "gt-th010",
+  "title": "Create CONTRIBUTING.md for themes repo",
+  "type": "docs",
+  "status": "pending",
+  "complexity": "S",
+  "description": "Mirror the theme contribution guide from webplatform4sync to themes/CONTRIBUTING.md. Adapt for direct contributor context: foundation JSON structure, pnpm generate workflow, validation requirements. Reference ADR-001 (OKLCH), ADR-002 (semantic isolation), ADR-003 (dark mode).",
+  "acceptance_criteria": [
+    "CONTRIBUTING.md at themes repo root",
+    "Documents: foundation JSON format, seed color requirements, cultural provenance, validation pipeline",
+    "References ADR-001 (OKLCH), ADR-002 (semantic isolation), ADR-003 (dark mode)"
+  ],
+  "repo": "syncupsuite/themes",
+  "convoy": "convoy-013",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 4.1",
+    "context": "Developer onboarding for theme contributors"
+  }
+}

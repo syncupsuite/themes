@@ -1,0 +1,22 @@
+{
+  "id": "gt-th009",
+  "title": "Implement JSON output adapter",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "S",
+  "description": "Implement a JSON output adapter that produces a flat key-value map suitable for Style Dictionary or other tooling. Output format: { \"--background-canvas\": \"#FBF8F1\", ... }. Includes both light and dark mode tokens.",
+  "acceptance_criteria": [
+    "transformToJSON(tokens: DTCGRoot, options?): string exported",
+    "Output is flat map of CSS custom property name to resolved value",
+    "Includes both light and dark mode tokens",
+    "Tests covering all token types"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-006",
+  "convoy": "convoy-013",
+  "blocked_by": ["gt-th008"],
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 3.3",
+    "context": "JSON adapter is the first community-facing output format"
+  }
+}

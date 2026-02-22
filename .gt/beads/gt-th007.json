@@ -1,0 +1,21 @@
+{
+  "id": "gt-th007",
+  "title": "Implement flattenRoot() API",
+  "type": "feature",
+  "status": "pending",
+  "complexity": "M",
+  "description": "Create a function in @syncupsuite/tokens that flattens a DTCGRoot into a flat token list that adapters consume. Each FlatToken has: path, value, type, description, extensions. References resolved to final values.",
+  "acceptance_criteria": [
+    "flattenRoot(tokens: DTCGRoot): FlatToken[] exported from tokens package",
+    "Each FlatToken has: path, value, type, description, extensions",
+    "References resolved to final values",
+    "Unit tests for all token types (color, dimension, fontFamily)"
+  ],
+  "repo": "syncupsuite/themes",
+  "adr": "ADR-006",
+  "convoy": "convoy-013",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 3.1",
+    "context": "Adapter isolation requires flat token input format"
+  }
+}

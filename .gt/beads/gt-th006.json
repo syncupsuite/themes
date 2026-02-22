@@ -1,0 +1,21 @@
+{
+  "id": "gt-th006",
+  "title": "Publish 12-theme patch release",
+  "type": "chore",
+  "status": "pending",
+  "complexity": "S",
+  "description": "Bump @syncupsuite/themes version and publish with all 12 themes (8 existing + 4 absorbed from BSU).",
+  "acceptance_criteria": [
+    "Version bump (patch or minor as appropriate)",
+    "pnpm publish via Doppler succeeds",
+    "npm listing shows 12 themes in package contents",
+    "All 233+ tests pass"
+  ],
+  "repo": "syncupsuite/themes",
+  "convoy": "convoy-012",
+  "blocked_by": ["gt-th005"],
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Story 2.3",
+    "context": "Publish after BSU theme absorption"
+  }
+}

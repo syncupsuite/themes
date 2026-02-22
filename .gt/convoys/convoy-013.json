@@ -1,0 +1,13 @@
+{
+  "id": "convoy-013",
+  "name": "Adapter Isolation & Developer Onboarding",
+  "theme": "Refactor transformer layer into formal adapter pattern (ADR-006) with flattenRoot API, adapter interface, and JSON adapter. Pair with developer onboarding docs (CONTRIBUTING.md, README refresh).",
+  "phase": "3.3–3.4",
+  "status": "pending",
+  "beads": ["gt-th007", "gt-th008", "gt-th009", "gt-th010", "gt-th011"],
+  "owner": "Iris",
+  "evidence": {
+    "source": "scopecraft/EPICS_AND_STORIES.md — Epics 3 & 4",
+    "adr": "ADR-006"
+  }
+}
