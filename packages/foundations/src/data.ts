@@ -2,22 +2,30 @@
 import type { FoundationData } from './engine';
 
 import artDecoData_ from '../data/art-deco.json';
+import deStijlData_ from '../data/de-stijl.json';
+import milaneseDesignData_ from '../data/milanese-design.json';
 import nihonMinimalData_ from '../data/nihon-minimal.json';
 import nihonTraditionalData_ from '../data/nihon-traditional.json';
 import nordicModernData_ from '../data/nordic-modern.json';
 import renaissanceData_ from '../data/renaissance.json';
 import shuimoModernData_ from '../data/shuimo-modern.json';
 import swissInternationalData_ from '../data/swiss-international.json';
+import swissModernistData_ from '../data/swiss-modernist.json';
 import tangImperialData_ from '../data/tang-imperial.json';
+import wienerWerkstaetteData_ from '../data/wiener-werkstaette.json';
 
 export const artDecoData = artDecoData_ as unknown as FoundationData;
+export const deStijlData = deStijlData_ as unknown as FoundationData;
+export const milaneseDesignData = milaneseDesignData_ as unknown as FoundationData;
 export const nihonMinimalData = nihonMinimalData_ as unknown as FoundationData;
 export const nihonTraditionalData = nihonTraditionalData_ as unknown as FoundationData;
 export const nordicModernData = nordicModernData_ as unknown as FoundationData;
 export const renaissanceData = renaissanceData_ as unknown as FoundationData;
 export const shuimoModernData = shuimoModernData_ as unknown as FoundationData;
 export const swissInternationalData = swissInternationalData_ as unknown as FoundationData;
+export const swissModernistData = swissModernistData_ as unknown as FoundationData;
 export const tangImperialData = tangImperialData_ as unknown as FoundationData;
+export const wienerWerkstaetteData = wienerWerkstaetteData_ as unknown as FoundationData;
 
 /** All registered foundations — used by the generator and theme browser (Phase 2/3) */
-export const ALL_FOUNDATIONS: FoundationData[] = [artDecoData, nihonMinimalData, nihonTraditionalData, nordicModernData, renaissanceData, shuimoModernData, swissInternationalData, tangImperialData];
+export const ALL_FOUNDATIONS: FoundationData[] = [artDecoData, deStijlData, milaneseDesignData, nihonMinimalData, nihonTraditionalData, nordicModernData, renaissanceData, shuimoModernData, swissInternationalData, swissModernistData, tangImperialData, wienerWerkstaetteData];

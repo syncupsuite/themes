@@ -1,0 +1,50 @@
+{
+  "id": "milanese-design",
+  "name": "Milanese Design",
+  "description": "Milanese Design — postwar Italian rationalism meets Mediterranean warmth. Olivetti pragmatism, travertine piazzas, and Lombard sage-green.",
+  "foundation": {
+    "story": "Milan's postwar Miracolo Economico produced a design language where industrial pragmatism met Mediterranean warmth. Olivetti's rational humanism, the warm travertine of Milanese piazzas, and the sage-green Lombard countryside fused into a vocabulary of quiet confidence — beautiful because it works, never because it decorates.",
+    "philosophy": "Forma segue funzione, ma la forma è anche calore — form follows function, but form is also warmth",
+    "era": "Modernist — Italian Rationalism to Radical Design, 1945–1975",
+    "harmonyMode": "golden-ratio",
+    "radiusTendency": "subtle",
+    "typographyCategory": "humanist-serif"
+  },
+  "seedColors": [
+    {
+      "hex": "#D4694A",
+      "name": "Terracotta (Lombardo)",
+      "tradition": "Lombard roof tiles — the terracotta of northern Italian vernacular architecture. The earthy warmth of Milan's domestic fabric.",
+      "source": "Italian Design: From Postwar to Postmodernism, G. Bosoni"
+    },
+    {
+      "hex": "#2C3E50",
+      "name": "Slate (Olivetti)",
+      "tradition": "Industrial slate-blue — Olivetti typewriter chassis, Milanese factory vernacular. Rational blue-grey of postwar manufacturing.",
+      "source": "The Story of Design, C. & P. Fiell"
+    },
+    {
+      "hex": "#F7F3EE",
+      "name": "Stone (Travertino)",
+      "tradition": "Travertine stone — Milan's piazza paving and façades. The warm neutral ground of Mediterranean architecture.",
+      "source": "Architecture in Italy Since 1945, F. Dal Co"
+    },
+    {
+      "hex": "#8FAF8C",
+      "name": "Sage (Lombardo)",
+      "tradition": "Lombard sage-green — the Pianura Padana in spring, olive groves near Lago di Garda. Nature as quiet counterpoint to industry.",
+      "source": "Made in Italy: Food & Stories, G. Locatelli"
+    },
+    {
+      "hex": "#C4A882",
+      "name": "Sand (Intonaco)",
+      "tradition": "Warm sand plaster — Milanese intonaco walls, Roman travertino chiaro. The warm neutral between cream and gold.",
+      "source": "Italian Interiors, TASCHEN"
+    }
+  ],
+  "validation": {
+    "schema": true,
+    "contrast": true,
+    "completeness": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "$name": "swiss-modernist",
+  "$description": "Swiss Modernist — International Typographic Style from Zürich and Basel schools, 1950s–70s. Müller-Brockmann's grid precision, Helvetica, and disciplined color.",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "Josef Müller-Brockmann, Armin Hofmann, and Emil Ruder established the International Typographic Style at Zürich's Kunstgewerbeschule and Basel's Allgemeine Gewerbeschule. Helvetica arrived in 1957, designed to say nothing but the message itself. One typeface, one grid, one accent color — the rest is discipline.",
+      "philosophy": "Objectivity over expression. The grid is not a constraint — it is liberation. Typography carries the visual weight; color is used once, with surgical precision.",
+      "era": "Modernist — 1950s–1970s",
+      "harmonyMode": "monochromatic",
+      "radiusTendency": "none",
+      "typographyCategory": "neo-grotesque"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#3B6EA5",
+      "name": "Himmelblau",
+      "tradition": "Sky blue recurring across Josef Müller-Brockmann's Zürich concert poster series, 1960–72. The structural color of the ITS canon.",
+      "source": "Josef Müller-Brockmann: Pioneer of Swiss Graphic Design, L. Müller"
+    },
+    {
+      "hex": "#C8202A",
+      "name": "Rotkreuz",
+      "tradition": "Red Cross red; Swiss national identity. The single vivid accent deployed against the neutral field — restraint is the principle.",
+      "source": "Swiss Graphic Design: Origins and Growth, R. Hollis"
+    },
+    {
+      "hex": "#64748B",
+      "name": "Bleigrau",
+      "tradition": "Lead gray (Blei = lead). The color of moveable type blocks before inking; the unprinted color of typographic infrastructure.",
+      "source": "Typography, E. Ruder"
+    },
+    {
+      "hex": "#8FA3B1",
+      "name": "Stahl",
+      "tradition": "Steel blue-gray from Swiss precision engineering and Alpine industrial heritage — the color of structural metal and machine casings.",
+      "source": "Grid Systems in Graphic Design, J. Müller-Brockmann"
+    },
+    {
+      "hex": "#4A7C59",
+      "name": "Alpenklee",
+      "tradition": "Alpine clover (Alpenklee). Nature as quiet counterpoint to industrial precision; from Swiss landscape graphic tradition.",
+      "source": "Armin Hofmann: His Work, Quest and Philosophy, A. Hofmann"
+    },
+    {
+      "hex": "#F5F3EE",
+      "name": "Elfenbein",
+      "tradition": "Ivory; the warm white of quality uncoated Swiss printing paper. The ground of all composition.",
+      "source": "Typographic Design: Form and Communication, R. Carter"
+    },
+    {
+      "hex": "#1A2530",
+      "name": "Russ",
+      "tradition": "Soot black (Russ = soot). The color of letterpress ink on uncoated paper — ink-black with depth, not flat digital black.",
+      "source": "The New Typography, J. Tschichold"
+    }
+  ]
+}

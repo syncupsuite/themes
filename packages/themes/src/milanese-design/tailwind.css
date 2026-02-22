@@ -1,0 +1,391 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Colors --- */
+  /* Terracotta (Lombardo) 50 */
+  --color-terracotta-lombardo-50: #FFEDE5;
+  /* Terracotta (Lombardo) 100 */
+  --color-terracotta-lombardo-100: #FFD3C5;
+  /* Terracotta (Lombardo) 200 */
+  --color-terracotta-lombardo-200: #F8B9A6;
+  /* Terracotta (Lombardo) 300 */
+  --color-terracotta-lombardo-300: #ED9F88;
+  /* Terracotta (Lombardo) 400 */
+  --color-terracotta-lombardo-400: #E18469;
+  /* Terracotta (Lombardo) 500 */
+  --color-terracotta-lombardo-500: #D4694A;
+  /* Terracotta (Lombardo) 600 */
+  --color-terracotta-lombardo-600: #A2462C;
+  /* Terracotta (Lombardo) 700 */
+  --color-terracotta-lombardo-700: #73250D;
+  /* Terracotta (Lombardo) 800 */
+  --color-terracotta-lombardo-800: #460400;
+  /* Terracotta (Lombardo) 900 */
+  --color-terracotta-lombardo-900: #1C0000;
+  /* Slate (Olivetti) 50 */
+  --color-slate-olivetti-50: #F0F6FC;
+  /* Slate (Olivetti) 100 */
+  --color-slate-olivetti-100: #C5CED7;
+  /* Slate (Olivetti) 200 */
+  --color-slate-olivetti-200: #9CA7B3;
+  /* Slate (Olivetti) 300 */
+  --color-slate-olivetti-300: #758291;
+  /* Slate (Olivetti) 400 */
+  --color-slate-olivetti-400: #4F5F70;
+  /* Slate (Olivetti) 500 */
+  --color-slate-olivetti-500: #2C3E50;
+  /* Slate (Olivetti) 600 */
+  --color-slate-olivetti-600: #1F2F3E;
+  /* Slate (Olivetti) 700 */
+  --color-slate-olivetti-700: #13202D;
+  /* Slate (Olivetti) 800 */
+  --color-slate-olivetti-800: #08121D;
+  /* Slate (Olivetti) 900 */
+  --color-slate-olivetti-900: #01060E;
+  /* Stone (Travertino) 50 */
+  --color-stone-travertino-50: #F6F5F4;
+  /* Stone (Travertino) 100 */
+  --color-stone-travertino-100: #F6F4F2;
+  /* Stone (Travertino) 200 */
+  --color-stone-travertino-200: #F6F4F1;
+  /* Stone (Travertino) 300 */
+  --color-stone-travertino-300: #F7F4F0;
+  /* Stone (Travertino) 400 */
+  --color-stone-travertino-400: #F7F3EF;
+  /* Stone (Travertino) 500 */
+  --color-stone-travertino-500: #F7F3EE;
+  /* Stone (Travertino) 600 */
+  --color-stone-travertino-600: #B2AFAA;
+  /* Stone (Travertino) 700 */
+  --color-stone-travertino-700: #726F6B;
+  /* Stone (Travertino) 800 */
+  --color-stone-travertino-800: #373533;
+  /* Stone (Travertino) 900 */
+  --color-stone-travertino-900: #070604;
+  /* Sage (Lombardo) 50 */
+  --color-sage-lombardo-50: #EFF8EF;
+  /* Sage (Lombardo) 100 */
+  --color-sage-lombardo-100: #DCE9DA;
+  /* Sage (Lombardo) 200 */
+  --color-sage-lombardo-200: #C8DAC6;
+  /* Sage (Lombardo) 300 */
+  --color-sage-lombardo-300: #B5CCB3;
+  /* Sage (Lombardo) 400 */
+  --color-sage-lombardo-400: #A2BD9F;
+  /* Sage (Lombardo) 500 */
+  --color-sage-lombardo-500: #8FAF8C;
+  /* Sage (Lombardo) 600 */
+  --color-sage-lombardo-600: #658062;
+  /* Sage (Lombardo) 700 */
+  --color-sage-lombardo-700: #3D543C;
+  /* Sage (Lombardo) 800 */
+  --color-sage-lombardo-800: #1A2C18;
+  /* Sage (Lombardo) 900 */
+  --color-sage-lombardo-900: #010800;
+  /* Sand (Intonaco) 50 */
+  --color-sand-intonaco-50: #FBF4EA;
+  /* Sand (Intonaco) 100 */
+  --color-sand-intonaco-100: #F0E4D5;
+  /* Sand (Intonaco) 200 */
+  --color-sand-intonaco-200: #E5D5C0;
+  /* Sand (Intonaco) 300 */
+  --color-sand-intonaco-300: #DAC6AB;
+  /* Sand (Intonaco) 400 */
+  --color-sand-intonaco-400: #CFB796;
+  /* Sand (Intonaco) 500 */
+  --color-sand-intonaco-500: #C4A882;
+  /* Sand (Intonaco) 600 */
+  --color-sand-intonaco-600: #917958;
+  /* Sand (Intonaco) 700 */
+  --color-sand-intonaco-700: #614D32;
+  /* Sand (Intonaco) 800 */
+  --color-sand-intonaco-800: #34250E;
+  /* Sand (Intonaco) 900 */
+  --color-sand-intonaco-900: #0D0400;
+  /* Neutral 50 */
+  --color-neutral-50: #FFF6F3;
+  /* Neutral 100 */
+  --color-neutral-100: #F6ECE9;
+  /* Neutral 200 */
+  --color-neutral-200: #E5DCD9;
+  /* Neutral 300 */
+  --color-neutral-300: #CBC2BF;
+  /* Neutral 400 */
+  --color-neutral-400: #9F9693;
+  /* Neutral 500 */
+  --color-neutral-500: #756C6A;
+  /* Neutral 600 */
+  --color-neutral-600: #534B49;
+  /* Neutral 700 */
+  --color-neutral-700: #38312F;
+  /* Neutral 800 */
+  --color-neutral-800: #201917;
+  /* Neutral 900 */
+  --color-neutral-900: #0B0605;
+  /* Accent 50 */
+  --color-accent-50: #EAF4FF;
+  /* Accent 100 */
+  --color-accent-100: #C6D5FF;
+  /* Accent 200 */
+  --color-accent-200: #A4B5FF;
+  /* Accent 300 */
+  --color-accent-300: #8396F1;
+  /* Accent 400 */
+  --color-accent-400: #6477E3;
+  /* Accent 500 */
+  --color-accent-500: #4955D4;
+  /* Accent 600 */
+  --color-accent-600: #333AA8;
+  /* Accent 700 */
+  --color-accent-700: #1F1F7F;
+  /* Accent 800 */
+  --color-accent-800: #0F0257;
+  /* Accent 900 */
+  --color-accent-900: #050032;
+
+  /* --- Spacing (8px grid) --- */
+  /* Spacing 0 (0px) */
+  --spacing-0: 0px;
+  /* Spacing 1 (4px) */
+  --spacing-1: 4px;
+  /* Spacing 2 (8px) */
+  --spacing-2: 8px;
+  /* Spacing 3 (12px) */
+  --spacing-3: 12px;
+  /* Spacing 4 (16px) */
+  --spacing-4: 16px;
+  /* Spacing 5 (20px) */
+  --spacing-5: 20px;
+  /* Spacing 6 (24px) */
+  --spacing-6: 24px;
+  /* Spacing 8 (32px) */
+  --spacing-8: 32px;
+  /* Spacing 10 (40px) */
+  --spacing-10: 40px;
+  /* Spacing 12 (48px) */
+  --spacing-12: 48px;
+  /* Spacing 16 (64px) */
+  --spacing-16: 64px;
+  /* Spacing 20 (80px) */
+  --spacing-20: 80px;
+  /* Spacing 0.5 (2px) */
+  --spacing-0-5: 2px;
+  /* Spacing 1.5 (6px) */
+  --spacing-1-5: 6px;
+
+  /* --- Font Families --- */
+  /* Heading font family */
+  --font-heading: "Noto Serif JP", "Noto Serif", Georgia, serif;
+  /* Body font family */
+  --font-body: "Noto Serif JP", "Noto Serif", Georgia, serif;
+  /* Monospace font family */
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Font Sizes --- */
+  /* Font size xs */
+  --text-xs: 0.75rem;
+  /* Font size sm */
+  --text-sm: 0.875rem;
+  /* Font size base */
+  --text-base: 1rem;
+  /* Font size lg */
+  --text-lg: 1.125rem;
+  /* Font size xl */
+  --text-xl: 1.25rem;
+  /* Font size 2xl */
+  --text-2xl: 1.5rem;
+  /* Font size 3xl */
+  --text-3xl: 1.875rem;
+  /* Font size 4xl */
+  --text-4xl: 2.25rem;
+
+  /* --- Border Radius --- */
+  /* Border radius none */
+  --radius-none: 0px;
+  /* Border radius sm */
+  --radius-sm: 2px;
+  /* Border radius md */
+  --radius-md: 4px;
+  /* Border radius lg */
+  --radius-lg: 6px;
+  /* Border radius xl */
+  --radius-xl: 8px;
+  /* Border radius full */
+  --radius-full: 9999px;
+
+}
+
+/* === Semantic Color API — theme-aware Tailwind utilities === */
+@theme {
+  --color-canvas: var(--background-canvas);
+  --color-surface: var(--background-surface);
+  --color-muted: var(--background-muted);
+  --color-foreground: var(--text-primary);
+  --color-foreground-secondary: var(--text-secondary);
+  --color-foreground-muted: var(--text-muted);
+  --color-foreground-inverse: var(--text-inverse);
+  --color-primary: var(--interactive-primary);
+  --color-primary-hover: var(--interactive-primary-hover);
+  --color-primary-active: var(--interactive-primary-active);
+  --color-border: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  --color-error: var(--status-error);
+  --color-success: var(--status-success);
+  --color-warning: var(--status-warning);
+  --color-info: var(--status-info);
+  --color-ring: var(--focus-ring);
+  --color-focus-visible: var(--accessibility-focus-visible);
+}
+
+/* Primitive aliases + light mode semantic tokens */
+:root {
+  /* --primitive-color-* aliases → @theme --color-* (for semantic var() resolution) */
+  --primitive-color-terracotta-lombardo-50: var(--color-terracotta-lombardo-50);
+  --primitive-color-terracotta-lombardo-100: var(--color-terracotta-lombardo-100);
+  --primitive-color-terracotta-lombardo-200: var(--color-terracotta-lombardo-200);
+  --primitive-color-terracotta-lombardo-300: var(--color-terracotta-lombardo-300);
+  --primitive-color-terracotta-lombardo-400: var(--color-terracotta-lombardo-400);
+  --primitive-color-terracotta-lombardo-500: var(--color-terracotta-lombardo-500);
+  --primitive-color-terracotta-lombardo-600: var(--color-terracotta-lombardo-600);
+  --primitive-color-terracotta-lombardo-700: var(--color-terracotta-lombardo-700);
+  --primitive-color-terracotta-lombardo-800: var(--color-terracotta-lombardo-800);
+  --primitive-color-terracotta-lombardo-900: var(--color-terracotta-lombardo-900);
+  --primitive-color-slate-olivetti-50: var(--color-slate-olivetti-50);
+  --primitive-color-slate-olivetti-100: var(--color-slate-olivetti-100);
+  --primitive-color-slate-olivetti-200: var(--color-slate-olivetti-200);
+  --primitive-color-slate-olivetti-300: var(--color-slate-olivetti-300);
+  --primitive-color-slate-olivetti-400: var(--color-slate-olivetti-400);
+  --primitive-color-slate-olivetti-500: var(--color-slate-olivetti-500);
+  --primitive-color-slate-olivetti-600: var(--color-slate-olivetti-600);
+  --primitive-color-slate-olivetti-700: var(--color-slate-olivetti-700);
+  --primitive-color-slate-olivetti-800: var(--color-slate-olivetti-800);
+  --primitive-color-slate-olivetti-900: var(--color-slate-olivetti-900);
+  --primitive-color-stone-travertino-50: var(--color-stone-travertino-50);
+  --primitive-color-stone-travertino-100: var(--color-stone-travertino-100);
+  --primitive-color-stone-travertino-200: var(--color-stone-travertino-200);
+  --primitive-color-stone-travertino-300: var(--color-stone-travertino-300);
+  --primitive-color-stone-travertino-400: var(--color-stone-travertino-400);
+  --primitive-color-stone-travertino-500: var(--color-stone-travertino-500);
+  --primitive-color-stone-travertino-600: var(--color-stone-travertino-600);
+  --primitive-color-stone-travertino-700: var(--color-stone-travertino-700);
+  --primitive-color-stone-travertino-800: var(--color-stone-travertino-800);
+  --primitive-color-stone-travertino-900: var(--color-stone-travertino-900);
+  --primitive-color-sage-lombardo-50: var(--color-sage-lombardo-50);
+  --primitive-color-sage-lombardo-100: var(--color-sage-lombardo-100);
+  --primitive-color-sage-lombardo-200: var(--color-sage-lombardo-200);
+  --primitive-color-sage-lombardo-300: var(--color-sage-lombardo-300);
+  --primitive-color-sage-lombardo-400: var(--color-sage-lombardo-400);
+  --primitive-color-sage-lombardo-500: var(--color-sage-lombardo-500);
+  --primitive-color-sage-lombardo-600: var(--color-sage-lombardo-600);
+  --primitive-color-sage-lombardo-700: var(--color-sage-lombardo-700);
+  --primitive-color-sage-lombardo-800: var(--color-sage-lombardo-800);
+  --primitive-color-sage-lombardo-900: var(--color-sage-lombardo-900);
+  --primitive-color-sand-intonaco-50: var(--color-sand-intonaco-50);
+  --primitive-color-sand-intonaco-100: var(--color-sand-intonaco-100);
+  --primitive-color-sand-intonaco-200: var(--color-sand-intonaco-200);
+  --primitive-color-sand-intonaco-300: var(--color-sand-intonaco-300);
+  --primitive-color-sand-intonaco-400: var(--color-sand-intonaco-400);
+  --primitive-color-sand-intonaco-500: var(--color-sand-intonaco-500);
+  --primitive-color-sand-intonaco-600: var(--color-sand-intonaco-600);
+  --primitive-color-sand-intonaco-700: var(--color-sand-intonaco-700);
+  --primitive-color-sand-intonaco-800: var(--color-sand-intonaco-800);
+  --primitive-color-sand-intonaco-900: var(--color-sand-intonaco-900);
+  --primitive-color-neutral-50: var(--color-neutral-50);
+  --primitive-color-neutral-100: var(--color-neutral-100);
+  --primitive-color-neutral-200: var(--color-neutral-200);
+  --primitive-color-neutral-300: var(--color-neutral-300);
+  --primitive-color-neutral-400: var(--color-neutral-400);
+  --primitive-color-neutral-500: var(--color-neutral-500);
+  --primitive-color-neutral-600: var(--color-neutral-600);
+  --primitive-color-neutral-700: var(--color-neutral-700);
+  --primitive-color-neutral-800: var(--color-neutral-800);
+  --primitive-color-neutral-900: var(--color-neutral-900);
+  --primitive-color-accent-50: var(--color-accent-50);
+  --primitive-color-accent-100: var(--color-accent-100);
+  --primitive-color-accent-200: var(--color-accent-200);
+  --primitive-color-accent-300: var(--color-accent-300);
+  --primitive-color-accent-400: var(--color-accent-400);
+  --primitive-color-accent-500: var(--color-accent-500);
+  --primitive-color-accent-600: var(--color-accent-600);
+  --primitive-color-accent-700: var(--color-accent-700);
+  --primitive-color-accent-800: var(--color-accent-800);
+  --primitive-color-accent-900: var(--color-accent-900);
+
+  /* Semantic tokens */
+  /* Page background */
+  --background-canvas: var(--primitive-color-neutral-50);
+  /* Card/surface background */
+  --background-surface: #FFFFFF;
+  /* Muted background */
+  --background-muted: var(--primitive-color-neutral-100);
+  /* Primary text */
+  --text-primary: var(--primitive-color-neutral-900);
+  /* Secondary text */
+  --text-secondary: var(--primitive-color-neutral-600);
+  /* Muted/disabled text */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on dark backgrounds */
+  --text-inverse: var(--primitive-color-neutral-50);
+  /* Primary interactive (buttons, links) */
+  --interactive-primary: var(--primitive-color-terracotta-lombardo-500);
+  /* Primary interactive hover */
+  --interactive-primary-hover: var(--primitive-color-terracotta-lombardo-600);
+  /* Primary interactive active */
+  --interactive-primary-active: var(--primitive-color-terracotta-lombardo-700);
+  /* Default border */
+  --border-default: var(--primitive-color-neutral-200);
+  /* Strong border */
+  --border-strong: var(--primitive-color-neutral-400);
+  /* Error — WCAG-compliant red */
+  --status-error: #DC2626;
+  /* Success — WCAG-compliant green */
+  --status-success: #16A34A;
+  /* Warning — WCAG AA amber (4.5:1+ on white) */
+  --status-warning: #A16207;
+  /* Info status */
+  --status-info: var(--primitive-color-terracotta-lombardo-500);
+  /* Focus ring color */
+  --focus-ring: var(--primitive-color-terracotta-lombardo-500);
+  /* Keyboard focus indicator */
+  --accessibility-focus-visible: var(--primitive-color-terracotta-lombardo-500);
+}
+
+/* Dark mode semantic tokens */
+[data-theme="dark"] {
+  /* Page background — dark */
+  --background-canvas: var(--primitive-color-neutral-900);
+  /* Card/surface — dark */
+  --background-surface: var(--primitive-color-neutral-800);
+  /* Muted background — dark */
+  --background-muted: var(--primitive-color-neutral-700);
+  /* Primary text — dark */
+  --text-primary: var(--primitive-color-neutral-50);
+  /* Secondary text — dark */
+  --text-secondary: var(--primitive-color-neutral-300);
+  /* Muted text — dark */
+  --text-muted: var(--primitive-color-neutral-500);
+  /* Text on light backgrounds — dark */
+  --text-inverse: var(--primitive-color-neutral-900);
+  /* Primary interactive — dark */
+  --interactive-primary: var(--primitive-color-terracotta-lombardo-400);
+  /* Primary hover — dark */
+  --interactive-primary-hover: var(--primitive-color-terracotta-lombardo-300);
+  /* Primary active — dark */
+  --interactive-primary-active: var(--primitive-color-terracotta-lombardo-200);
+  /* Default border — dark */
+  --border-default: var(--primitive-color-neutral-700);
+  /* Strong border — dark */
+  --border-strong: var(--primitive-color-neutral-500);
+  /* Error — WCAG-compliant red (dark) */
+  --status-error: #EF4444;
+  /* Success — WCAG-compliant green (dark) */
+  --status-success: #22C55E;
+  /* Warning — WCAG-compliant amber (dark) */
+  --status-warning: #EAB308;
+  /* Info — dark */
+  --status-info: var(--primitive-color-terracotta-lombardo-400);
+  /* Focus ring — dark */
+  --focus-ring: var(--primitive-color-terracotta-lombardo-400);
+  /* Keyboard focus — dark */
+  --accessibility-focus-visible: var(--primitive-color-terracotta-lombardo-400);
+}

@@ -1,0 +1,40 @@
+{
+  "$name": "wiener-werkstaette",
+  "$description": "Wiener Werkstätte — Vienna Workshop, founded 1903. Josef Hoffmann and Koloman Moser's Gesamtkunstwerk vocabulary: geometric rigor, Klimt gilding, and Biedermeier warmth.",
+  "$extensions": {
+    "syncupsuite.foundation": {
+      "story": "Josef Hoffmann and Koloman Moser's Vienna Workshop unified fine art and craft under geometric rigor. Their black-and-white checkerboard motifs, Klimt-gilded surfaces, and Biedermeier cream walls created a distinctly Viennese vocabulary that lives between ornament and abstraction.",
+      "philosophy": "Gesamtkunstwerk — the total work of art, where every object from building to teaspoon belongs to the same aesthetic whole",
+      "era": "Early Modernist — 1903–1932",
+      "harmonyMode": "golden-ratio",
+      "radiusTendency": "subtle",
+      "typographyCategory": "geometric-sans"
+    }
+  },
+  "seedColors": [
+    {
+      "hex": "#C8A96E",
+      "name": "Gold (Klimt-Gold)",
+      "tradition": "Klimt gilding — gold leaf on Secession paintings. The warmth and material opulence of Vienna's artistic golden age.",
+      "source": "Gustav Klimt: Painting, Design and Modern Life, T. Natter & G. Frodl"
+    },
+    {
+      "hex": "#B5473A",
+      "name": "Crimson (Werkstätte Rot)",
+      "tradition": "Werkstätte textile dyes — lacquered tin boxes and woven fabric. The warm red of Viennese craft tradition.",
+      "source": "Wiener Werkstätte: Design in Vienna 1903–1932, C. Brandstätter"
+    },
+    {
+      "hex": "#1C1C1A",
+      "name": "Charcoal (Schmiedeeisen)",
+      "tradition": "Secession building wrought iron — Josef Hoffmann's geometric ironwork. The black of structural craft.",
+      "source": "Josef Hoffmann: Interiors 1902–1913, C. Long"
+    },
+    {
+      "hex": "#F5F0E8",
+      "name": "Cream (Wiener Weiß)",
+      "tradition": "Viennese plasterwork walls — Biedermeier domestic interiors. The warm white ground of all Werkstätte composition.",
+      "source": "Vienna 1900: Art, Life & Culture, C. Schorske"
+    }
+  ]
+}

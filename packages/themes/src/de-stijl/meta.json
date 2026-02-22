@@ -1,0 +1,50 @@
+{
+  "id": "de-stijl",
+  "name": "De Stijl",
+  "description": "De Stijl — Dutch Neo-Plasticism, founded Leiden 1917. Mondrian's primary colors and Rietveld's spatial geometry reduced to irreducible elements.",
+  "foundation": {
+    "story": "Piet Mondrian and Theo van Doesburg reduced painting to its irreducible elements: the primary colors, the horizontal and vertical line. Gerrit Rietveld built a chair from this philosophy. The result is not minimal — it is maximal through constraint. Every decision becomes visible because there are so few of them.",
+    "philosophy": "Absolute abstraction, universal harmony — beauty through the elimination of everything that is not essential",
+    "era": "Early Modernist — De Stijl to International Style, 1917–1931",
+    "harmonyMode": "triadic",
+    "radiusTendency": "none",
+    "typographyCategory": "neo-grotesque"
+  },
+  "seedColors": [
+    {
+      "hex": "#0D3B8C",
+      "name": "Blue (Mondriaan Blauw)",
+      "tradition": "Mondrian primary blue — the exact blue of Composition with Red, Blue and Yellow (1930). The structural anchor.",
+      "source": "Piet Mondrian: Life and Work, M. Seuphor"
+    },
+    {
+      "hex": "#D42B2B",
+      "name": "Red (Rietveld Rood)",
+      "tradition": "Mondrian primary red — vermilion of the Rietveld Red Blue Chair (1917). Warmth within the grid.",
+      "source": "De Stijl 1917–1931: The Dutch Contribution to Modern Art, H. Jaffé"
+    },
+    {
+      "hex": "#F5D800",
+      "name": "Yellow (Cadmium Geel)",
+      "tradition": "Mondrian primary yellow — cadmium yellow of Neo-Plasticism theory. The light source in the composition.",
+      "source": "Mondrian: The Art of Destruction, C. Blotkamp"
+    },
+    {
+      "hex": "#1A1A1A",
+      "name": "Black (Raster Zwart)",
+      "tradition": "De Stijl grid lines — the black bars that define spatial relationships in Mondrian's grids. Structure made visible.",
+      "source": "Theo van Doesburg: A New Expression of Life, Art, and Technology, J. Baljeu"
+    },
+    {
+      "hex": "#F7F7F5",
+      "name": "White (Doek Wit)",
+      "tradition": "Canvas ground — the neutral field that makes all relationships visible. Not empty but active.",
+      "source": "The New Art — The New Life: Collected Writings of Piet Mondrian"
+    }
+  ],
+  "validation": {
+    "schema": true,
+    "contrast": false,
+    "completeness": true
+  }
+}
