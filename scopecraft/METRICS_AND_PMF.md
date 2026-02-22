@@ -23,7 +23,7 @@ This measures whether the token pipeline delivers enough value for developers to
 ### L2 — Theme count in package
 
 **Target**: 12 themes (8 built + 4 BSU absorption)
-**Current**: 8 themes published (v0.3.1)
+**Current**: 12 themes published (v0.4.0)
 **Measurement**: `packages/themes/src/*/meta.json` count
 
 ### L3 — Consumer API coverage
@@ -35,7 +35,7 @@ This measures whether the token pipeline delivers enough value for developers to
 ### L4 — WCAG compliance rate
 
 **Target**: 100% of themes pass all 20 contrast pairs
-**Current**: 8/8 themes pass (100%)
+**Current**: 12/12 themes pass (100%)
 **Measurement**: Generator output — `contrast: PASS` for all themes
 
 ### L5 — Test coverage health
@@ -91,9 +91,9 @@ A single project uses 2+ themes (e.g., different themes per tenant). This valida
 | Milestone | Metric | Target | Status |
 |-----------|--------|--------|--------|
 | Internal adoption | BSU + LSU consuming from npm | 2/2 | Done (LSU via gt-tk001) |
-| Theme diversity | 8+ themes in package | 8 | Done (v0.3.1) |
+| Theme diversity | 8+ themes in package | 12 | Done (v0.4.0) |
 | Consumer API | Semantic Tailwind utilities | 18 mappings | Done (d77d67d) |
 | Quality gate | WCAG contrast automated | 20 pairs | Done (851db1d) |
 | External adoption | 1 external project | 1 | Pending |
 | Community contribution | 1 accepted theme PR | 1 | Pending (needs CONTRIBUTING.md + registry) |
-| Scale | 12+ themes | 12 | Pending (BSU absorption) |
+| Scale | 12+ themes | 12 | Done (v0.4.0) |

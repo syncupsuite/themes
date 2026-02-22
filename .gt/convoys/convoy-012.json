@@ -3,7 +3,7 @@
   "name": "BSU Theme Absorption",
   "theme": "Extract 4 BSU production themes (Wiener Werkstatte, Milanese Design, De Stijl, Swiss Modernist) into the npm package. Cross-repo dependency on habitusnet/syncup for source data.",
   "phase": "3.2",
-  "status": "pending",
+  "status": "complete",
   "beads": ["gt-th004", "gt-th005", "gt-th006"],
   "owner": "Iris",
   "cross_repo_dependency": "habitusnet/syncup — Felix provides source data",

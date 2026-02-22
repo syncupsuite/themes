@@ -18,9 +18,9 @@ In Stage 4, this pipeline becomes the **visual identity infrastructure** for any
 ### Completed (Stages 1-2 + Stage 3 themes work)
 
 - 4-package pipeline: tokens → foundations + transformers → themes
-- 8 culturally-grounded themes published to npm (v0.3.1)
+- 12 culturally-grounded themes published to npm (v0.4.0)
 - Semantic Color API — `bg-canvas`, `text-foreground`, `bg-primary` etc. via Tailwind @theme
-- WCAG contrast validation (20 critical pairs, all 8 themes pass)
+- WCAG contrast validation (20 critical pairs, all 12 themes pass)
 - Auto-discovery generator (ADR-007 Phase 1) — drop JSON, run `pnpm generate`
 - Dual CJS+ESM output, TypeScript strict, ES2022
 - 233 tests across 4 packages
@@ -46,12 +46,12 @@ In Stage 4, this pipeline becomes the **visual identity infrastructure** for any
 
 ### Stage 3 — themes (completion target)
 
-- [x] 3+ themes published to npm (8 delivered)
+- [x] 3+ themes published to npm (12 delivered)
 - [x] WCAG contrast validation automated
 - [x] Semantic color consumer API for Tailwind
 - [x] Theme contribution guide published (webplatform4sync)
 - [ ] Visual regression testing baseline (ADR-005)
-- [ ] BSU production themes absorbed into npm package
+- [x] BSU production themes absorbed into npm package (v0.4.0, dda439c)
 - [ ] CONTRIBUTING.md in themes repo
 
 ### Stage 4 — themes (entry criteria)

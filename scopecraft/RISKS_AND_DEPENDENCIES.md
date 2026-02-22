@@ -6,15 +6,18 @@
 
 ## Risk Register
 
-### R1 — BSU theme source data access
+### R1 — BSU theme source data access [RETIRED]
 
 **Severity**: Medium
 **Likelihood**: Low
 **Phase**: 3.2
+**Status**: Retired (2026-02-22)
 
 The 4 BSU production themes (Wiener Werkstatte, Milanese Design, De Stijl, Swiss Modernist) live in the `habitusnet/syncup` monorepo. Iris needs Felix to extract or provide the foundation data (seed colors, cultural metadata). If the themes were created ad-hoc without structured foundation JSON, they may need reverse-engineering.
 
 **Mitigation**: Coordinate with Felix early. Check if BSU themes already follow the foundation JSON schema or need conversion. If conversion is needed, scope as a separate story.
+
+**Resolution**: All 4 BSU themes were successfully extracted, converted to foundation JSON, and absorbed into the npm package via the standard pipeline (commit dda439c, published in v0.4.0).
 
 ### R2 — npm token expiry
 
@@ -32,7 +35,7 @@ The npm publish token in Doppler (`syncupsuite-marketplace/prd`) expires **2026-
 **Likelihood**: Medium
 **Phase**: 3.1
 
-160 baseline screenshots (20 per theme x 8 themes) create CI fragility. Font rendering differences across OS versions, anti-aliasing changes, or sub-pixel shifts can cause false failures.
+240 baseline screenshots (20 per theme x 12 themes) create CI fragility. Font rendering differences across OS versions, anti-aliasing changes, or sub-pixel shifts can cause false failures.
 
 **Mitigation**: Use generous threshold (0.1% pixel diff). Consider component-level snapshots (smaller, more stable) over full-page screenshots. Pin CI runner OS version.
 
@@ -99,7 +102,7 @@ No runtime dependencies in any published package (zero-dep design).
 
 | Dependency | Direction | Notes |
 |-----------|-----------|-------|
-| `habitusnet/syncup` (BSU/LSU) | Consumes themes | BSU has 4 themes not yet in npm; LSU adopted via gt-tk001 |
+| `habitusnet/syncup` (BSU/LSU) | Consumes themes | All 12 themes published (v0.4.0); LSU adopted via gt-tk001 |
 | `syncupsuite/webplatform4sync` | Documents themes | Theme contribution guide, `diagnose-tokens` subcommand |
 | `syncupsuite/syncupsuite-com` | Showcases themes | ThemePreview component uses swiss-international |
 | `syncupsuite/hn-platform4sync` | References themes | Stack conventions reference themes package |
@@ -108,7 +111,7 @@ No runtime dependencies in any published package (zero-dep design).
 
 | Item | Blocked By | Status |
 |------|-----------|--------|
-| BSU theme absorption (3.2) | Felix providing source data | Not started |
+| BSU theme absorption (3.2) | Felix providing source data | Complete (v0.4.0) |
 | Registry Phase 2 (4.1) | Phase 3 complete | Vision |
 | Tier stacking (4.2) | Phase 3 complete + BrandSyncUp integration | Vision |
 | Community themes | Registry Phase 2 + CONTRIBUTING.md | Vision |

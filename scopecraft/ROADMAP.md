@@ -24,7 +24,7 @@
 **Goal**: Expand theme catalog, add quality gates, make themes consumable by Tailwind sites.
 
 - [x] 6 new themes: nordic-modern, tang-imperial, shuimo-modern, nihon-minimal, renaissance, art-deco (gt-pm002, c581a84)
-- [x] WCAG contrast validation — 20 critical pairs, all 8 themes pass (gt-pg004, 851db1d)
+- [x] WCAG contrast validation — 20 critical pairs, all 12 themes pass (gt-pg004, 851db1d)
 - [x] Semantic Color API — SEMANTIC_COLOR_MAP in tailwind-v4.ts (d77d67d)
   - `bg-canvas`, `bg-surface`, `text-foreground`, `bg-primary`, `border-border`, `ring-ring` etc.
 - [x] CSS API contract banner in tokens.css output
@@ -39,9 +39,9 @@
 
 ### 3.1 — Visual Regression Testing (ADR-005)
 
-Implement Playwright snapshot matrix for all 8 themes. 20 snapshots per theme covering key UI patterns (buttons, cards, forms, typography, status indicators). Enforced at build time.
+Implement Playwright snapshot matrix for all 12 themes. 20 snapshots per theme covering key UI patterns (buttons, cards, forms, typography, status indicators). Enforced at build time.
 
-### 3.2 — BSU Theme Absorption
+### 3.2 — BSU Theme Absorption [COMPLETE]
 
 Port the 4 themes running in BrandSyncUp production into the npm package:
 - Wiener Werkstatte
@@ -51,6 +51,8 @@ Port the 4 themes running in BrandSyncUp production into the npm package:
 
 Each needs cultural provenance, seed color documentation, and WCAG validation through the standard pipeline.
 
+Completed in commit dda439c, published in v0.4.0. All 4 themes converted to foundation JSON and absorbed via the standard pipeline.
+
 ### 3.3 — Adapter Isolation (ADR-006)
 
 Refactor transformers to operate on a flat token list via `flattenRoot()`. Implement the adapter interface so new output formats can be added without touching core logic. Target: CSS, Tailwind v4, JSON, CLI adapters.
@@ -58,7 +60,7 @@ Refactor transformers to operate on a flat token list via `flattenRoot()`. Imple
 ### 3.4 — Developer Onboarding
 
 - Mirror CONTRIBUTING.md from webplatform4sync to themes repo
-- Refresh root README with all 8 themes, semantic color API docs, dark mode guide
+- Refresh root README with all 12 themes, semantic color API docs, dark mode guide
 - Per-package README updates reflecting current API surface
 
 ---
@@ -92,6 +94,6 @@ HTTP registry for theme discovery — enables cross-organization theme sharing a
 ```
 Phase 1 ████████████████  COMPLETE (v0.1.x – v0.2.0)
 Phase 2 ████████████████  COMPLETE (v0.2.1 – v0.3.1)
-Phase 3 ████░░░░░░░░░░░░  ACTIVE
+Phase 3 ████████░░░░░░░░  ACTIVE (3.2 complete)
 Phase 4 ░░░░░░░░░░░░░░░░  VISION (post Stage 3 success)
 ```

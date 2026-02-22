@@ -22,9 +22,9 @@ Set up Playwright in the themes monorepo with a minimal HTML test page that rend
 - Page accepts `?theme=swiss-international` query param to load different themes
 - Runs headless in CI
 
-### Story 1.2 — Snapshot baseline for all 8 themes
+### Story 1.2 — Snapshot baseline for all 12 themes
 
-Capture baseline screenshots for all 8 themes (20 snapshots each = 160 total).
+Capture baseline screenshots for all 12 themes (20 snapshots each = 240 total).
 
 **Acceptance criteria**:
 - 20 snapshot scenarios per theme (backgrounds, text hierarchy, interactive states, borders, status colors, focus rings, dark mode variants)
@@ -135,10 +135,10 @@ Mirror the theme contribution guide from webplatform4sync to themes/CONTRIBUTING
 
 ### Story 4.2 — README refresh
 
-Update root README and per-package READMEs to reflect current state (8 themes, semantic color API, dark mode, Tailwind integration).
+Update root README and per-package READMEs to reflect current state (12 themes, Semantic Color API, dark mode, Tailwind integration).
 
 **Acceptance criteria**:
-- Root README lists all 8 themes with descriptions
+- Root README lists all 12 themes with descriptions
 - Semantic color API usage examples (`bg-canvas`, `text-foreground`, etc.)
 - Dark mode section (`[data-theme="dark"]`)
 - Per-package READMEs accurate for current exports

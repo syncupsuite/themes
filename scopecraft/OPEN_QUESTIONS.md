@@ -14,6 +14,8 @@ Do the 4 BSU production themes (Wiener Werkstatte, Milanese Design, De Stijl, Sw
 
 **Resolution path**: Felix inspects `habitusnet/syncup/su-brandsyncup-com/` for theme data format. If conversion is needed, Iris scopes a conversion story.
 
+**Status**: Resolved (2026-02-22). All 4 BSU themes were converted to foundation JSON and absorbed via the standard pipeline (commit dda439c, published in v0.4.0). The BSU DTCG files were OUTPUT format; seed colors, harmony mode, radius, and typography were reverse-engineered into foundation JSON INPUT format.
+
 ---
 
 ## Q2 — Visual regression CI runner
@@ -63,6 +65,12 @@ Stage 3 docs mention a Tailwind v3 transformer for projects not yet on v4. Is th
 **Blocks**: Performance at scale
 **Owner**: Iris
 
-Stage 4 docs mention per-theme bundle splitting. Currently `@syncupsuite/themes` bundles all 8 themes into a single package (431KB ESM). At 12+ themes this grows. Should themes be split into individual packages, or is tree-shaking sufficient?
+Stage 4 docs mention per-theme bundle splitting. Currently `@syncupsuite/themes` bundles all 12 themes into a single package (677KB ESM, 408KB compressed tarball). Should themes be split into individual packages, or is tree-shaking sufficient?
 
-**Resolution path**: Measure bundle impact at 12 themes. If total dist exceeds 1MB, evaluate per-theme packages. Tree-shaking already works for programmatic access; CSS files are already per-theme via subpath exports.
+**Measured at 12 themes (2026-02-22)**:
+- ESM bundle: 677KB (`dist/index.js`)
+- CJS bundle: 678KB (`dist/index.cjs`)
+- Published tarball: 408KB (`.tgz`)
+- Total dist (uncompressed): 3.1MB (includes source maps + type declarations)
+
+**Resolution path**: Total dist is well under 1MB for the published JS. The 3.1MB uncompressed includes source maps. Tree-shaking already works for programmatic access; CSS/JSON files are per-theme via subpath exports. No split needed yet. Re-evaluate if theme count exceeds 20.
