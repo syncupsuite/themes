@@ -42,6 +42,136 @@ import { swissInternational } from '@syncupsuite/themes';
 import { nihonTraditional } from '@syncupsuite/themes';
 ```
 
+## Quick Start (Copy-Paste Ready)
+
+### Tailwind v4 + React
+
+```bash
+npm install @syncupsuite/themes
+```
+
+In your `tailwind.config.js`:
+
+```javascript
+import { swissInternational } from '@syncupsuite/themes';
+
+export default {
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    function ({ addBase }) {
+      addBase([
+        {
+          '@layer base': swissInternational.tailwindCss,
+        },
+      ]);
+    },
+  ],
+};
+```
+
+In your component:
+
+```jsx
+export default function App() {
+  return (
+    <div className="bg-canvas text-foreground min-h-screen p-8">
+      <h1 className="text-2xl font-bold text-foreground mb-4">
+        Swiss International Theme
+      </h1>
+      <button className="px-4 py-2 bg-primary text-canvas rounded hover:bg-primary-hover transition-colors">
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+### Plain CSS (HTML/CSS)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="node_modules/@syncupsuite/themes/swiss-international/tokens.css">
+  <style>
+    body {
+      background-color: var(--background-canvas);
+      color: var(--text-foreground);
+      font-family: var(--typography-body);
+      line-height: var(--line-height-body);
+    }
+    h1 {
+      font-size: var(--type-scale-2xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--text-foreground);
+    }
+    button {
+      background-color: var(--interactive-primary);
+      color: var(--text-canvas);
+      padding: var(--spacing-3) var(--spacing-4);
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background-color 200ms ease-out;
+    }
+    button:hover {
+      background-color: var(--interactive-primary-hover);
+    }
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--background-canvas-dark);
+        color: var(--text-foreground-dark);
+      }
+      button {
+        background-color: var(--interactive-primary-dark);
+        color: var(--text-canvas-dark);
+      }
+      button:hover {
+        background-color: var(--interactive-primary-hover-dark);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Swiss International Theme</h1>
+  <button>Click me</button>
+</body>
+</html>
+```
+
+### All 12 themes at a glance
+
+Each theme is imported identically:
+
+```typescript
+import {
+  swissInternational,
+  nihonTraditional,
+  nordicModern,
+  tangImperial,
+  shuimoModern,
+  nihonMinimal,
+  renaissance,
+  artDeco,
+  deStijl,
+  milaneseDesign,
+  swissModernist,
+  wienerWerkstaette,
+} from '@syncupsuite/themes';
+```
+
+Use in your stylesheet:
+
+```css
+/* Swap themes by changing import or generating CSS at runtime */
+@import '@syncupsuite/themes/tangimperial/tokens.css';
+/* or */
+@import '@syncupsuite/themes/art-deco/tailwind.css';
+```
+
 ## Available themes
 
 | Theme | Import | Cultural basis |
